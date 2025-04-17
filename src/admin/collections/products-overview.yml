@@ -1,0 +1,67 @@
+- name: "products-overview"
+  label: "Products Overview"
+  file: "src/content/products/index.md"
+  fields:
+    - {label: "Layout", name: "layout", widget: "hidden", default: "products.njk"}
+    <!-- @include-static ../partials/base-fields.yml -->
+    <!-- @include-static ../partials/nav-fields.yml -->
+    <!-- @include-static ../partials/jumbotron.yml -->
+    - {label: Intro, name: body, widget: markdown }
+    - {label: "Intro Image", name: "intro_img", widget: "image"}
+    - name: section_1
+      label: Section 1
+      widget: "object"
+      fields:
+        - { label: "Headline", name: "headline", widget: "string", required: false}
+        - { label: "Copy", name: "copy", widget: "markdown", required: false }
+        - { label: "Youtube Url", name: "youtube_url", widget: "string", required: false }
+    - name: section_2
+      label: Section 1
+      widget: "object"
+      required: false
+      fields:
+        - { label: "Headline", name: "headline", widget: "string", required: false}
+        - { label: "Copy", name: "copy", widget: "markdown", required: false }
+        - { label: "Image", name: "img", widget: "image", 'hint':"", required: false}
+    - name: enclosures
+      label: Enclosures
+      widget: "object"
+      fields:
+        - { label: "Headline", name: "headline", widget: "string", required: false }
+        - { label: "Copy", name: "copy", widget: "markdown", required: false }
+        - name: cards
+          label: Cards
+          widget: list
+          fields:
+            - { label: copy, name: copy, widget: markdown }
+            - { label: title, name: title, widget: string }
+            - { label: URL, name: url, widget: string }
+            - { label: "Image", name: "image", widget: "image" }
+    - name: air_filtration
+      label: Air Filtration
+      widget: "object"
+      fields:
+        - { label: "Headline", name: "headline", widget: "string", required: false }
+        - { label: "Copy", name: "copy", widget: "markdown", required: false }
+        - name: cards
+          label:  Cards
+          widget: list
+          fields:
+            - { label: copy, name: copy, widget: markdown }
+            - { label: title, name: title, widget: string }
+            - { label: URL, name: url, widget: string }
+            - { label: "Image", name: "image", widget: "image" }
+    - name: dust_collection
+      label: Dust Collection
+      widget: "object"
+      fields:
+        - { label: "Headline", name: "headline", widget: "string", required: false }
+        - { label: "Copy", name: "copy", widget: "markdown", required: false }
+        - name: cards
+          label: Cards
+          widget: list
+          fields:
+            - { label: copy, name: copy, widget: markdown }
+            - { label: title, name: title, widget: string }
+            - { label: URL, name: url, widget: string }
+            - { label: "Image", name: "image", widget: "image" }

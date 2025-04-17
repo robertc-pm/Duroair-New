@@ -1,0 +1,118 @@
+- name: "why-duroair"
+  label: "Why Duroair"
+  file: "src/content/about/why-duroair.md"
+  fields:
+    - {label: "Layout", name: "layout", widget: "hidden", default: "product-page.njk"}
+    <!-- @include-static ../partials/base-fields.yml -->
+    <!-- @include-static ../partials/nav-fields.yml -->
+    <!-- @include-static ../partials/jumbotron.yml -->
+    - name: section_1 
+      label: Intro
+      widget: object
+      fields:
+        - {label: "Heading", name: "head", widget: "string"}
+        - {label: "Descrtion", name: "desc", widget: "markdown"}
+    - name: choose_duroair 
+      label: Reason For Choose Duroair
+      widget: list
+      fields:
+        - {label: "Heading", name: "heading_1", widget: "string"}
+        - {label: "Descrtion", name: "description_1", widget: "markdown"}
+        - {label: "Image", name: "image", widget: "image"}
+    - name: efficient 
+      label: Efficient Section
+      widget: object
+      fields:
+        - {label: "Heading", name: "heading_2", widget: "string"}
+        - {label: "Descrtion", name: "description_2", widget: "markdown"}
+        - {label: "Number", name: "number", widget: "string"}
+    - name: air_system 
+      label: Airfiltration System
+      widget: object
+      fields:
+        - { label: "Heading", name: "heading_3", widget: "string" }
+        - { label: "Description", name: "description_3", widget: "markdown" }
+        - name: air_stages 
+          label: Airfiltration Stages
+          widget: list
+          fields:
+            - { label: "Heading", name: "heading_4", widget: "string" }
+            - { label: "Description", name: "description_4", widget: "markdown" }
+        - {label: "Descrtion", name: "description_5", widget: "markdown"}
+        - name: efficient 
+          label: Efficient Section
+          widget: object
+          fields:
+            - {label: "Number", name: "number_1", widget: "string"}
+            - {label: "Descrtion", name: "description_6", widget: "markdown"}
+            - {label: "Heading", name: "heading_6", widget: "string"}
+    - name: compilance_section 
+      label: Compilance Section 
+      widget: object
+      fields:
+        - {label: "Heading", name: "heading_7", widget: "string"}
+        - {label: "Descrtion", name: "description_7", widget: "markdown"}
+        - {label: "Image 1", name: "image_1", widget: "image"}
+        - {label: "Image 2", name: "image_2", widget: "image"}
+        - {label: "Image 3", name: "image_3", widget: "image"}
+    - name: our_system 
+      label: Our System Provide
+      widget: object
+      fields:
+        - {label: "Title", name: "title", widget: "string"}
+        - name: flexibility 
+          label: Flexibility 
+          widget: object
+          fields:
+            - {label: "Heading", name: "heading_8", widget: "string"}
+            - {label: "Descrtion", name: "description_8", widget: "markdown"}
+            - {label: "Image 1", name: "image_4", widget: "image"}
+            - {label: "Image 2", name: "image_5", widget: "image"}
+        - name: workflow 
+          label: Workflow 
+          widget: object
+          fields:
+            - {label: "Heading", name: "heading_9", widget: "string"}
+            - {label: "Descrtion", name: "description_9", widget: "markdown"}        
+            - name: air_list 
+              label: Airfiltration List
+              widget: list
+              fields:
+                - { label: "Image", name: "image_6", widget: "image" }
+                - { label: "Description", name: "description_10", widget: "markdown" }
+        - name: retracts
+          label: Retracts Section 
+          widget: object
+          fields:
+            - {label: "Heading", name: "heading_11", widget: "string"}
+            - {label: "Descrtion", name: "description_11", widget: "markdown"}
+            - {label: "Image", name: "image_7", widget: "image"}
+    - name: ingenuity
+      label: Duroair's Ingenuity 
+      widget: object
+      fields:
+        - {label: "Title", name: "title_1", widget: "string"}
+        - {label: "Intro Description", name: "intro_desc", widget: "markdown"}
+        - {label: "Heading", name: "heading_12", widget: "string"}
+        - {label: "Descrtion", name: "description_12", widget: "markdown"}
+        - {label: "Image", name: "image_8", widget: "image"}
+        - name: flexible_options 
+          label: Flexible Setup Options
+          widget: list
+          fields:
+            - { label: "Heading", name: "heading_13", widget: "string" }
+            - { label: "Description", name: "description_13", widget: "markdown" }
+            - {label: "Image", name: "image_9", widget: "image"}
+    - name: bottom_section 
+      label: Bottom Section
+      widget: object
+      fields:
+        - {label: Heading, name: bottom_heading, widget: string}
+        - {label: Description, name: bottom_description, widget: string}
+        - {label: "Image", name: "bottom_image", widget: "image"}
+    - name: compliance 
+      label: Compliance 
+      widget: list
+      fields:
+        - {label: Code, name: code, widget: string}
+        - {label: Description, name: description, widget: string}

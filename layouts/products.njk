@@ -1,0 +1,103 @@
+{% extends "layout.njk" %}
+{% block body %}
+    {# Intro #}
+    <section class="section">
+        <div class="grid-2">
+            <div>
+                <img src="{{ intro_img }}" class="img-responsive shadow img-intro img-1" alt=""/>
+            </div>
+            <div class="apply-ruled-headers product-intro">{{ contents | safe }}</div>
+        </div>
+    </section>
+    {#    Section 1  #}
+    <section class="section full">
+        <div class="grid-2">
+            <div>
+                <div class="video-embed max-w-800x">
+                    <iframe width="560" height="315" src="//www.youtube.com/embed/{{ section_1.youtube_url | getYoutubeId }}?autoplay=0&rel=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="ruled-headers product-intro max-w-600">
+                <h3>{{ section_1.headline }}</h3>
+                {{ section_1.copy | md }}
+                <a href="/products/duroroom" class="btn btn-outline brand-primary">Learn More</a>
+            </div>
+        </div>
+    </section>
+    {#    Section 2  #}
+    <div class="relative overflow-x-hidden">
+        <section class="section static fi-container">
+            <img class="floating-image" src="{{ section_2.img }}" alt="">
+            <div class="grid-2 ruled-headers">
+                <div class="">
+                    <br>
+                    <h3>{{ section_2.headline }}</h3>
+                    {{ section_2.copy | md }}
+                    <br>
+                </div>
+                <div>
+                </div>
+            </div>
+        </section>
+    </div>
+    {#    Enclosuers  #}
+    <div class="bg-light">
+    <section class="section">
+        <div class="intro center">
+            <h4 class="h3 text-brand-primary">{{ enclosures.headline }}</h4>
+            <p>{{ enclosures.copy }}</p>
+        </div>
+        {%- for card in enclosures.cards -%}
+            <div class="card card-horizontal" data-href="{{ card.url }}">
+                <div class="card-img-container">
+                    <img src="{{ card.image }}" class="img-responsive card-img" alt="">
+                </div>
+                <div class="card-copy">
+                    <h4 class="h3 pc">{{ card.title }}</h4>
+                    {{ card.copy }}
+                    <br><a href="{{ card.url }}" class="link-learn-more card-link">Learn More</a>
+                </div>
+            </div>
+        {%- endfor %}
+    </section>
+    {#    Air Filtration  #}
+    <div class="bg-light">
+        <section class="section">
+            <div class="intro center">
+                <h4 class="h3 text-brand-primary">{{ air_filtration.headline }}</h4>
+                <p>{{ air_filtration.copy }}</p>
+            </div>
+            {%- for card in air_filtration.cards -%}
+                <div class="card card-horizontal" data-href="{{ card.url }}">
+                    <div class="card-img-container">
+                        <img src="{{ card.image }}" class="img-responsive card-img" alt="">
+                    </div>
+                    <div class="card-copy">
+                        <h4 class="h3 pc">{{ card.title }}</h4>
+                        {{ card.copy }}
+                        <br><a href="{{ card.url }}" class="link-learn-more card-link">Learn More</a>
+                    </div>
+                </div>
+            {%- endfor %}
+        </section>
+        {#    Dust Collection #}
+        <section class="section">
+            <div class="intro center">
+                <h4 class="h3 text-brand-primary">{{ dust_collection.headline }}</h4>
+                <p>{{ dust_collection.copy }}</p>
+            </div>
+            {%- for card in dust_collection.cards -%}
+                <div class="card card-horizontal" data-href="{{ card.url }}">
+                    <div class="card-img-container">
+                        <img src="{{ card.image }}" class="img-responsive card-img" alt="">
+                    </div>
+                    <div class="card-copy">
+                        <h4 class="h3 pc">{{ card.title }}</h4>
+                        {{ card.copy }}
+                        <br><a href="{{ card.url }}" class="link-learn-more card-link">Learn More</a>
+                    </div>
+                </div>
+            {%- endfor %}
+        </section>
+    </div>
+{% endblock %}

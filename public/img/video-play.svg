@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="103" height="103" viewBox="0 0 103 103">
+  <defs>
+    <polygon id="video-play-a" points="0 0 103 0 103 103 0 103"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <mask id="video-play-b" fill="#fff">
+      <use xlink:href="#video-play-a"/>
+    </mask>
+    <path fill="#FFF" fill-opacity=".75" d="M56.5574935,61.8160062 L38.6898487,72.1315417 L38.6898487,51.4995292 L38.6898487,30.8684583 L56.5574935,41.1839938 L74.4251383,51.4995292 L56.5574935,61.8160062 Z M51.4995292,0 C23.0564834,0 0,23.0574249 0,51.4995292 C0,79.9425751 23.0564834,103 51.4995292,103 C79.9416335,103 103,79.9425751 103,51.4995292 C103,23.0574249 79.9416335,0 51.4995292,0 L51.4995292,0 Z" mask="url(#video-play-b)"/>
+  </g>
+</svg>

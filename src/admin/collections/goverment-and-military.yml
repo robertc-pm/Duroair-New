@@ -1,0 +1,80 @@
+- name: "goverment-and-military"
+  label: "Goverment and Military"
+  file: "src/content/goverment-and-military/index.md"
+  fields:
+    - {label: "Layout", name: "layout", widget: "hidden", default: "goverment-and-military.njk"}
+    <!-- @include-static ../partials/base-fields.yml -->
+    <!-- @include-static ../partials/jumbotron.yml -->
+    <!-- @include-static ../partials/nav-fields.yml -->
+
+    - {label: Main Heading, name: main_head, widget: string}
+
+    - name: gm_intro
+      label: Goverment and Military Intro
+      widget: object
+      fields:
+        - {label: Intro Heading, name: intro_head, widget: string}
+        - {label: Intro Description, name: intro_desc, widget: markdown}
+        - {label: Intro Image, name: intro_image, widget: image}
+
+    - name: dod_section
+      label: DOD Maintenance Section
+      widget: object
+      fields:
+        - name: child_left_sec
+          label: Child Left Section
+          widget: object
+          fields:
+            - {label: Heading, name: dod_left_head, widget: string}
+            - {label: Description, name: dod_desc, widget: markdown} 
+        - name: child_right_sec
+          label: Child Right Section
+          widget: list
+          fields:
+            - {label: Heading, name: dod_right_head, widget: string}
+            - {label: Description, name: description, widget: markdown}
+            - {label: Button, name: btn, widget: string}
+
+    - name: flexibility
+      label: MRO Flexibility Section
+      widget: list
+      fields:
+            - {label: Heading, name: heading, widget: string}  
+            - {label: Description, name: description, widget: markdown}
+            - {label: image, name: image, widget: image}
+    - name: solution_section
+      label: Solution Section
+      widget: object
+      fields:
+        - {label: Heading, name: solution_haed, widget: string}
+        - {label: "Related Products", name: "related_products", widget: "relation", multiple: true, collection: "product", search_fields: ["title"], value_field: "title", "hint":"Begin typing to select a related solution ", required: false}
+
+    - name: top_10_section
+      label: TOP 10 Section
+      widget: object
+      fields:
+        - {label: Heading, name: sec_heading, widget: string}
+        - {label: Description, name: sec_description, widget: markdown}
+        - {label: image, name: image, widget: image}
+        - name: top_10_child
+          label: Top 10 Child
+          widget: list
+          fields:
+            - {label: Heading, name: child_head, widget: string}
+            - {label: Description, name: child_desc, widget: markdown}
+
+    - name: certificate_section
+      label: Certificate Section
+      widget: object
+      fields:
+        - {label: Heading, name: cert_head, widget: string}
+        - {label: Description, name: cert_desc, widget: string}
+        - { label: Brochure, name: brochure, widget: file, required: false, allow_multiple: false}
+        - {label: Download, name: cert_btn, widget: string}
+    - name: compliance
+      label: Compliance
+      widget: list
+      fields:
+        - {label: Code, name: code, widget: string}
+        - {label: Description, name: description, widget: string}
+    <!-- @include-static ../partials/cta-callout.yml -->

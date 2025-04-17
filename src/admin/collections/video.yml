@@ -1,0 +1,14 @@
+- name: "video"
+  label: "Videos"
+  label_singular: Video
+  folder: "src/content/resources/videos"
+  create: true
+  filter: {field: "layout", value: "video.njk"}
+  fields:
+    <!-- @include-static ../partials/base-fields.yml -->
+    - {label: "Layout", name: "layout", widget: "hidden", default: "video.njk"}
+    - {label: "Permalink", name: "permalink", widget: "string", required: false}
+    - {label: "Youtube URL", name: "youtube_url", widget: "text", required: true, 'hint':' Enter a full url like "https://www.youtube.com/watch?v=hLoMT95EIpw"'}
+    - {label: "Youtube ID", name: "youtube_id", widget: "string", 'hint':' The id can be found in the url - "https://www.youtube.com/watch?v=hLoMT95EIpw"'}
+    - {label: "Copy", name: "body", widget: "markdown"}
+    - {label: "Image", name: "thumbail", widget: "image", required: false}

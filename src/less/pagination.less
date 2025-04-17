@@ -1,0 +1,110 @@
+.pagination{
+    vertical-align: middle;
+    svg{
+        @s:13px;
+        width:@s;
+        height:@s;
+        position: relative;
+        top:-1px;
+    }
+    a{
+        transition: all .3s;
+        &:hover{
+            color:#000;
+        }
+    }
+}
+.pagination-previous{
+    margin-right:24px;
+}
+.pagination-blocks{
+    display: none;
+}
+
+
+@media screen and (min-width: @screen-sm-min) {
+    .pagination-blocks{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        min-height: 239px;
+
+        // a{
+        //     display: block;
+        //     width:100%;
+        //     height: 100%;
+        //     text-align: right;
+        //     padding:80px;
+        //     color:#fff;
+        //     position: relative;
+        //     background-repeat: no-repeat;
+        //     transition: all .3s;
+        //     background-size: 100%;
+        //     background-position: 50% 50%;
+        //     transform: translate3d(0, 0, 0);
+        //     overflow:hidden;
+
+            // &:hover{
+            //     // background-size: 108%;
+
+            //     img{
+            //         transform: scale(1.08);
+            //     }
+            // }
+
+            // &:after{
+            //     content:'';
+            //     display: block;
+            //     @c1:rgba(23,68,92,0.8);
+            //     @c2:rgba(31, 95, 129, 0.79);
+            //     background: linear-gradient(to right, @c1 0%, @c2); 
+            //     width:100%;
+            //     height: 100%;
+            //     position: absolute;
+            //     top:0;
+            //     left:0;
+            //     z-index: 1;
+            //     transition: all .3s;
+            // }
+
+            // &:hover{
+            //     &:after{
+            //         opacity: .8;
+            //     }
+            // }
+        }
+
+        a + a{
+            text-align: left;
+        }
+
+        span{
+            display: block;
+            position: relative;
+            z-index: 5;
+        }
+        svg{
+            position: relative;
+            top:-1px;
+            @s:10px;
+            width:@s;
+            height:@s;
+        }
+        .pagination-block-label{
+            .h7;
+            text-transform: uppercase;
+            padding-bottom:24px;
+        }
+        .pagination-block-title{
+            .h4;
+        }
+        // img{
+        //     object-fit:cover;
+        //     position:absolute;
+        //     top:0;
+        //     left:0;
+        //     width:100%;
+        //     height:100%;
+        //     transition: all .3s;
+        // }
+    }
+

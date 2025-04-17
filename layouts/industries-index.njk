@@ -1,0 +1,177 @@
+{% extends "layout.njk" %}
+{% set waveType = 'gray' %}
+{% block body %}
+
+    <!-- Industries Section Begin -->
+
+    <div class="industry-cstm-sec">
+        <div class="container">
+            <div class="ind-cstm-inr">
+                <div class="indcstm-row row">
+                    <div class="indcstm-left-wrp col-lg-6">
+                        <div class="indcstm-left">
+                            <div class="sec-inr-head">
+                                <h2>Built for Your Industry, Customized for You.</h2>
+                                <p>Duroair engineers industrial air filtration for dust collection and coatings, ISO clean rooms, and other controlled, clean air environments to meet your industry's niche specifications for compliance and safety while protecting sensitive processes from contamination.</p>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="indcstm-right-wrp col-lg-6">
+                        <div class="indcstm-right">
+                            <div class="indcstm-img indcstmimg-1">
+                                <img src="/img/industry-img-1.png" alt="Industry Image">
+                            </div>
+                            <div class="indcstm-img indcstmimg-2">
+                                <img src="/img/industry-img-2.png" alt="Industry Image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <!-- End Of Industries Section -->
+
+  <!-- Indus Solution Section begin -->
+<div class="ind-solution-sec">
+    <div class="container">
+        <div class="ind-solution-inr has-texture">
+            <div class="texture"><img src="/img/curved-bg.svg" alt="Texture"></div>
+            <div class="sec-head">
+                <h2>Solutions for Your Industry</h2>
+            </div>
+            <div class="indsolution-cards-row row">
+
+                <div class="indsoution-card-wrp col-lg-4">
+                    {%- for industry in industries -%}
+                        {%- if loop.index <= 2 -%}
+                            <div class="indsolution-card">
+                                <div class="indsolution-img">
+                                    <img src="{{ industry.thumbnail }}" alt="{{ industry.title }}">
+                                    <h3>{{ industry.title }}</h3>
+                                </div>
+                                <div class="onhvr-card">
+                                    <div class="indsolutiononhvr-cntnt">
+                                        <div class="h3-title">{{ industry.title }}</div>
+                                        <p>{{ industry.description }}</p>
+                                    </div>
+                                    <a href="/{{ industry.path }}" class="button">Explore More
+                                        <span class="button__spotlight"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        {%- endif -%}
+                    {%- endfor -%}
+                </div>
+
+                <div class="indsoution-card-wrp col-lg-4">
+                    {%- for industry in industries -%}
+                        {%- if loop.index > 2 and loop.index <= 5 -%}
+                            <div class="indsolution-card">
+                                <div class="indsolution-img">
+                                    <img src="{{ industry.thumbnail }}" alt="{{ industry.title }}">
+                                    <h3>{{ industry.title }}</h3>
+                                </div>
+                                <div class="onhvr-card">
+                                    <div class="indsolutiononhvr-cntnt">
+                                        <div class="h3-title">{{ industry.title }}</div>
+                                        <p>{{ industry.description }}</p>
+                                    </div>
+                                    <a href="/{{ industry.path }}" class="button">Explore More
+                                        <span class="button__spotlight"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        {%- endif -%}
+                    {%- endfor -%}
+                </div>
+
+                <div class="indsoution-card-wrp col-lg-4">
+                    {%- for industry in industries -%}
+                        {%- if loop.index > 5 -%}
+                            <div class="indsolution-card">
+                                <div class="indsolution-img">
+                                    <img src="{{ industry.thumbnail }}" alt="{{ industry.title }}">
+                                    <h3>{{ industry.title }}</h3>
+                                </div>
+                                <div class="onhvr-card">
+                                    <div class="indsolutiononhvr-cntnt">
+                                        <div class="h3-title">{{ industry.title }}</div>
+                                        <p>{{ industry.description }}</p>
+                                    </div>
+                                    <a href="/{{ industry.path }}" class="button">Explore More
+                                        <span class="button__spotlight"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        {%- endif -%}
+                    {%- endfor -%}
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- End of Indus Solution Section -->
+
+<!-- Case Studies Section Begin -->
+
+<div class="case-study-sec">
+    <div class="container">
+        <div class="case-study-inr">
+            <div class="sec-head">
+                <h2>Case Studies</h2>
+            </div>
+            <div class="row">
+                <div class="case-study-slider-wrp">
+                    <div class="case-study-slider">
+                        {%- for caseStudy in caseStudies -%}
+                        <div class="casesl-item">
+                        <a href="/{{ caseStudy.path }}" class="arw-btn-icon">
+                            <div class="cs-item-inr">
+                                <div class="csitem-img">
+                                    <img src="{{ caseStudy.small_image }}" alt="{{ caseStudy.title }}">
+                                </div>
+                                <div class="case-sdy-content">
+                                    <h3>{{ caseStudy.title }}</h3>
+                                    <a href="/{{ caseStudy.path }}" class="arw-btn-icon">
+                                        <img src="/img/arw-btn-icon.svg" alt="Icon">
+                                    </a>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+                        {%- endfor -%}
+                    </div>
+                </div>
+                <div class="case-study-nav-slider-wrp">
+                    <div class="cstdy-slider-nav-inr-wrp">
+                        <div class="csstdy-nav-slider cmnslider">
+                            {%- for caseStudy in caseStudies -%}
+                            <div class="csstdy-slider-item">
+                                <div class="csstdy-item-inr">
+                                    <div class="csstdyitem-img">
+                                        <img src="{{ caseStudy.small_image }}" alt="{{ caseStudy.title }}">
+                                    </div>
+                                    <div class="csstdynv-content">
+                                        <h3>{{ caseStudy.title }}</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            {%- endfor -%}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Of Case Studies Section -->
+
+
+
+
+
+{% endblock %}

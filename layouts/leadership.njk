@@ -1,0 +1,18 @@
+{% extends "layout.njk" %}
+{% block body %}
+    <section class="section narrow">
+        <div class="intro center">
+            {{ contents | safe}}
+        </div>
+        {% for t in team %}
+            <div class="card-horizontal team-card">
+                <img src="{{t.photo}}" class="img-responsive" />
+                <div class="card-content">
+                    <h4 class="pc">{{ t.name }}</h4>
+                    <div class="h5">{{t.position}}</div>
+                    <p>{{ t.bio }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </section>
+{% endblock %}

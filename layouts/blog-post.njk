@@ -1,0 +1,82 @@
+{% extends "layout.njk" %}{% block body %}
+<div class="container">
+<div class="blog-post-sec cmn-gap has-texture newtexturepos blgdtl-pg">
+        <div class="container">
+            <div class="blog-post-inr">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="blog-detail-card">
+                               <h2>{{title}}</h2>
+                               {{ body1 | md }}
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            {% include "partials/blog-sidebar.njk" %}
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="blog-details">
+                                {{ body2 | md }}
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div> 
+</div>               
+            {% if cta %}
+                <div class="blog-cta">
+                    <div class="blog-cta-copy">
+                        <h2>{{cta.copy}}</h2>
+                    </div>
+                    <a href="{{cta.url}}" class="cmn-btn button">{{cta.label}} <span class="button__spotlight"></span></a>
+                </div>
+            {% endif %}
+            {%- include 'partials/pagination-blocks.njk' -%}
+</div>
+
+{% set grid = collection | getRelatedPosts(collections) %}
+{%- if grid and grid.length -%}
+    <div class="videos-sec cmn-gap blog-detail-pg pb-200">
+        <div class="container">
+            <div class="videos-inr">
+                <div class="sec-head">
+                    <h2>More Posts You Might Like</h2>
+                </div>
+                <br><br>
+                {% set grid = collection | getRelatedPosts(collections) %}
+                {% set gridCssClass = 'grid-3 related-posts' %}
+                {% set cardCssClass = 'simple'%}
+                {% set cardType = 'simple'%}
+                {% include "partials/grid.njk" %}
+            </div>
+        </div>
+    </div>
+{%- endif -%}
+<script type="application/ld+json">
+    { "@context": "http://schema.org", 
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{siteConfig.siteUrl}}/{{path}}"
+    },
+    "headline": "{{title}}",
+    "image": "{{siteConfig.siteUrl}}/{{img}}",
+    "publisher": {
+        "@type":"Organization",
+        "name" : "{{siteConfig.siteName}}",
+        "logo": {
+        "@type": "ImageObject",
+        "url": "{{siteConfig.siteUrl}}/img/logo.png"
+        }
+    },
+    "author":{
+        "@type":"Organization",
+        "name" : "{{siteConfig.siteName}}"
+    },
+    "url": "{{siteConfig.siteUrl}}/{{path}}",
+    "datePublished": "{{date}}",
+    "dateCreated": "{{date}}",
+    "dateModified": "{{date}}",
+    "articleBody": "{{ contents | escape }}"
+    }
+</script>
+{% endblock %}

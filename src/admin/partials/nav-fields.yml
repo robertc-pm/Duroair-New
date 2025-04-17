@@ -1,0 +1,9 @@
+- {label: "Nav Title", name: "nav_title", widget: "string", hint: "Optional nav item label (will default to page title)", required: false}
+- {label: "Nav Order", name: "nav_sort", widget: "number", required: false, value_type: "int"}
+- label: "Show in nav?"
+  name: "show_in_menu"
+  widget: "select"
+  required: false
+  options:
+    - { label: "Yes", value: "true" }
+    - { label: "No", value: "false" }

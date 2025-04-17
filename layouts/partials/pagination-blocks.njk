@@ -1,0 +1,32 @@
+{%- set paginationBlockLabelType = paginationBlockLabelType if paginationBlockLabelType else 'post' -%}
+{%- set paginationBlockCollectionKey = paginationBlockCollectionKey if paginationBlockCollectionKey else 'posts' -%}
+<div class="pagination-blocks {% if not next or not previous-%}full{%- endif -%}">
+    <div class="custom-left-page-block">
+    {% if not previous %}
+        {%- set previous = collections[paginationBlockCollectionKey] | last -%}
+    {% endif %} 
+    <a href="/{{ previous.path }}">
+        <span class="pagination-block-label">
+            <img src="/img/next-arrow-forward_svgrepo.com.png" alt="prev-arrow" style="width: 22px; height: 22px;">
+            Previous {{paginationBlockLabelType}}
+        </span>
+    
+    <span class="pagination-block-title">{{ previous.title}}</span>
+    <picture><img src="{{ previous.small_image}}" alt="" loading="lazy"/></picture>
+    </a>
+    </div>
+    <div class="custom-right-page-block">
+    {% if not next %}
+        {%- set next = collections[paginationBlockCollectionKey] | first -%}
+    {% endif %} 
+    <a href="/{{ next.path }}">
+        <span class="pagination-block-label">
+            Next {{paginationBlockLabelType}}
+            <img src="/img/next-arrow-forward_svgrepo.com (1).png" alt="next-arrow" style="width: 22px; height: 22px;">
+        </span>
+    
+    <span class="pagination-block-title">{{ next.title}}</span>
+        <picture><img src="{{ next.small_image}}" alt="" loading="lazy"/></picture>
+        </a>
+    </div>
+</div>

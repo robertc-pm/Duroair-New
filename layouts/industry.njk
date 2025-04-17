@@ -1,0 +1,126 @@
+{% extends "layout.njk" %}
+{% block body %}
+
+    <!-- Transforming Solution Section Begin -->
+
+    <div class="transforming-solution-sec cmn-gap airospace-aviation-pg">
+        <div class="container">
+            <div class="transforming-solution-inr has-texture">
+                <div class="texture"><img src="/img/military-csstdy-texture.png" alt="Texture"></div>
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="transfrom-solution-left"> 
+                            <div class="sec-inr-head">
+                                {{ contents | md }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="transfrom-solution-right row">
+                            <div class="transfromsl-img-wrp">
+                                <div class="transforming-solution-img">
+                                    <img src="{{image_1}}" alt="Image">
+                                </div>
+                                <div class="blob1"></div>
+                            </div>
+                            <div class="transfromsl-img-wrp">
+                                <div class="transforming-solution-img">
+                                    <img src="{{image_3}}" alt="Image">
+                                </div>
+                                <div class="blob1"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End Of Transforming Solution Section -->
+
+    <!-- Expertise Section Begin -->
+
+        <div class="expertise-sec airospace-aviation-pg cmn-gap pt-0">
+            <div class="container">
+                <div class="expertise-inr expertise-bg">
+                    <div class="expertise-cards row">
+                        <div class="expts-card-left-wrp col-lg-6">
+                            <div class="expts-card-left">
+                                <div class="exptscd-img">
+                                    <img src="{{image_2}}" alt="Expertise Image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="expts-card-right-wrp col-lg-6">
+                            <div class="expts-card-right">
+                                {{ secondary_copy | md }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- End Of Expertise Section -->
+
+    <!-- Specialised Section Begin -->
+        <div class="specialised-sec">
+            <div class="container">
+                <div class="specialised-inr">
+                    <div class="gr-brdr"><img src="/img/gr-brdr.png" alt="Gradient Border"></div>
+                    <div class="row">
+                        <div class="specialised-left-wrp">
+                            <div class="spacialised-left">
+                                <div class="sec-inr-head">
+                                    <h2>Specialized Solutions for Your Industry</h2>
+                                </div>
+                                <p>Between manufacturing, MRO, and prototyping, you don’t have time to rearrange your entire facility with the dedicated space.</p>
+                            </div>
+                        </div>
+                        <div class="specialised-slider-wrp">
+                            <div class="specialised-slider cmnslider">
+                                {%- for item in solutions_for_industry -%}
+                                {%- set solution = item | findByField('title', solutions) -%}
+                                {%- if solution -%}
+                                    <div class="specialised-slider-item">
+                                        <div class="specialised-item-inr">
+                                            <a href="/{{ solution.path }}" class="specialised-img">
+                                                <img src="{{ solution.thumbnail }}" alt="{{ solution.title }}">
+                                            </a>
+                                            <div class="specialised-card-content">
+                                                <div class="spcl-card-content-inr">
+                                                    <h3><a href="/{{ solution.path }}">{{ solution.title }}</a></h3>
+                                                    <p>{{ solution.short_description }}</p>
+                                                </div>
+                                                <a href="/{{ solution.path }}">Learn more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {%- endif -%}
+                            {%- endfor -%}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- End Of Specialised Section -->
+
+    <div class="bg-light">
+      {%- if related_products -%}
+        <section class="section">
+            <h3 class="ruled text-center">Duroair Products</h3><br><br>
+            <div class="grid-3 related-products">
+                {%- for p in related_products -%}
+                {%- set item  = p | findByField('title', products) -%}
+                {%- set cardCssClass  = 'card-product' -%}
+                {% include "partials/card.njk" %}
+                {%- endfor -%}
+            </div>
+        </section>
+        {%- endif -%}
+    </div>
+{% endblock %}
+{% block testimonial %}
+{% include "partials/testimonial.njk" %}
+{% endblock %}

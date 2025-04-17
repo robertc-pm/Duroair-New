@@ -1,0 +1,16 @@
+<div class="col-lg-12">
+    <div class="beyond-compliance-in">
+        {%- for b in blocks-%}
+            <!-- ITEM -->
+            <div class="beyond-compliance-item-outer">
+                <div class="beyond-compliance-item">
+                    <div class="beyond-compliance-item-icon">
+                        <object id="svg-{{loop.index}}" data-animate-svg="svg-{{loop.index}}" type="image/svg+xml" data="{{b.icon}}" alt="icon"></object>
+                    </div>
+                    <p>{{b.copy}}</p>
+                </div>
+            </div>
+            <!-- ITEM -->
+        {%- endfor -%}
+    </div>
+</div>

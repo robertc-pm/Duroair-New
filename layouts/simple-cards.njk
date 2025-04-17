@@ -1,0 +1,13 @@
+{% extends "layout.njk" %}
+{% block body %}
+<section class="section">
+    {%- if contents -%}
+        <div class="intro center">{{ contents}}</div>
+    {%- endif -%}
+    {% set grid = collections[collection_key] %}
+    {% set gridCssClass = 'grid-3' %}
+    {% set cardCssClass = 'simple card-' + collection_key %}
+    {% set cardType = 'simple'%}
+    {% include "partials/grid.njk" %}
+</section>
+{% endblock %}

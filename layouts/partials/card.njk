@@ -1,0 +1,30 @@
+<div class="card grid-item {{cardCssClass}} show-on-scroll" data-href="/{{item.path}}" data-scroll data-duration="{{loop.index}}">
+    {%- if  item.jumbotron.img -%}
+    {%- set img = item.jumbotron.img -%}
+    {%- endif-%}
+    {%- if item.thumbnail -%}
+    {%- set img = item.thumbnail -%}
+    {%- endif -%}
+    {%- if item.youtube_url -%}
+    {%- set img = item.youtube_url | getYoutubeThumbnail -%}
+    {%- endif -%}
+    {%- if img -%}
+    <div class="card-img-container">
+        <img src="{{img}}" class="img-responsive card-img" alt="">
+    </div>
+    {%- endif-%}
+    <div class="card-copy">
+        {%- if cardType == 'simple' -%}
+                <p>{{ item.title }}</p>
+            
+        {%- else -%}
+            <h4 class="card-title">{{item.title}}</h4>
+            {%- if item.short_description -%}
+                <p>{{ item.short_description }}</p>
+            {%- else -%}
+                <p>{{ item.title }}</p>
+            {%- endif-%}
+        {%- endif -%}
+        <a href="/{{ item.path }}" class="link-learn-more card-link" title="{{item.title}}">{{ cardLinkLabel if cardLinkLabel else 'Read More'}}</a>
+    </div>
+</div>

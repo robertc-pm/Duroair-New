@@ -1,0 +1,273 @@
+.relative {
+    position: relative;
+}
+
+.static {
+    position: static !important;
+}
+
+.pc {
+    color: @primary-color;
+}
+.text-white{
+    color:#fff;
+}
+.rule {
+    height: 3px;
+    width: 123px;
+    @c1: #17445c;
+    @c2: #2b779f;
+    background: @c1;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, @c1 0%, @c2 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, @c1 0%, @c2 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, @c1 0%, @c2 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@c1', endColorstr='@c2', GradientType=1);
+    /* IE6-9 */
+    transition: all 2s;
+
+    margin: 18px 0;
+
+    &.center {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+.relative{
+    position: relative;
+}
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+.img-full-width {
+    width: 100%;
+    margin: auto;
+}
+
+.narrow-text {
+    max-width: 600px;
+    margin: auto;
+}
+
+.intro {
+    padding: 0 0 72px;
+    max-width: 600px;
+
+    &.center {
+        text-align: center;
+        margin: auto;
+    }
+}
+
+main {
+    ul {
+        margin-bottom: 24px;
+    }
+}
+
+.block {
+    display: block;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.bg-light {
+    background-color: #f4f4f4;
+}
+
+.img-1 {
+    margin-bottom: 24px;
+}
+
+.img-3 {
+    margin-top: 40px;
+}
+
+.icon-block-container {
+    padding: 72px 0 0;
+}
+
+.icon-block {
+    max-width: 300px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 48px;
+
+    object {
+        margin-bottom: 16px;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+[data-href] {
+    cursor: pointer;
+}
+
+.page-request-for-quote-success,
+.page-industries {
+    background-color: #fafafa;
+}
+
+.success {
+    #hero {
+        .jumbo-content {
+            text-align: center;
+        }
+    }
+}
+
+.full-bg {
+    background: #fff 50% 50% no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 427px;
+}
+
+.muted {
+    font-size: 12px;
+    color: #a2a2a2;
+    letter-spacing: 0.72px;
+    line-height: 22px;
+}
+
+.shadow {
+    box-shadow: 0 30px 24px -15px rgba(74, 61, 54, 0.2);
+}
+
+.paddless-p {
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.collapse-trigger {
+    margin:0;
+    background: #fff;
+    padding: 22px;
+    position: relative;
+    .h4;
+    color: @black;
+    cursor: pointer;
+    padding-right: 40px;
+
+    &:after {
+        content: '';
+        display: block;
+
+        .square(30px);
+        font-size: 44px;
+        color: @primary-color;
+        position: absolute;
+        @p: 16px;
+        top: @p;
+        right: @p;
+        font-weight: normal;
+        background: url('/img/icons/icon-plus.svg') 50% 50% no-repeat;
+    }
+}
+.collapse-trigger-container{
+    border:1px solid #979797;
+    box-shadow: 0px 7px 36px -14px rgba(0, 0, 0, .3);
+    &.active {
+        .collapse-trigger {
+            &::after {
+                background: url('/img/icons/icon-minus.svg') 50% 50% no-repeat;
+            }
+        }
+    }
+}
+.collapsible{
+    display: none;
+    opacity: 0;
+    transition: all 1.5s ease-out;
+    &.active {
+        display: block;
+        opacity: 1;
+    }
+}
+
+
+//animation
+.generate-animation-delays(10);
+
+.generate-animation-delays(@n, @i: 1) when (@i =< @n) {
+    [data-animation-delay='@{i}'] {
+        transition-delay: @i * 0.08s !important;
+    }
+
+    .generate-animation-delays(@n, (@i + 1));
+}
+
+.fade-up {
+
+    &.animated {
+        position: relative;
+        top: 32px;
+        transition: 1.3s all;
+        will-change: top, opacity;
+        opacity: 0;
+    }
+
+    &.is-visible {
+        top: 0;
+        opacity: 1;
+    }
+}
+.bg-white{
+    background: #fff;
+}
+
+
+.product-intro p + ul {
+    margin-top: -16px;
+}
+.pb-0{
+    padding-bottom: 0;
+}
+.pt-0{
+    padding-top: 0!important;
+}
+.max-w-600{
+    max-width: 600px;
+}
+.max-w-800{
+    max-width: 800px;
+}
+.overflow-x-hidden{
+    overflow-x: hidden;
+}
+@media screen and (min-width: @screen-sm-min) {
+    .img-1 {
+        margin-bottom: 0;
+    }
+
+    .icon-block-container {
+        padding: 72px 0 0;
+    }
+
+    .icon-block {
+        margin: 0 auto;
+    }
+
+    .img-intro {
+        max-width: 449px;
+    }
+
+    .page-products,
+    .related-products {
+        .card-img {
+            width: 359px;
+            height: 254px;
+        }
+    }
+}

@@ -1,0 +1,76 @@
+{% extends "layout.njk" %}
+{% block body %}
+
+        <!-- Cmn About Section Begin -->
+
+        <div class="cmn-about-sec cmn-gap industry-associates-pg">
+            <div class="container">
+                <div class="cmn-about-inr">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="cmn-about-right">
+                                <div class="sec-inr-head">
+                                    <h2>{{ head }}</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 industry-associates-content-wrp">
+                            <div class="industry-associates-content">
+                                <p>{{ desc }}</p>
+                            </div>
+                        </div>
+                        <div class="industry-associates-img-wrp">
+                            <div class="blob1"></div>
+                            <div class="blob2"></div>
+                            <div class="industry-associates-img">
+                                <img src="{{ image }}" alt="Industry Associations">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- End Of Cmn About Section -->
+
+    <!-- Industry Partner Section Begin -->
+
+        <div class="industry-partner-sec">
+            <div class="container">
+                <div class="industry-partner-inr">
+                    <div class="sec-head newhedline">
+                        <h2>Our Industry Association Partners</h2>
+                    </div>
+                    {% include "partials/associations.njk" %}
+                </div>
+            </div>
+        </div>
+
+    <!-- End Of Industry Partner Section -->
+
+    <!-- Learn Duroair Section Begin -->
+
+        <div class="learn-duroair-sec cmn-gap">
+            <div class="container">
+                <div class="learn-duroair-inr">
+                    <div class="learn-duroair-wrp">
+                        <div class="learn-duroair-img">
+                            <img src="/img/learn-duroair-img.png" alt="Learn Duroair">
+                        </div>
+                        <div class="learn-duroair-content">
+                            <h2>Learn How Duroair Designs Flexible Solutions Move With Your Workflow</h2>
+                            {% if cta %}
+                            <a href="{{cta.url}}" class="cmn-btn button">Contact Us Today <span class="button__spotlight"></span></a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- End Of Learn Duroair Section -->
+
+{% endblock %}
+{% block testimonial %}
+{% include "partials/testimonial.njk" %}
+{% endblock %}

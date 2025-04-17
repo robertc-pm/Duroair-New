@@ -1,0 +1,23 @@
+- name: "home"
+  label: "Home"
+  file: "src/content/index.md"
+  fields:
+    - {label: "Layout", name: "layout", widget: "hidden", default: "home.njk"}
+    <!-- @include-static ../partials/base-fields.yml -->
+    <!-- @include-static ../partials/jumbotron.yml -->
+    - {label: Intro, name: body, widget: markdown }
+    - {label: "Image 1", name: "image_1", widget: "image"}
+    - {label: Copy Block 1, name: copy_block_1, widget: markdown }
+    - name: video
+      label: Video
+      widget: object
+      fields:
+        - { name: type, label: Video Type, widget: select, options: ["upload", "url"], default: "url" }
+        - { name: video_file, label: Upload Video, widget: file, required: false }
+        - { name: video_url, label: Video URL, widget: string, required: false }
+    - {label: "Banner heading", name: "ban_head", widget: "string"}
+    - {label: "Banner CTA", name: "ban_cta", widget: "string"}
+    - {label: "Banner description", name: "ban_desc", widget: "markdown"}
+    - {label: "Image 2", name: "image_2", widget: "image"}
+    - {label: Copy Block 2, name: copy_block_2, widget: markdown }
+    - {label: "Image 3", name: "image_3", widget: "image"} 

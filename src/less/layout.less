@@ -1,0 +1,94 @@
+main{
+    // padding:32px 0 ;
+    position: relative;
+}
+.container, .section {
+    max-width: 1284px;
+    width: 100%;
+    margin: auto;
+    display: block;
+    position: relative;
+
+    &.wide {
+        max-width: 1500px;
+    }
+}
+.footer-bg .container {
+    max-width: 1120px;
+}
+
+ .section{
+    padding: 56px 16px;
+    max-width: 1170px;
+    &.full{
+        padding-left:0;
+        padding-right:0;
+        max-width: none;
+    }
+    &.narrow{
+        max-width: 1200px;
+        margin:auto;
+    }
+}
+.container {
+    padding: 0 16px;
+}
+
+@media screen and (min-width: @screen-sm-min) {
+    main{
+        // padding:112px 0;
+    }
+     .section {    
+        padding: 72px 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+}
+
+@media screen and (min-width: @screen-md-min) {
+}
+@media screen and (min-width: @screen-lg-min) {
+    
+}
+
+.low-margin * {
+    margin-bottom: 0;
+}
+
+
+.case-study-details .pagination-blocks {
+    display: flex
+;
+    width: 1150px;
+    margin: 0px auto;
+    gap: 40px;
+}
+.case-study-details {
+    padding-bottom: 60px;
+}
+
+.section.narrow.custom h1 {
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 600;
+    font-family: 'Inter';
+    color: #003A70;
+}
+
+.section.narrow.custom h4 {
+    font-size: 24px;
+    line-height: 26px;
+    font-weight: 600;
+    font-family: 'Inter';
+    color: #003A70;
+}
+
+.section.narrow.custom p, ul li {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    font-family: 'Inter';
+    color: #353535;
+}

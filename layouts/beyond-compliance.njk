@@ -1,0 +1,108 @@
+{% extends "layout.njk" %}
+{% block body %}
+
+<!-- Transforming Solution Section Begin -->
+
+        <div class="transforming-solution-sec cmn-gap airospace-aviation-pg beyond-compliance-pg">
+            <div class="container">
+                <div class="transforming-solution-inr has-texture">
+                    <div class="texture"><img src="/img/military-csstdy-texture.png" alt="Texture"></div>
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="transfrom-solution-left">
+                                <div class="sec-inr-head">
+                                    <h2 class="mb-4">{{ heading }}</h2>
+                                    <p>{{ description | nl2br  }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="cmn-about-left">
+                                <div class="cmnabt-img-wrp-outer">
+                                    <div class="cmnabt-img-wrp-inr">
+                                        <img src="{{image_1}}" alt="Image">
+                                    </div>
+                                    <div class="blob1"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- End Of Transforming Solution Section -->
+
+    <!-- BEYOND-COMPLIANCE-SECTION -->
+     
+        {%- include "partials/beyond-compliance-icon-blocks.njk" -%}
+
+    <!-- BEYOND-COMPLIANCE-SECTION -->
+
+
+
+<!-- Tech Specs Section Begin -->
+
+    <div class="tech-specs-sec cmn-gap beyond-compliance-pg pb-0">
+        <div class="container">
+            <div class="tech-specs-inr">
+                <div class="sec-head-wrp">
+                    <div class="sec-head newhedline">
+                        <h2>We’ve Got Your Compliance Covered</h2>
+                    </div>
+                    <p>We can design a responsive solution to meet your industry’s clean air standards, including the following environmental and safety requirements.</p>
+                </div>
+                <div class="dcap-classification-wrp">
+                    <div class="dcap-classification-content" style="display: block !important;">
+                        <div class="dcapclfication-table">
+                         {% include "partials/compliance-table.njk" %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- End Of Tech Specs Section -->
+
+<!-- Tailored To Your Industry Section Begin -->
+
+        <div class="tailored-to-your-industry-sec cmn-gap">
+            <div class="container">
+                <div class="tailored-to-your-industry-inr">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="tailored-to-your-industry-left">
+                                <svg width="0" height="0" style="position:absolute;">
+                                    <clipPath id="cstm-shape">
+                                        <path d="M17.9629 433.008C8.57406 433.008 0.962891 425.397 0.962891 416.008V17.0867C0.962891 6.92418 9.8713 -0.964061 19.9652 0.214884C244.238 26.4095 329.118 42.5529 430.88 162.459L372.69 297.733L324.702 409.29C319.876 420.511 328.105 433.008 340.319 433.008H430.88H17.9629Z" fill="url(#pattern0_19161_378)"/>
+                                        <path d="M789.963 416.542C789.963 425.636 782.591 433.008 773.497 433.008H430.88H340.319C328.105 433.008 319.876 420.511 324.702 409.29L372.69 297.733L430.88 162.459C516.691 268.557 631.249 365.813 789.963 405.894L789.963 416.542V416.542Z" fill="url(#pattern1_19161_378)"/>
+                                    </clipPath>
+                                </svg>                                    
+                                <div class="tailoredtoind-img">
+                                    <img src="{{ image_2 }}" alt="Image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="tailored-to-your-industry-right">
+                                <div class="sec-inr-head">
+                                    <h2>{{ outro_head }}</h2>
+                                </div>
+                                <p>{{ outro_desc | md }}</p>
+                                <div class="tailored-to-your-industry-right-btn">
+                                    <a href="/industries/" class="cmn-btn button">Industries<span class="button__spotlight"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- End Of Tailored To Your Industry Section -->
+
+{% endblock %}
+{% block testimonial %}
+{% include "partials/testimonial.njk" %}
+{% endblock %}

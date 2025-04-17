@@ -1,0 +1,218 @@
+{% extends "layout.njk" %}
+{% block body %}
+<!-- INDUSTRIES-SECTION -->
+<div class="industries-wrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-heading">
+                    <h2>Built for Your Industry,<br> Customized for You</h2>
+                </div>
+                <div class="section-content">
+                    <p>Duroair engineers industrial air filtration, ISO clean rooms, and other controlled, clean air environments to meet your industry’s niche specifications for compliance and safety while protecting sensitive processes from contamination.</p>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="industries-in">
+                    <!-- TAB-SLIDER -->
+                    <ul class="nav nav-pills tab-slider" id="pills-tab" role="tablist">
+                        {%- for industry in industries -%}
+                        <div>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link {% if loop.first %} active {% endif %}" id="pills-{{ loop.index }}-tab"
+                                    data-bs-toggle="pill" data-bs-target="#pills-{{ loop.index }}" type="button"
+                                    role="tab" aria-controls="pills-{{ loop.index }}" 
+                                    aria-selected="{{ 'true' if loop.first else 'false' }}">
+                                    {{ industry.title }}
+                                </button>
+                            </li>
+                        </div>
+                        {%- endfor -%}
+                    </ul>
+                    <!-- TAB-SLIDER -->
+
+                    <!-- TAB-GRID -->
+                    <div class="tab-content" id="pills-tabContent">
+                        {%- for industry in industries -%}
+                        <div class="tab-pane fade {% if loop.first %} show active {% endif %}" id="pills-{{ loop.index }}"
+                            role="tabpanel" aria-labelledby="pills-{{ loop.index }}-tab" tabindex="0">
+                            <div class="industries-grid">
+                                <div class="industries-grid-left">
+                                    <div class="industries-grid-box">
+                                        <div class="industries-grid-text">
+                                            <h2>{{ industry.title }}</h2>
+                                            <p>{{ industry.short_description }}</p>
+                                            <a href="{{ industry.path }}" class="button">Explore Now<span class="button__spotlight"></span></a>
+                                        </div>
+                                        <img src="{{ industry.thumbnail }}" alt="{{ industry.title }}">
+                                    </div>
+                                </div>
+                                <div class="industries-grid-right">
+                                    {%- if industry.image_1 -%}
+                                    <div class="industries-grid-box">
+                                        <div class="industries-grid-text">
+                                            <h2>{{ industry.text_1 }}</h2>
+                                        </div>
+                                        <img src="{{ industry.image_1 }}" alt="{{ industry.text_1 }}">
+                                    </div>
+                                    {%- endif -%}
+
+                                    {%- if industry.image_2 -%}
+                                    <div class="industries-grid-box">
+                                        <div class="industries-grid-text">
+                                            <h2>{{ industry.text_2 }}</h2>
+                                        </div>
+                                        <img src="{{ industry.image_2 }}" alt="{{ industry.text_2 }}">
+                                    </div>
+                                    {%- endif -%}
+
+                                    {%- if industry.image_3 -%}
+                                    <div class="industries-grid-box">
+                                        <div class="industries-grid-text">
+                                            <h2>{{ industry.text_3 }}</h2>
+                                        </div>
+                                        <img src="{{ industry.image_3 }}" alt="{{ industry.text_3 }}">
+                                    </div>
+                                    {%- endif -%}
+                                </div>
+                            </div>
+                        </div>
+                        {%- endfor -%}
+                    </div>
+                    <!-- TAB-GRID -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- INDUSTRIES-SECTION -->
+
+
+
+<!-- WHY-CHOOSE-DUROAIR-SECTION -->
+    
+        <div class="why-choose-duroair pb-170">
+            <div class="container">
+            <div class="why-choose-inr">
+                <div class="row">
+                <div class="col-lg-10">
+                    <div class="why-choose-duroair-in">
+                    <h3>Why choose Duroair</h3>
+                    <p> We engineer flexible, end-to-end clean air solutions that meet EHS, safeguard employees, and
+                        maximize productivity.
+                    </p>
+                    </div>
+                </div>
+                </div>
+                <div class="why-choose-duroair-box">
+                <h3><span class="numbercount">99</span>%</h3>
+                <p>The patented DuroPure system safely captures and destroys 99+ percent of airborne particulates</p>
+                </div>
+                <div class="why-choose-duroair-box">
+                <h3><span class="numbercount">20</span>%</h3>
+                <p>DuroRoom enclosures retract to 20% of their extended length</p>
+                </div>
+                <div class="why-choose-duroair-box">
+                <h4>Unlimited Customization</h4>
+                <p>From large-capacity hardwall clean rooms to portable paint booths</p>
+                </div>
+            </div>
+            </div>
+        </div>
+
+    <!-- WHY-CHOOSE-DUROAIR-SECTION -->
+
+<!-- CLEAN-AIR-APPLICATIONS-SECTION -->
+
+<div class="clean-air-app-wrap">
+    <div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+        <div class="section-heading">
+            <h2>Clean Air Applications</h2>
+        </div>
+        </div>
+        <div class="col-lg-12">
+        <div class="clean-air-app-grid row">
+            {%- for solution in solutions -%}
+            <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="clean-air-app-item">
+                <a href="/{{solution.path}}"> <span>{{solution.title}}</span>
+                <img src="{{solution.thumbnail}}" alt="Image">
+                <span class="btn-arw-icon"><img src="/img/arw-btn-icon.svg" alt="Icon"></span>
+                </a>
+            </div>
+            </div>
+            {%- endfor -%}
+        </div>
+        </div>
+    </div>
+    </div>
+</div>
+<!-- CLEAN-AIR-APPLICATIONS-SECTION -->
+
+
+    <!-- BEYOND-COMPLIANCE-SECTION -->
+
+        <div class="beyond-compliance-wrap beyond-compliance-pg">
+            <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                <div class="section-heading">
+                    <h2>Beyond Compliance</h2>
+                </div>
+                </div>
+                {%- include "partials/beyond-compliance-icon-blocks.njk" -%}
+                <div class="col-lg-12">
+                <div class="section-cta">
+                    <a href="/about/beyond-compliance/" class="button">Learn More<span class="button__spotlight"></span></a>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+    <!-- BEYOND-COMPLIANCE-SECTION -->
+
+    <!-- RESPONSIVE-REQUIREMENTS-SECTION -->
+        <div class="responsive-requirements-wrap">
+            <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                <div class="responsive-requirements-in">
+                    <div class="responsive-requirements-image"> 
+                        <video autoplay="true" loop="true" muted="true" src="/img/responsive-section.mp4" class="visible"></video>
+                    </div>
+                    <div class="responsive-requirements-text">
+                    <h2>{{ ban_head }}</h2>
+                    <p>{{ ban_desc }}</p>
+                    <a href="/about/how-we-work/" class="button white-btn">How We Work <span class="button__spotlight"></span></a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    <!-- RESPONSIVE-REQUIREMENTS-SECTION -->
+    </section>
+</div>
+
+   <div class="global-leaders-wrap">
+            <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                <div class="section-heading">
+                    <h2>Trusted by Global Leaders</h2>
+                </div>
+                </div>
+                <div class="col-lg-12">
+                  {% include "partials/solutions-delivered.njk" %}
+                </div>
+            </div>
+            </div>
+        </div>
+
+{% include "partials/testimonial.njk" %}
+
+
+{% endblock %}

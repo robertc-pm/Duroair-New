@@ -1,0 +1,57 @@
+{% extends "layout.njk" %}
+{% block body %}
+<section class="section narrow custom">
+    <h1 class="h3">{{ headline }}</h1><br><br>
+    <h4>Situation</h4>
+    {{ situation | md }}
+</section>
+
+<div class="container">
+<div class="case-study-detail-imgs cmn-gap has-texture newtexturepos">
+                        <div class="texture">
+                            <img src="/img/shape-4.png" alt="Texture">
+                        </div>
+                        <div class="texture-2 texture">
+                            <img src="/img/shape-4.png" alt="Texture">
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="case-study-detail-img-wrp">
+                                    <div class="case-study-detail-img">
+                                    {%- if main_image_1 -%}
+                                        <img src="{{ main_image_2 }}" alt="Case Study Detail Image">
+                                    {%- endif -%}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+</div>
+<section class="section narrow custom">
+    <h4>Solution</h4>
+    {{ solution | md }}
+    
+    <br><br>
+    <img src="{{ results_image }}" alt="Case Study Detail Image">
+    <h4>Results</h4>
+    {{ results | md }}
+    {%- if testimonial -%}
+    <br><br><br>
+    <p class="pc h4">&quot;{{ testimonial.quotation }}&quot;</p>
+    <div class="muted">{{ testimonial.attestant}}</div> 
+    {%- endif-%}
+    {% if cta %}
+                <div class="blog-cta">
+                    <div class="blog-cta-copy">
+                        {{cta.copy}}
+                    </div>
+                    <a href="{{cta.url}}" class="btn">{{cta.label}}</a>
+                </div>
+            {% endif %}
+</section>
+<div class="case-study-details">
+{%- set paginationBlockLabelType = 'case' -%}
+{%- set paginationBlockCollectionKey = 'caseStudies' -%}
+{%- include 'partials/pagination-blocks.njk' -%}
+{% endblock %}
+</div>

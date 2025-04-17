@@ -1,0 +1,21 @@
+{%- if not hideFooterCta -%}
+{%- set footerCtaHeadline = cta.headline if cta.headline else "Clean Air, Clear Solutions.<br>Let's Talk!" -%}
+{%- set footerCtaCopy = cta.copy if cta.copy else 'Contact us today to discuss how we can design a customized, clean-air solution to meet your compliance and safety requirements while solving your workflow challenges.' -%}
+{%- set footerCtaUrl = cta.url if cta.url else '/request-for-quote/' -%}
+{%- set footerCtaLabel = cta.label if cta.label else 'Request for Quote' -%}
+<div class="footer-cta-bg">
+    <div class="container">
+        <div class="footer-cta">
+            <div>
+                <div class="h3">{{ footerCtaHeadline}}</div>
+                <p class="footer-cta-copy">
+                        {{ footerCtaCopy }}
+                </p>
+            </div>
+            <div>
+            <a href="{{ footerCtaUrl }}" class="button">{{ footerCtaLabel }} <span class="button__spotlight"></span></a>
+            </div>
+        </div>
+    </div>
+</div>
+{%- endif -%}

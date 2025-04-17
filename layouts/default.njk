@@ -1,0 +1,12 @@
+{% extends "layout.njk" %}
+{% block body %}
+{%- if grayBg -%}
+<div class="bg-light">
+{%- endif -%}
+<section class="section">
+    {{ contents | safe }}
+</section>
+{%- if grayBg -%}
+</div>
+{%- endif -%}
+{% endblock %}

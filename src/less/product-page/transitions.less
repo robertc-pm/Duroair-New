@@ -1,0 +1,87 @@
+[data-on-view] {
+  --duration: 1.3s;
+  transition-duration: var(--duration);
+}
+
+.onview-debug {
+  [data-on-view] {
+    border: 1px dashed rgba(255, 0, 0, 0.75);
+  }
+}
+.duration-5{
+  --duration: .5s;
+}
+.on-view-ready{
+}
+.fade-in-left {
+  transform: translateX(-100px);
+  opacity: 0;
+  transition: tranform var(--duration) ease-out, opacity calc(var(--duration / 3)) ease-out;
+}
+
+.fade-in-right {
+  transform: translateX(130px);
+  opacity: 0;
+  transition: tranform var(--duration) ease-out, opacity calc(var(--duration / 3)) ease-out;
+}
+
+.fade-in-up {
+  transform: translateY(130px);
+  opacity: 0;
+  transition: tranform var(--duration) ease, opacity .3s ease-out;
+}
+
+.fade-in-down {
+  transform: translateY(-130px);
+  opacity: 0;
+  transition: tranform var(--duration) ease, opacity .3s ease-out;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1.4s;
+}
+
+.inview {
+  .fade-in-left, .fade-in-right, .fade-in-up, .fade-in-down {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+@keyframes breath {
+  0% {
+    animation-timing-function: ease-in-out;
+  }
+
+  50% {
+    transform: translate(3px, -10px) perspective(1px);
+    //text-shadow: 0 0 40px var(--glow-color);
+  }
+  100%{}
+}
+
+@media (prefers-reduced-motion:no-preference) and (min-width: @screen-sm-min) {
+  .jumbotron-headline > span {
+    display: inline-block;
+    white-space: break-spaces;
+    --glow-color: white;
+  }
+
+
+  .jumbotron-headline >span {
+    animation: breath 5s ease calc(var(--index) * 100 * 1ms) 5 alternate;
+  }
+}
+

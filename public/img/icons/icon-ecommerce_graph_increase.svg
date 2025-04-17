@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="39" height="54" viewBox="0 0 39 54">
+  <g fill="none" fill-rule="evenodd" stroke="#3C83B7" stroke-width="2" transform="translate(1 1)">
+    <rect width="10" height="15" y="37"/>
+    <rect width="10" height="38" x="27" y="14"/>
+    <rect width="10" height="26" x="14" y="26"/>
+    <g transform="translate(3)">
+      <path d="M0,31 L31,0"/>
+      <polyline stroke-linejoin="bevel" points="21.784 0 31 0 31 9.216"/>
+    </g>
+  </g>
+</svg>

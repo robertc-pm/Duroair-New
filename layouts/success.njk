@@ -1,0 +1,33 @@
+{% extends "layout.njk" %}
+{%- set hideFooterCta = true -%}
+{% set waveType = 'gray' %}
+{% block body %}
+    <script>
+        window.indNoPromo = true;
+    </script>
+
+    <!-- Thank You Section -->
+
+        <div class="thank-you-sec cmn-gap has-texture">
+            <img src="/img/texture-thank.png" alt="Image" class="texture-nw">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="thank-you-wrp">
+                            <div class="thank-you-inr text-center">
+                                {{ contents | safe }}
+                            </div>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- End Of Thank You Section -->
+
+    <div class="btm-img">
+        <img src="/img/thankyou-btm-img.png" alt="Image">
+    </div>
+
+    <!-- LETS-TALK-SECTION -->
+{% endblock %}

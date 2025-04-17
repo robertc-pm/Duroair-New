@@ -1,0 +1,170 @@
+{% extends "layout.njk" %}
+{% set waveType = 'gray' %}
+{% block body %}
+
+<!-- Our Lagecy Section Begin -->
+
+    <div class="lagecy-sec">
+      <div class="container">
+        <div class="lagecy-inr">
+          <div class="lagecy-inr-row row">
+            <div class="lagecy-left-wrp col-lg-6">
+              <div class="lagecy-left">
+                <div class="sec-inr-head">
+                  <h2>{{ about_intro.heading }}</h2>
+                </div>
+                <div class="lagecy-content">
+                  {{ about_intro.description | md }}
+                </div>
+              </div>
+            </div>
+            <div class="lagecy-right-wrp col-lg-6">
+                <div class="lagecy-right">
+                    <div class="lagecy-right-imges">
+                        <div class="img-1 lagecy-img-wrp">
+                            <img src="{{ about_intro.image_1 }}" alt="Lagecy image">
+                        </div>
+                        <div class="img-2 lagecy-img-wrp">
+                            <img src="{{ about_intro.image_2 }}" alt="Lagecy Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- End Of Our Lagecy Section -->
+
+<!-- Nederman Section Begin -->
+
+<div class="nederman-sec">
+  <div class="container">
+      <div class="nederman-inr">
+          <div class="heading">
+              <h2>{{ a_nederman_company.heading }}</h2>
+          </div>
+          <div class="nederman-content">
+            {{ a_nederman_company.description | md }}
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- End Of Nederman Section -->
+
+<!-- Milestonse Section begin -->
+
+<div class="milestones-sec">
+    <div class="container-fluid">
+        <div class="sec-head">
+                <h2>Key Milestones</h2>
+          </div>
+        <div class="mlstn-inr">
+            <div class="timeline-container">
+                <div class="timeline">
+                    {%- for item in key_milestone.milestone_head -%}
+                    <div class="segment">{{ item.main_head }}</div>
+                    {%- endfor -%}
+                </div>
+                {%- for item in key_milestone.milestone_achi -%}
+                <div class="event">
+                    <div class="event-dtls">
+                        <h2>{{ item.achi_year }}</h2>
+                        <p>{{ item.achi_description | md }}</p>
+                    </div>
+                    <div class="dot"></div>
+                </div>
+                {%- endfor -%}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- End of Milestonse Section --> 
+
+<!-- Expertise Section Begin -->
+
+<div class="expertise-sec">
+  <div class="container">
+      <div class="expertise-inr">
+          <div class="sec-head">
+              <h2>Our Expertise</h2>
+          </div>
+          {%- for item in our_experties -%}
+          <div class="expertise-cards row">
+              <div class="expts-card-left-wrp col-lg-6">
+                  <div class="expts-card-left">
+                      <div class="exptscd-img">
+                          <img src="{{ item.image }}" alt="Expertise Image">
+                      </div>
+                  </div>
+              </div>
+              <div class="expts-card-right-wrp col-lg-6">
+                  <div class="expts-card-right">
+                      <div class="sec-inr-head">
+                          <h3 class="h2-title">{{ item.heading }}</h3>
+                      </div>
+                      <div class="lagecy-content">
+                        {{ item.description | md }}
+                      </div>
+                  </div>
+              </div>
+          </div>
+          {%- endfor -%}
+      </div>
+  </div>
+</div>
+
+<!-- End Of Expertise Section -->
+
+<!-- More About Section Begin -->
+
+<div class="more-abt-sec">
+  <div class="container">
+      <div class="moreabt-inr">
+          <div class="sec-head">
+              <h2>Learn More About Duroair</h2>
+          </div>
+          <div class="mrabt-cards-outer">
+              <div class="mrabt-cards-row row">
+                {%- for card in cards -%}
+                  <div class="mr-abt-card col-lg-6 col-md-6 col-sm-6">
+                      <div class="mr-abt-card-inr" data-href="{{card.url}}">
+                          <div class="mrabtcdimg">
+                              <img src="{{card.image}}" alt="More About Card icon">
+                          </div>
+                          <div class="mrabtcdtitle">
+                              <h3>{{card.title}}</h3>
+                          </div>
+                      </div>
+                  </div>
+                  {%- endfor %}
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- End Of More About Section -->
+
+
+<!-- GLOBAL-LEADERS-SECTION -->
+  <div class="global-leaders-wrap pb-170">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <h2>Duroair's Global Impact </h2>
+          </div>
+        </div>
+        <div class="col-lg-12">
+         {% include "partials/solutions-delivered.njk" %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- GLOBAL-LEADERS-SECTION -->
+
+{% endblock %}

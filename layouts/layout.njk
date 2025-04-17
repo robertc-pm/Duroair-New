@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {% include "partials/head.njk" %}
+    {% block additionalHead %}{% endblock %}
+    <link href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="page-{{ path | cssClassify }} {{ layout | cssClassify }}">
+    {%- include "partials/gtm-noscript.njk" -%}
+    {% include "partials/header.njk" %}
+    {% include "partials/jumbotron.njk" %}
+    <main>
+        {% block body %}{% endblock %}
+    </main>
+    {% block testimonial %}{% endblock %}
+    {% include "partials/footer-cta.njk" %}
+    {% include "partials/footer.njk" %}
+    {% block additionalScripts %}{% endblock %}
+    
+</body>
+</html>

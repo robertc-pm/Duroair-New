@@ -1,0 +1,14 @@
+<link rel="canonical" href="{{ siteConfig.siteUrl }}/{{ path }}">
+<meta name="description" content="{{ seo.description if seo.description else '' }}">
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="{{title}}" />
+<meta property="og:description" content="{{seo.description}}" />
+<meta property="og:url" content="{{siteConfig.siteUrl}}/{{path}}" />
+<meta property="og:site_name" content="{{siteConfig.siteName}}" />
+{% if jumbotron.img %}
+<meta property="og:image" content="{{ siteConfig.siteUrl }}/{{ jumbotron.img}}">
+{% else %}
+<meta property="og:image" content="{{ siteConfig.siteUrl }}/img/og-image-default.jpg">
+{% endif%}
+{% if private or seo.noindex %}<meta name="robots" content="noindex, nofollow">{% endif%}

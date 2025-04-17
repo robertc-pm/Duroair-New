@@ -1,0 +1,8 @@
+- label: Testimonial
+  name: "testimonial"
+  widget: "object"
+  required: false
+  fields:
+    - {label: "Qotation", name: "quotation", widget: "string", required: false, 'hint':"Do not surround with quotes."}
+    - {label: "Attestant", name: "attestant", 'hint': "The person who said it ",  widget: "string", required: false}
+    - {label: "Company", name: "company", 'hint': "Job title, company",  widget: "string", required: false}

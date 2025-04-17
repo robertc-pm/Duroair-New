@@ -1,0 +1,212 @@
+{% extends "layout.njk" %}
+{% block body %}
+
+<!-- Cmn About Section Begin -->
+
+        <div class="cmn-about-sec cmn-gap durocap-about-sec">
+            <div class="container">
+                <div class="cmn-about-inr">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="cmn-about-right">
+                                <div class="cmn-about-right-inr">
+                                    <div class="sec-inr-head">
+                                        <h2>{{ product_intro.heading }}</h2>
+                                    </div>
+                                    <div class="cmnabt-box">
+                                        <p>{{ product_intro.description | md }}</p>
+                                    </div>
+                                    <a href="/contact-us/" class="cmn-btn button"><span class="button__spotlight"></span>Contact Us</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="cmn-about-left">
+                                <div class="cmnabt-img"><img src="{{ thumbnail }}" alt="Image"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- End Of Cmn About Section -->
+
+    <!-- DuroCap Features Section Begin -->
+
+<div class="durocap-features-sec has-texture newtexturepos cmn-gap">
+    <div class="container">
+        <div class="durocap-features-inr">
+            <div class="texture">
+                <img src="/img/shape-4.png" alt="Texture">
+            </div>
+            <div class="texture-2 texture">
+                <img src="/img/shape-4.png" alt="Texture">
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="durocap-features-left">
+                        <div class="durocap-features-img-col pt">
+                            <div class="dcapfture-img">
+                                <img src="{{ key_images.image_1 }}" alt="DuroCap Features Image">
+                            </div>
+                            <div class="dcapfture-img">
+                                <img src="{{ key_images.image_2 }}" alt="DuroCap Features Image">
+                            </div>
+                        </div>
+                        <div class="durocap-features-img-col pb">
+                            <div class="dcapfture-img">
+                                <img src="{{ key_images.image_3 }}" alt="DuroCap Features Image">
+                            </div>
+                            <div class="dcapfture-img">
+                                <img src="{{ key_images.image_4 }}" alt="DuroCap Features Image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="durocap-features-right">
+                        <div class="sec-inr-head">
+                            <h2>Key Features</h2>
+                        </div>
+                        <div class="durocap-features-items-wrp">
+                            {%- for item in new_key_features -%}
+                            <div class="durocap-features-item reasons-accrdn-card">
+                                <div class="dcapftures-heading reasonsaccr-head">
+                                    <h3>{{ item.heading }}</h3>
+                                    <span class="chevron">
+                                        <i class="fa-solid fa-chevron-up"></i>
+                                    </span>
+                                </div>
+                                <div class="dcapftures-content">
+                                    <p>{{ item.description | md }}</p>
+                                </div>
+                            </div>
+                            {%- endfor -%}
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- End Of DuroCap Features Section -->
+
+
+    <!-- Tech Specs Section Begin -->
+
+<div class="tech-specs-sec cmn-gap has-texture dcap-pg">
+    <div class="nwtexture"><img src="/img/oval-texture.png" alt="Texture"></div>
+    <div class="container">
+        <div class="tech-specs-inr">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="tech-specs-left">
+                        <div class="sec-inr-head">
+                            <h2>{{ techncal_specification.technical_heading }}</h2>
+                        </div>
+                        <div class="tecspecs-list mb-5">
+                            <p>{{ techncal_specification.technical_description | md }}</p>
+                        </div>
+                        {%- if brochure and brochure | length > 0 -%}
+                            <a href="{{ brochure }}" class="cmn-btn button" target="_blank">
+                                {{ btn_label | default("Download Brochure") }}
+                                <span class="button__spotlight"></span>
+                            </a>
+                        {%- endif -%}
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="tech-specs-right has-texture">
+                        <div class="radial-shape"><img src="/img/radial-shape.png" alt="Shape"></div>
+                        <div class="tecspecs-img">
+                            <img src="{{ image_2 }}" alt="Image">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="dcap-classification-wrp">
+                <div class="dcapclassification-heading">
+                    <h4>{{ title }} ISO 14644-1 Classifications</h4>
+                    <span class="dcap-classification-icon">
+                        <i class="fa-solid fa-plus"></i>
+                    </span>
+                </div>
+                <div class="dcap-classification-content">
+                    <p>All classifications are in accordance with U.S. Federal Standard 209E and represent concentrations of particles using reference size of 0.5 micron.</p>
+                    <div class="dcapclfication-table">
+                        {%- if compliance and compliance | length > 0 -%}
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>Code Compliance</td>
+                                        <td>Code Description</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {%- for item in compliance -%}
+                                        <tr>
+                                            <td><strong>{{ item.code }}</strong></td>
+                                            <td>{{ item.description | md }}</td>
+                                        </tr>
+                                    {%- endfor -%}
+                                </tbody>
+                            </table>
+                        {%- endif -%}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- End Of Tech Specs Section -->
+
+    <!-- Specialised Section Begin -->
+
+<div class="specialised-sec">
+    <div class="container">
+        <div class="specialised-inr">
+            <div class="gr-brdr"><img src="/img/gr-brdr.png" alt="Gradient Border"></div>
+            <div class="row">
+                <div class="specialised-left-wrp">
+                    <div class="spacialised-left">
+                        <div class="sec-inr-head">
+                            <h2>Precision-Engineered for Your Application</h2>
+                        </div>
+                        <p>Our products are customized to meet your exact needs and specifications ensuring both a safe and productive work environment.</p>
+                    </div>
+                </div>
+                <div class="specialised-slider-wrp">
+                    <div class="specialised-slider cmnslider">
+                        {%- for item in related_solutions -%}
+                        {%- set solution = item | findByField('title', solutions) -%}
+                        <div class="specialised-slider-item"> 
+                            <div class="specialised-item-inr">
+                                <a href="/{{ solution.path }}" class="specialised-img">
+                                    <img src="{{ solution.thumbnail }}" alt="Specialised Image">
+                                </a>
+                                <div class="specialised-card-content">
+                                    <div class="spcl-card-content-inr"> 
+                                        <h3><a href="/{{ solution.path }}">{{ solution.title }}</a></h3>
+                                        <p>{{ solution.short_description }}</p>
+                                    </div>
+                                    <a href="/{{ solution.path }}">Learn more</a>
+                                </div>
+                            </div>
+                        </div>
+                        {%- endfor -%}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- End Of Specialised Section -->
+
+
+{% endblock %}

@@ -1,0 +1,445 @@
+{% extends "layout.njk" %}
+{% set waveType = 'gray' %}
+{% set hideFooterCta = true %}
+{% block additionalHead %}
+    <link rel="stylesheet" href="/css/product-page.css">
+    <link rel="preload" as="image" href="/img/product-pages/bg-air-wave.svg">
+{% endblock %}
+{% block body %}
+
+<svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+        <defs>
+            <symbol id="icon-replay" viewBox="0 0 512 512">
+                <path fill="#ffffff" d="M266.91 327.74v-37.32c-57.07 0-84.51 13.47-108.58 38.68-5.4 5.65-15 1.32-14.29-6.43 5.45-61.45 34.14-117.09 122.87-117.09v-37.32a8.32 8.32 0 0114-6L365.42 242a8.2 8.2 0 010 11.94L281 333.71a8.32 8.32 0 01-14.09-5.97z"/>
+                <path d="M64 256c0 106 86 192 192 192s192-86 192-192S362 64 256 64 64 150 64 256z" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="32"/>
+            </symbol>
+        </defs>
+</svg>
+
+  <!-- End Of Inner Banner Section -->
+
+    <div class="transforming-solution-sec cmn-gap airospace-aviation-pg beyond-compliance-pg whyduroair-pg">
+        <div class="container">
+            <div class="transforming-solution-inr has-texture">
+                <div class="texture"><img src="/img/whyduroabt-texture.png" alt="Texture"></div>
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="whyduroair-inr">
+                            <div class="whyduroair-inr-content">
+                                <h2>{{ section_1.head }}</h2>
+                                <p>{{ section_1.desc | md }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Reasons Section Begin -->
+<div class="reasons-sec cmn-gap">
+    <div class="container">
+        <div class="reasons-inr">
+            <div class="row">
+                <!-- Left Section: Accordion -->
+                <div class="col-lg-6 reasone-left-wrp">
+                    <div class="sec-inr-head">
+                        <h2>8 Reasons WHY Customers Choose Duroair</h2>
+                    </div>
+                    <div class="reasone-left">
+                        <div class="reasons-accrdn">
+                            {%- for item in choose_duroair -%}
+                            <div class="reasons-accrdn-card {% if loop.first %}active{% endif %}" data-index="{{ loop.index }}">
+                                <div class="reasonsaccr-head">
+                                    <h3>{{ item.heading_1 }}</h3>
+                                    <div class="chevron">
+                                        <i class="fal fa-chevron-down"></i>
+                                    </div>
+                                </div>
+                                <div class="reasonsaccr-body">
+                                    <p>{{ item.description_1 | md }}</p>
+                                </div>
+                            </div>
+                            {%- endfor -%}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Section: Image Slider -->
+                <div class="col-lg-6 reasone-right-wrp">
+                    <div class="reasone-right">
+                        <div class="reasonert-navfor-slider-wrp">
+                            <div class="reasonert-navfor-slider">
+                                {%- for item in choose_duroair -%}
+                                <div class="reasonert-navfor-slider-inr-item {% if loop.first %}active{% endif %}" data-index="{{ loop.index }}">
+                                    <div class="reasonert-navfor-slider-inr-item-img">
+                                        <img src="{{ item.image }}" alt="Image">
+                                    </div>
+                                </div>
+                                {%- endfor -%}
+                            </div>
+                        </div>
+
+                        <!-- Small Images (Navigation Thumbnails) -->
+                        <div class="reason-slider-nav">
+                                {%- for item in choose_duroair -%}
+                                <div class="reason-slider-nav-item {% if loop.first %}active{% endif %}" data-index="{{ loop.index }}">
+                                    <div class="reason-slider-nav-item-img">
+                                        <img src="{{ item.image }}" alt="Thumbnail">
+                                    </div>
+                                </div>
+                                {%- endfor -%}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Of Reasons Section -->
+
+    <!-- Transmission Section Begin -->
+
+        <div class="transmission-sec cmn-gap">
+            <div class="container">
+                <div class="transmission-inr">
+                    <div class="row">
+                        <div class="col-lg-4 transmission-left-col">
+                            <div class="transmission-left">
+                                <div class="sec-inr-head">
+                                    <h2>{{ efficient.heading_2 }}</h2>
+                                    <p>{{ efficient.description_2 | md }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 transmission-right-col">
+                            <div class="transmission-right">
+                                <!-- <div class="transmission-right-img">
+                                    <img src=/img/transmission-img.png" alt="Image">
+                                </div> -->
+                                <div class="wave-container">
+                                    <div class="percentage-numbers percentage-numbers-left">
+                                      <span >100%</span>
+                                      <span>90%</span>
+                                      <span>80%</span>
+                                      <span>70%</span>
+                                      <span>60%</span>
+                                      <span>50%</span>
+                                      <span>40%</span>
+                                      <span>30%</span>
+                                      <span>20%</span>
+                                      <span>10%</span>
+                                    </div>
+                                    <div class="wave-wrp">
+                                      <div class="fill" id="waveFill">
+                                        <div class="wave"></div>
+                                      </div>
+                                    </div>
+                                    <div class="percentage-numbers percentage-numbers-right">
+                                        <span >100%</span>
+                                        <span>90%</span>
+                                        <span>80%</span>
+                                        <span>70%</span>
+                                        <span>60%</span>
+                                        <span>50%</span>
+                                        <span>40%</span>
+                                        <span>30%</span>
+                                        <span>20%</span>
+                                        <span>10%</span>
+                                      </div>
+                                    <div class="current-percent" id="currentPercent">{{ efficient.number }}</div>
+                                  </div>
+                                  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- End Of Transmission Section -->
+
+    <!-- Stages Section Begin -->
+
+        <div class="stages-sec cmn-gap pt-0">
+            <div class="container">
+                <div class="stages-inr">
+                    <div class="sec-head-wrp">
+                        <div class="sec-inr-head text-center">
+                            <h2>{{ air_system.heading_3 }}</h2>
+                        </div>
+                        <p>{{ air_system.description_3 | md }}</p>
+                    </div>
+                    <div class="stages-chart-img">
+                        <p class="stages-chart-p">{{ air_system.description_5 | nl2br }}</p>
+                        <!-- <img src="images/stages-chart.png" alt="Image"> -->
+                        <div class="funnel-container">
+                            {%- for item in air_system.air_stages -%}
+                                <div class="stage stage{{ loop.index }} {% if loop.index <= 3 %}has-dot{% endif %}">
+                                    <h3>{{ item.heading_4 }}</h3>
+                                    {%- if loop.index <= 3 -%}
+                                        <p>{{ item.description_4 | md }}</p>
+                                        <div class="dot-img"></div>
+                                    {%- endif -%}
+                                </div>
+                            {%- endfor -%}
+                        </div>
+                        
+                    </div>
+                    <div class="achivments">
+                        <div class="achiv-percent">{{ air_system.efficient.number_1 }}+</div>
+                        <div class="achiv-text">
+                            <p>{{ air_system.efficient.description_6 | md }}</p>
+                        </div>
+                    </div>
+                    <div class="text-card">
+                        <p>{{ air_system.efficient.heading_6 }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- End Of Stages Section -->
+
+    <!-- Compliance Section Begin -->
+
+        <div class="compliance-sec cmn-gap pb-200">
+            <div class="container">
+                <div class="compliance-inr has-texture">
+                    <div class="texture"><img src="/img/whyduroabt-texture.png" alt="Texture"></div>
+                    <div class="sec-head-wrp">
+                        <div class="sec-inr-head text-center">
+                            <h2>{{ compilance_section.heading_7 }}</h2>
+                        </div>
+                        <p>{{ compilance_section.description_7 | md }}</p>
+                    </div>
+                    <div class="compliance-cards-row row">
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="compliance-card">
+                                <div class="compliance-card-img">
+                                    <img src="{{ compilance_section.image_1 }}" alt="Image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="compliance-card">
+                                <div class="compliance-card-img">
+                                    <img src="{{ compilance_section.image_2 }}" alt="Image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="compliance-card">
+                                <div class="compliance-card-img">
+                                    <img src="{{ compilance_section.image_3 }}" alt="Image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- End Of Compliance Section -->
+
+    <!-- We Provide Section Begin -->
+
+        <div class="we-provide-sec cmn-gap">
+            <div class="container">
+                <div class="we-provide-inr">
+                    <div class="sec-inr-head">
+                        <h2>{{ our_system.title }}</h2>
+                    </div>
+                    <div class="we-provide-outer">
+                        <div class="we-provide-cards-row row">
+                            <div class="col-lg-4">
+                                <div class="we-provide-content">
+                                    <h3>{{ our_system.flexibility.heading_8 }}</h3>
+                                    <p>{{ our_system.flexibility.description_8 | md }}</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="we-provide-right">
+                                    <div class="we-provide-right-img">
+                                        <img src="{{ our_system.flexibility.image_4 }}" alt="Image">
+                                        <img src="{{ our_system.flexibility.image_5 }}" alt="Image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="we-provide-cards-row row">
+                            <div class="col-lg-4">
+                                <div class="we-provide-content">
+                                    <h3>{{ our_system.workflow.heading_9 }}</h3>
+                                    <p>{{ our_system.workflow.description_9 | md }}</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="we-provide-right">
+                                    <div class="workflow-slider cmnslider">
+                                        {%- for item in our_system.workflow.air_list -%}
+                                        <div class="workflow-slider-item">
+                                            <div class="workflow-item-inr">
+                                                <div class="workflow-item-inr-img">
+                                                    <img src="{{ item.image_6 }}" alt="Image">
+                                                </div>
+                                                <div class="workflow-item-inr-content">
+                                                    <p>{{ item.description_10 | md }}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {%- endfor -%}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="we-provide-cards-row row cstmwidth">
+                            <div class="col-lg-4">
+                                <div class="we-provide-content">
+                                    <h3>{{ our_system.retracts.heading_11 }}</h3>
+                                    <p>{{ our_system.retracts.description_11 | md }}</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="we-provide-right has-texture">
+                                    <div class="blob1"></div>
+                                    <div class="we-provide-right-img p-0">
+                                        <video autoplay="true" loop="true" muted="true" src="/img/retracts.mp4" class="visible"></video> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- End Of We Provide Section -->
+
+    <!-- Ingenuity Section Begin -->
+
+        <div class="ingenuity-sec cmn-gap">
+            <div class="container">
+                <div class="ingenuity-inr has-texture">
+                    <div class="texture"><img src="/img/whyduroabt-texture.png" alt="Texture"></div>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="sec-inr-head">
+                                <h2>{{ ingenuity.title_1 }}</h2>
+                                <p>{{ ingenuity.intro_desc | md }}</p>
+                            </div>
+                            <div class="ingenunity-content">
+                                <h3>{{ ingenuity.heading_12 }}</h3>
+                                <p>{{ ingenuity.description_12| md }}</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="ingenuity-img">
+                                <img src="{{ ingenuity.image_8 }}" alt="Image">
+                            </div>
+                        </div>
+                        {%- for item in ingenuity.flexible_options -%}
+                        <div class="col-md-6 col-lg-4 ingenunity-operation-card-wrp">
+                            <div class="ingenunity-operation-card">
+                                <div class="ingenuity-ot-card-content">
+                                    <h4>{{ item.heading_13 }}</h4>
+                                    <p>{{ item.description_13| md }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {%- endfor -%}
+                    </div>
+
+                    <div class="ingenuity-imgs-row-btm">
+                        <div class="ingenuity-imgs-row-btm-inr row">
+                            {%- for item in ingenuity.flexible_options -%}
+                            <div class="ingenuity-img-wrp col-lg-4 col-md-4 col-sm-6">
+                                <div class="ingenuity-img">
+                                    <img src="{{ item.image_9 }}" alt="Image">
+                                </div>
+                            </div>
+                            {%- endfor -%}
+                        </div>
+                    </div>
+                </div>
+                <!------- Ingenuity Section Begin ------>
+
+                    <div class="ingenuity-sec-wrap mobile-ingenuity">
+                    <div class="container">
+                        <div class="row">
+                        {%- for item in ingenuity.flexible_options -%}
+                        <div class="col-lg-4">
+                            <!-- CARD -->
+                            <div class="ingenuity-card">
+                            <div class="content-sec-ingenuity">
+                                <h4>{{ item.heading_13 }}</h4>
+                                <p>{{ item.description_13| md }}</p>
+                                <div class="image-box">
+                                <img src="{{ item.image_9 }}" alt="">
+                                </div>
+                            </div>
+                            </div>
+                            <!-- CARD -->
+                        </div>
+                        {%- endfor -%}
+                        </div>
+                    </div>
+                    </div>
+
+                    <!------- Ingenuity Section Begin ------>
+            </div>
+        </div>
+
+    <!-- End Of Ingenuity Section -->
+
+    <!-- Learn Duroair Section Begin -->
+
+        <div class="learn-duroair-sec cmn-gap pt-0 why-duroair-pg">
+            <div class="container">
+                <div class="learn-duroair-inr">
+                    <div class="learn-duroair-wrp">
+                        <div class="learn-duroair-img">
+                            <img src="{{ bottom_section.bottom_image }}" alt="Learn Duroair">
+                        </div>
+                        <div class="learn-duroair-content">
+                            <h2>{{ bottom_section.bottom_heading }}</h2>
+                            <p>{{ bottom_section.bottom_description | md }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- End Of Learn Duroair Section -->
+
+    <!-- Contact Us Section Begin -->
+
+
+    <div class="contact-us-sec cmn-gap contact-us-sec-2 pt-0 why-duroair-pg">
+            <div class="container">
+                <div class="contact-us-inr has-texture">
+                    <div class="blob1"></div>
+                    <div class="sec-inr-head">
+                        <h2>Contact Us</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="contact-us-right">
+                                <div class="contact-us-right-inr">
+                                    {% include "partials/hubspot-form.njk" %} 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- End Of Contact Us Section -->
+
+{% endblock %}
+{% block additionalScripts %}
+    <script src="/js/product.page.js"></script>
+{% endblock %}

@@ -1,0 +1,28 @@
+<aside>
+    <div class="newsletter-sidebar">
+        <!-- <h6">Get Duroair Articles in Your Inbox</h6> -->
+        <h6 style="font-size: 18px;
+    line-height: 26px;font-weight: 400;font-family: 'Inter';color: #353535;">Get the Latest Duroair News</h6>
+            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+            <script>
+                hbspt.forms.create({
+                    portalId: "3114036",
+                    formId: "d1aff500-c2eb-4eba-86b1-0e15c66cfea1",
+                    css: '',
+                    cssClass:'ns-form'
+                });
+            </script>
+    </div>
+    <br>
+    <h6 style="width: 260px;border-bottom: 1px solid #D6D6D6;padding-bottom: 10px;font-size: 20px;line-height: 30px;font-weight: 500;color: #0D0D0D;">Latest Blogs</h6>
+    <div class="recent-posts">
+        {%- for p in posts.slice(0,3) -%}
+        <div class="card-horizontal recent-post" data-href="/{{ p.path }}">
+            <a href="/{{ p.path }}" class="img-container"  aria-label="Read more about - {{ p.title | escape}}">
+                {%- if p.jumbotron.img -%}<img src="{{p.jumbotron.img}}" alt="" class="img-responsive">{%- endif-%}
+            </a>
+            <div><a href="/{{ p.path }}">{{p.title}}</a></div>
+        </div>
+        {%- endfor -%}
+    </div>
+</aside>

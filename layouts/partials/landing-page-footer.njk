@@ -1,0 +1,40 @@
+<div class="footer lp-footer">
+    {% if hide_footer != 1 %}
+    <div class="container-fluid">
+        <div class="lp-footer-resources">
+            <div class="row">
+                <h5 class="more-resources-title">More free resources from INDUSTRIAL:</h5>
+                <div class="footer-resources-grid">
+                    {% for item in resources.slice(0,6) %}
+                    {% if item.active %}
+                    <a href="{{item.url}}" data-ga-event="Resources" data-ga-action="Click" data-ga-label="{{item.headline}}"><img src="{{item.img}}" alt="{{item.img}}" class="img-responsive lp-resource-img" /></a>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="subhead">From Nashville, TN</div>
+                <h3 class="lp-footer-title">BROUGHT TO YOU BY INDUSTRIAL</h3>
+                <p>
+                    We are a full-service industrial marketing agency that plans, designs, executes, and measures integrated marketing strategies. 
+                </p>
+                <a href="/about/" class="btn btn-default">More About Us</a>
+            </div>
+            <div class="col-sm-5 col-sm-offset-1">
+                <img src="/img/industrial-office.jpg" class="img-responsive img-office" alt="">
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    <div class="container-fluid lp-footer-meta">
+        <div class="pull-left">&copy; {{year}} Industrial Strength Marketing <a href="/privacy-policy/">Privacy Policy</a></div>
+        <div class="pull-right">
+            <span class="footer-phone">Call Us: 1-866-529-8908</span>
+        </div>
+    </div>
+</div>
+{% include "partials/schema.njk" %}
+<script src="/js/scripts.js"></script>
+{% include "partials/footer-scripts.njk" %}

@@ -1,0 +1,44 @@
+{% set title = "Blog" + ( " page " + pagination.num if pagination.num >1 else "") %}
+{{ "true" if foo else "false" }}
+{%- set hideJumbotronTitle = false -%}
+{% extends "layout.njk" %}{% block body %}
+{% if tag %}
+{% set postsCollection = tags[tag] %}
+{% elif  pagination %}
+{% set postsCollection = pagination.files %}
+{% else %}
+{% set postsCollection = posts %}
+{% endif %}
+
+<div class="container">
+    {%- if path == 'blog' -%}
+        {%- set main =  postsCollection.shift() -%}
+        <div class="blog-post-featured" data-href="/{{ main.path }}">
+            <picture><img src="{{ main.jumbotron.img}}" alt=""  class="blog-post-featured-img"/></picture>
+            <div class="content">
+                <h1 class="h2 light title">{{ main.title}}</h1>
+                <p>{{ main | blogExcerpt }}</p>
+                <a href="/{{main.path}}" class="btn btn-outline light" aria-label="Read more about {{ main.title | escape}}">Read More</a>
+            </div>
+        </div>
+    {% endif %}
+    <div class="blog">
+        <section class="section blog-section">
+            {% for f in postsCollection %}
+            <div class="card-horizontal blog-post-item post-{{loop.index}}">
+                <div class="img-container">
+                    <a href="/{{ f.path }}"  aria-label="Read more about {{ f.title | escape}}"><img src="{{ f.small_image }}"  alt="" class="img-responsive img-blog-listing shadow" /></a>
+                </div>
+                <div class="blog-listing-copy">
+                    <h4 class="h3"><a href="/{{ f.path }}"  aria-label="Read more about {{ f.title | escape}}">{{ f.title }}</a></h4>
+                    <p>{{ f | blogExcerpt }}</p><a href="/{{f.path}}" class="link-learn-more"  aria-label="Read more about {{ f.title | escape}}">Read More</a>
+                </div>
+            </div>
+            {% endfor %}
+            
+        </section>
+        {% include "partials/blog-sidebar.njk" %}
+    </div>
+    {% include "partials/pagination.njk" %}
+</div>
+{% endblock %}

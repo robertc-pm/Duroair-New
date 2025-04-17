@@ -1,0 +1,79 @@
+{
+    "name": "duroair-static-site",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "prebuild": "cd functions/search && npm i",
+
+        "dev": "cross-env NODE_ENV=dev npm run watch",
+        "start": "cross-env NODE_ENV=dev npm run build && netlify dev & npm run dev:cms-proxy-server",
+
+        "build": "npm run ensure-build-dir && npm run build:js && npm run build:css && npm run build:admin:config && npm run build:metalsmith && npm run build:product:page",
+        "ensure-build-dir": "node -e \"require('fs').mkdirSync('build', { recursive: true })\"",
+
+        "build:metalsmith": "node build.js && npm run build:public",
+        "build:public": "mkdir -p build && cp -R public/* build/",
+
+        "build:admin:config": "node src/admin/preprocess.js src/admin/admin-template.yml public/admin/config.yml",
+
+        "build:css": "lessc --js src/less/style.less public/css/style.css --clean-css='--s0 --advanced' --source-map && cp -R public/css build/",
+
+        "build:product:page": "npm run build:product:page:css && npm run build:product:page:js",
+        "build:product:page:css": "lessc --js src/less/product-page/page.less public/css/product-page.css --clean-css='--s0 --advanced' --source-map && cp -R public/css build/",
+        "build:product:page:js": "terser node_modules/@glidejs/glide/dist/glide.min.js src/js/product-page/*.js --output public/js/product.page.js && cp -R public/js build/",
+
+        "build:js": "terser src/js/vivus.min.js src/js/*.js --output public/js/scripts.js && cp -R public/js build/",
+
+        "watch": "npm run watch:css & npm run watch:js & npm run watch:metalsmith & npm run watch:admin",
+        "watch:product:page": "npm run watch:product:page:css & npm run watch:product:page:js",
+        "watch:metalsmith": "watch -p 'metalsmith.build.js' -p 'src/admin/**/*' -p 'src/content/**/*' -p 'layouts/**/*' -c 'npm run build:metalsmith'",
+        "watch:admin": "watch -p 'src/admin/**/*' -c 'npm run build:admin:config'",
+        "watch:css": "watch -p 'src/less/**/*.less' -c 'npm run build:css'",
+        "watch:product:page:css": "watch -p 'src/less/product-page/*.less' -c 'npm run build:product:page:css'",
+        "watch:product:page:js": "watch -p 'src/js/product-page/*.js' -c 'npm run build:product:page:js'",
+        "watch:js": "watch -p 'src/js/*.js' -c 'npm run build:js'",
+
+        "dev:cms-proxy-server": "npx netlify-cms-proxy-server"
+    },
+    "author": "Industrial",
+    "license": "ISC",
+    "dependencies": {
+        "@11ty/eleventy-fetch": "^4.0.1",
+        "@glidejs/glide": "^3.6.0",
+        "concurrently": "^7.6.0",
+        "extend": "^3.0.2",
+        "jstransformer-nunjucks": "^1.2.0",
+        "less": "^4.2.0",
+        "less-plugin-clean-css": "^1.5.1",
+        "marked": "^4.3.0",
+        "metalsmith": "^2.6.3",
+        "metalsmith-collection-metadata": "^1.0.0",
+        "metalsmith-collection-tags": "github:sparkalow/metalsmith-collection-tags",
+        "metalsmith-collections": "^0.9.0",
+        "metalsmith-feed": "^1.0.0",
+        "metalsmith-layouts": "^2.3.1",
+        "metalsmith-lunr-index": "^0.2.0",
+        "metalsmith-mapsite": "github:sparkalow/metalsmith-mapsite",
+        "metalsmith-markdown": "^1.3.0",
+        "metalsmith-navigation": "^0.2.9",
+        "metalsmith-pagination": "^1.5.0",
+        "metalsmith-permalinks": "^2.2.0",
+        "nunjucks": "^3.2.4",
+        "preprocess": "^3.2.0",
+        "rss": "^1.2.2",
+        "slugify": "^1.6.6",
+        "terser": "^5.30.2",
+        "uglify-js": "^3.17.4",
+        "watch-cli": "^0.2.3"
+    },
+    "devDependencies": {
+        "browser-sync": "^3.0.2",
+        "metalsmith-debug-ui": "^0.3.2",
+        "netlify-cli": "^17.21.1",
+        "netlify-cms-proxy-server": "^1.3.24",
+        "npx": "^10.2.2",
+        "request-promise-native": "^0.0.0",
+        "cross-env": "^7.0.3",
+        "rimraf": "^5.0.1"
+    }
+}

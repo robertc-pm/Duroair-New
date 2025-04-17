@@ -1,0 +1,7 @@
+<div class="{{gridCssClass if gridCssClass else 'grid-4'}}">
+{% for item in grid %}
+{%- if not item.private -%}
+{% include "partials/card.njk" %}
+{%- endif -%}
+{% endfor %}
+</div>

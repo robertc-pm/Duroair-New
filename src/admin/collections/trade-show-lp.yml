@@ -1,0 +1,26 @@
+- name: "tradeshowLandingPage"
+  label: "Tradeshow Landing Page"
+  folder: "src/content/tradeshow"
+  create: true
+  fields:
+    - {label: "Private?", name: "private", widget: "boolean", required: false, 'hint':'Set to true to prevent publishing'}
+    <!-- @include-static ../partials/base-fields.yml -->
+    <!-- @include-static ../partials/jumbotron.yml -->
+    - {label: "Layout", name: "layout", widget: "hidden", default: "tradeshow-landing-page.njk"}
+    - {label: "Permalink URL", name: "permalink", widget: "string"}
+    - {label: "Trade Show Date", name: "trade_show_date", widget: "string", hint: "Don't put full URL slug, only example-page"}
+    - {label: "Body", name: "body", widget: "markdown"}
+    - {label: "Form Intro", name: "form_intro", widget: "string"}
+    - {label: "Hubspot Form ID", name: "hubspot_form_id", widget: "string"}
+    - {label: "Video Embed", name: "video_embed", widget: "text", required: false, hint: "Use the  embed code from youtube, vimeo, etc."}
+    - name: bottom_section
+      label: Bottom Page bottom
+      widget: object
+      fields: 
+        - {label: "Headline", name: "headline", widget: "string", required: false}
+        - name: icon_blocks
+          label: Icon Content Blocks
+          widget: list
+          fields:
+            - {label: "Icon", name: "icon", widget: "string", required: false}
+            - {label: "Content", name: "content", widget: "string", required: false}

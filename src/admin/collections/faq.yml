@@ -1,0 +1,23 @@
+- name: "faq"
+  label: "FAQ"
+  file: "src/content/resources/faq/index.md"
+  fields:
+    - {label: "Layout", name: "layout", widget: "hidden", default: "faq.njk"}
+    <!-- @include-static ../partials/base-fields.yml -->
+    <!-- @include-static ../partials/nav-fields.yml -->
+    <!-- @include-static ../partials/jumbotron.yml -->
+    - {label: Body, name: body, widget: markdown }
+    - { label: Intro Heading, name: intro_head, widget: string }
+    - name: questions
+      label: Questions
+      widget: list
+      fields:
+        - { label: Question, name: question, widget: string }
+        - { label: Answer, name: answer, widget: markdown }
+        - label: Category
+          name: category
+          widget: relation
+          collection: product   # Change this to the actual collection where products are stored
+          search_fields: ["title"] # It will show product titles in the CMS dropdown
+          value_field: "title"  # The selected value will be stored as the product title
+          display_fields: ["title"] # Displays the product title

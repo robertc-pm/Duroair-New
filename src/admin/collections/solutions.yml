@@ -1,0 +1,40 @@
+- name: "solution"
+  label: "Solutions"
+  folder: "src/content/solutions"
+  create: true
+  filter: {field: "layout", value: "solution.njk"}
+  fields:
+    <!-- @include-static ../partials/base-fields.yml -->
+    <!-- @include-static ../partials/jumbotron.yml -->
+    <!-- @include-static ../partials/nav-fields.yml -->
+    - {label: "Layout", name: "layout", widget: "hidden", default: "solution.njk"}
+    - {label: "Permalink", name: "permalink", widget: "string", required: false}
+    - {label: "Thumbnail", name: "thumbnail", widget: "image", required: true}
+    - {label: "Page Image 1", name: "image_1", widget: "image", required: false}
+    - {label: "Page Image 2", name: "image_2", widget: "image", required: false}
+    - {label: "Page Image 3", name: "image_3", widget: "image", required: false}
+    - {label: "Short Description", name: "short_description", widget: "text", 'hint':'shows on cards and summaries'}
+    - name: intro
+      label: Intro
+      widget: "object"
+      fields:
+        - {label: "Intro heading", name: "intro_head", widget: string}
+        - {label: "Intro description", name: "intro_desc", widget: markdown}
+    - {label: "Copy Block List", name: "copy_block_list", widget: "markdown"}
+    - {label: "Copy Block 1", name: "copy_block_1", widget: "markdown"}
+    - {label: "Copy Block 2", name: "copy_block_2", widget: "markdown", 'hint': 'technical specs, etc.'}
+    - name: compliance
+      label: Compliance
+      widget: list
+      fields:
+        - {label: Code, name: code, widget: string}
+        - {label: Description, name: description, widget: string}
+    - {label: "Related Products", name: "related_products", widget: "relation", multiple: true, collection: "product", search_fields: ["title"], value_field: "title", "hint":"Begin typing to select a related solution ", required: false}
+    
+  
+    
+    <!-- @include-static ../partials/testimonial.yml -->
+    - { label: "Form Intro", name: "form_intro", widget: "markdown" }
+    - { label: "Hubspot Form ID", name: "hubspot_form_id", widget: "string", required: true, default: "8a7e8410-f0e6-4fdf-9fe9-60dfeb51b9b4" }
+
+    <!-- @include-static ../partials/cta-callout.yml -->

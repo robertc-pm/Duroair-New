@@ -1,0 +1,20 @@
+<div class="dcap-classification-wrp">
+                <div class="dcap-classification-content" style="display: block !important;">
+                    <div class="dcapclfication-table">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Code Compliance</strong></td>
+                                    <td><strong>Code Description</strong></td>
+                                </tr>
+                                {%- for item in compliance -%}
+                                <tr>
+                                    <td><strong>{{item.code}}</strong></td>
+                                    <td>{{item.description | md }}</td>
+                                </tr>
+                                {%- endfor -%}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>

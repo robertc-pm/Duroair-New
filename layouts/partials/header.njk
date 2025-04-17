@@ -1,0 +1,22 @@
+<header id="header" class="header-wrap show">
+    <div class="search-container" id="search-container">
+        <form class="search" id="search-form" autocomplete="off">
+            <input type="text" placeholder="search" name="durq" id="search-field" value="" class="search-ui">
+            <button class="btn btn-search" title="Search"><span>Search</span></button>
+            <div class="search-results" id="search-results"></div>
+            <svg data-search-trigger id="search-close" width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Symbols-nav" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round"><g transform="translate(-599.000000, -19.000000)" stroke="#D1D4D4" stroke-width="2"><g><g id="icon-x" transform="translate(600.000000, 20.000000)"><path d="M7.93305815,-2 L8,18" id="hLine-3" transform="translate(8.000000, 8.000000) rotate(-44.808226) translate(-8.000000, -8.000000) "></path><path d="M7.93305815,-2 L8,18" id="Line-3h" transform="translate(8.000000, 8.000000) scale(-1, 1) rotate(-44.808226) translate(-8.000000, -8.000000) "></path></g></g></g></g></svg>
+        </form>
+    </div>
+    {# <div class="header-msg striped">{% include 'partials/global-message.njk' %}</div> #}
+    <div class="nav-wrap">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            {% include "partials/primary-nav.njk" %}
+          </div>
+        </div>
+      </div>
+    </div>
+     <!-- NAVBAR-SECTION -->
+    <button class="navbar-toggler collapsed" id="navoverlay" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></button>
+</header>

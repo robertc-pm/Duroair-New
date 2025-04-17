@@ -1,0 +1,39 @@
+<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="80%" class="rss-item-container" align="center">
+    {%- set url = feedOptions.site_url +'/' +itemData.path -%}
+    {%- if itemData.jumbotron.img -%}
+    <tr><th class="stack-column rss-img-col base-typography" align="left" valign="top"><a href="{{url}}"><img src="{{feedOptions.site_url}}{{itemData.jumbotron.img}}" width="100%" class="" alt=" " style="width:100%;" /></a></th></tr>
+    <tr><th height="4" style="padding:3px 0;"></th></tr>
+    {%- endif -%}
+    <tr>
+        <th class="stack-column rss-copy-col base-typography" valign="top"  style="border-collapse: collapse;font-family: Arial, Helvetica, sans-serif; color: #16445c; font-size: 16px;line-height: 1.4;" align="left">
+            <div class="rss-h1"  style="font-family:Arial, Helvetica, sans-serif; text-align:left; color:#3b84b8; font-size:20px; font-weight:bold;padding-bottom:3px;"><a href="{{url}}" style="color:#3b84b8;text-decoration: none;">{{itemData.title}}</a></div><!--[if mso]>&#160;<br><![endif]--> 
+            <div class="rss-summary" style="border-collapse: collapse;font-family: Arial, Helvetica, sans-serif; color: #16445c; font-size: 16px;line-height: 1.4;font-weight: normal;">
+                {%- if itemData.short_description -%}
+                    {{itemData.short_description}}
+                {%- else -%}
+                    {{contents | safe | striptags(false) | truncate(160) }}
+                {%- endif -%}
+            </div>
+        </th>
+    </tr>
+    <tr>
+        <th height="16">
+        </th>
+    </tr>
+    <tr>
+        <th>
+                <table border="0" cellpadding="0" cellspacing="0" class="cta" align="left" style="border-spacing: 0;">
+                        <tbody><tr>
+                            <td align="center" valign="middle" style="padding:2px;-webkit-border-radius: 50px; border-collapse: collapse; border-radius: 50px; background-color: #49BFAC; font-family: Arial, sans-serif;" bgcolor="#49BFAC">
+                                <a href="{{url}}" target="_blank" style="text-transform:uppercase; font-weight:bold; -webkit-border-radius:50px; border:1px solid #49BFAC; border-radius:50px; color:#FFFFFF; display:inline-block; padding:12px 28px; text-decoration:none; background-color:#49BFAC" class="cta-link" bgcolor="#49BFAC" data-hs-link-id="2">
+                                    <!--[if mso]>&nbsp;&nbsp; <![endif]-->
+                                    Read More
+                                    <!--[if mso]>&nbsp;&nbsp; <![endif]-->
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody></table>
+        </th>
+    </tr>
+</table>
+ <!--[if mso]>&nbsp;<br><![endif]-->

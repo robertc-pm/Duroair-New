@@ -1,0 +1,35 @@
+backend:
+  name: git-gateway
+  branch: <!-- @echo BRANCH -->
+display_url: /
+logo_url: /img/logo.svg
+media_folder: "public/media/uploads" # Media files will be stored in the repo at this location
+public_folder: "/media/uploads" # The src attribute for uploaded media will begin with this
+collections:
+  <!-- @include collections/industries.yml -->
+  <!-- @include collections/blog.yml -->
+  <!-- @include collections/trade-show-lp.yml -->
+  <!-- @include collections/solutions.yml -->
+  <!-- @include collections/products.yml -->
+  <!-- @include collections/case-study.yml -->
+  <!-- @include collections/video.yml -->
+  - label: "Pages"
+    name: "pages"
+    files:
+      <!-- @include collections/home.yml -->
+      <!-- @include collections/leadership.yml -->
+      <!-- @include collections/faq.yml -->
+      <!-- @include collections/beyond-compliance.yml -->
+      <!-- @include collections/about.yml -->
+      <!-- @include collections/products-overview.yml -->
+      <!-- @include collections/industry-associations.yml -->
+      <!-- @include collections/resources.yml -->
+      <!-- @include collections/goverment-and-military.yml -->
+      <!-- @include collections/how-we-work.yml -->
+      <!-- @include collections/why-duroair.yml -->
+      
+       
+  - label: "Site"
+    name: "site"
+    files:
+      <!-- @include collections/site-settings.yml -->

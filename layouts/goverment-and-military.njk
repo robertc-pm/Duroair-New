@@ -1,0 +1,338 @@
+{% extends "layout.njk" %}
+{% set waveType = 'gray' %}
+{% block body %}
+
+<!-- Transforming Solution Section Begin -->
+
+        <div class="transforming-solution-sec govt-pg cmn-gap airospace-aviation-pg">
+            <div class="container">
+                <div class="transforming-solution-inr advance-cl-inr has-texture">
+                    <div class="texture"><img src="/img/advance-cl-texture.png" alt="Texture"></div>
+                    <div class="sec-head">
+                        <h2>{{ main_head }}</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div class="transfrom-solution-left">
+                                <div class="sec-inr-head">
+                                    <h2>{{ gm_intro.intro_head }}</h2>
+                                        {{ gm_intro.intro_desc | md }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="transfromsl-img-wrp">
+                                <div class="transforming-solution-img">
+                                    <img src="{{ gm_intro.intro_image }}" alt="Image">
+                                </div>
+                                <div class="blob1"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- End Of Transforming Solution Section -->
+
+    <!-- DOD Section Begin -->
+
+        <div class="dod-sec cmn-gap">
+            <div class="container">
+                <div class="dod-inr">
+                    <div class="row">
+                        <div class="col-lg-5 dod-left-wrp">
+                            <div class="dod-left">
+                                <div class="sec-inr-head">
+                                    <h2>{{ dod_section.child_left_sec.dod_left_head }}</h2>
+                                    <p>{{ dod_section.child_left_sec.dod_desc | md }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 desktop-dod dod-right-wrp">
+                            <div class="dod-right">
+
+                                <!-- Small Cards: Dynamically Generated from List Widget --> 
+                                <div class="dod-small-cards-wrp">
+                                    {%- for item in dod_section.child_right_sec if not loop.first -%}  {# Skip the first item #}
+                                        <div class="dod-sm-card">
+                                            <div class="dod-sm-card-head">
+                                                <h3>{{ item.dod_right_head }}</h3>
+                                            </div>
+                                            <div class="dod-sm-card-btn">
+                                                <a href="#url" 
+                                                class="dod-btn" 
+                                                data-head="{{ item.dod_right_head }}" 
+                                                data-desc="{{ item.description | md }}">
+                                                {{ item.btn }}
+                                                <img src="/img/btn-arrow.svg" alt="Arrow Icon">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    {%- endfor -%}
+                                </div>
+                                
+                                <!-- Main Section: Show First List Item Initially -->
+                                <div class="dod-card-wrp">
+                                    <div class="dod-card">
+                                        <div class="dod-card-head">
+                                            <h3 id="dod-main-head">
+                                                {{ dod_section.child_right_sec[0].dod_right_head }}
+                                            </h3>
+                                        </div>
+                                        <div class="dod-card-body" id="dod-main-body">
+                                            {{ dod_section.child_right_sec[0].description | md }} 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 mobile-dod dod-right-wrp">
+                        <div class="dod-right">
+
+                            <!-- Small Cards: Dynamically Generated from List Widget -->
+                            <div class="dod-small-cards-wrp">
+
+                            {%- for item in dod_section.child_right_sec if not loop.first -%}
+                            <!-- ===== CARD ==== -->
+
+                            <div class="dod-sm-card">
+                                <div class="dod-sm-card-head">
+                                <h3>{{ item.dod_right_head }}</h3>
+                                </div>
+                                <div class="dod-sm-card-btn">
+                                <a href="#" class="show-decribe-data-{{ loop.index }}" data-target="show-describe-data-list-{{ loop.index}}"
+                                    data-head="{{ item.dod_right_head }}">
+                                    Read More
+                                    <img src="/img/btn-arrow.svg" alt="Arrow Icon">
+                                </a>
+                                </div>
+                            </div>
+
+                            <!-- SHOW HIDE SEC DOD FOR MOBILE AND DESKTOP -->
+                            <div class="dod-card-wrp show-describe-data-list-{{ loop.index }}" style="display: none;">
+                                <div class="dod-card">
+                                <div class="dod-card-head">
+                                    <h3 id="dod-main-head">
+                                    {{ item.dod_right_head }}
+                                    </h3>
+                                </div>
+                                <div class="dod-card-body" id="dod-main-body">
+                                    {{ item.description | md }}       
+                                </div> 
+                                </div>
+                            </div>
+                            <!-- SHOW HIDE SEC DOD FOR MOBILE AND DESKTOP -->
+                            {%- endfor -%}
+                            <!-- ===== CARD ==== -->
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- End Of DOD Section -->
+
+    <!-- MRO Section Begin -->
+
+        <div class="mro-sec cmn-gap">
+            <div class="container">
+                <div class="mro-outer">
+                    <div class="sec-inr-head">
+                        <h2>Containment + Filtration = MRO Flexibility and Operational Readiness</h2>
+                    </div>
+                    <div class="mro-inr">
+                        {%- for item in flexibility -%}
+                        <div class="mro-content-sec">
+                            <div class="mro-content-row row">
+                                <div class="mro-content-left-wrp col-lg-6">
+                                    <div class="mro-content-left">
+                                        <h3>{{ item.heading }}</h3>
+                                        <div class="mro-content">
+                                            {{ item.description | md }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mro-content-right-wrp col-lg-6">
+                                    <div class="mro-content-right">
+                                        <div class="mro-content-rt-img">
+                                            <img src="{{ item.image }}" alt="Image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {%- endfor -%}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- End Of MRO Section -->
+
+    <!-- Mro Needs Section Begin -->
+
+        <div class="mro-needs-sec">
+            <div class="container">
+                <div class="mro-needs-inr">
+                    <div class="sec-inr-head">
+                        <h2 style="text-align:center;">{{ solution_section.solution_haed }}</h2>
+                    </div>
+
+                    <div class="mro-needs-cards">
+                    {%- for p in solution_section.related_products -%}
+                    {%- set item = p | findByField('title', products) -%}
+                    {%- if item and item.title and item.thumbnail -%}
+                        <div class="mro-needs-card">
+                            <div class="mro-need-card-left">
+                                <div class="mrond-card-img">
+                                    <img src="{{ item.thumbnail }}" alt="Mro Need Image">
+                                </div>
+                            </div>
+                            <div class="mro-need-right">
+                                <div class="mro-need-right-head">
+                                    <h3>{{ item.title }}</h3>
+                                    {{ item.g&m_related_data.show_data | md }}
+                                    <a href="javascript:void(0)" class="read-btn">Read more <img src="/img/btn-arrow.svg" alt="Icon"></a>
+                                </div>
+                                <div class="mro-need-right-content">
+                                    <div class="mro-need-content-list">
+                                        {{ item.g&m_related_data.hide_data | md }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {%- endif -%}
+                    {%- endfor -%}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- End Of Mro Needs Section -->
+
+    <!-- Reasons Section Begin -->
+
+        <div class="reasons-sec cmn-gap govt-pg">
+            <div class="container">
+                <div class="reasons-inr">
+                    <div class="sec-inr-head">
+                        <h2>{{ top_10_section.sec_heading }}</h2>
+                        <p>{{ top_10_section.sec_description | md }}</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 reasone-left-wrp">
+                            <div class="reasone-left">
+                                <div class="reasons-accrdn">
+                                {%- for item in top_10_section.top_10_child -%}
+                                    <div class="reasons-accrdn-card">
+                                        <div class="reasonsaccr-head">
+                                            <h3>{{ item.child_head | md }}</h3>
+                                            <div class="chevron">
+                                                <i class="fal fa-chevron-down"></i>
+                                            </div>
+                                        </div>
+                                        <div class="reasonsaccr-body">
+                                            <p>{{ item.child_desc | md }}</p>
+                                        </div>
+                                    </div>
+                                {%- endfor -%}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 reasone-right-wrp">
+                            <div class="reasone-right">
+                                <div class="reason-right-img">
+                                    <img src="{{ top_10_section.image }}" alt="Reason Image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- End Of Reasons Section -->
+
+    <!-- Case Studies Section Begin -->
+
+        <div class="case-study-sec">
+            <div class="container">
+                <div class="case-study-inr has-texture">
+                    <div class="texture"><img src="/img/military-csstdy-texture.png" alt="Texture"></div>
+                    <div class="sec-head">
+                        <h2>Real-World Success: Military Case Studies</h2>
+                    </div>
+                    <div class="row">
+                        <div class="case-study-slider-wrp">
+                            <div class="case-study-slider">
+                                {%- for caseStudy in caseStudies -%}
+                                <div class="casesl-item">
+                                <a href="/{{ caseStudy.path }}" class="arw-btn-icon">
+                                    <div class="cs-item-inr">
+                                        <div class="csitem-img">
+                                            <img src="{{ caseStudy.small_image }}" alt="{{ caseStudy.title }}">
+                                        </div>
+                                        <div class="case-sdy-content">
+                                            <h3>{{ caseStudy.title }}</h3>
+                                            <a href="/{{ caseStudy.path }}" class="arw-btn-icon">
+                                                <img src="/img/arw-btn-icon.svg" alt="Icon">
+                                            </a>
+                                        </div>
+                                    </div>
+                                 </a>
+                                </div>
+                                {%- endfor -%}
+                            </div>
+                        </div>
+                        <div class="case-study-nav-slider-wrp">
+                            <div class="cstdy-slider-nav-inr-wrp">
+                                <div class="csstdy-nav-slider cmnslider">
+                                    {%- for caseStudy in caseStudies -%}
+                                    <div class="csstdy-slider-item">
+                                        <div class="csstdy-item-inr">
+                                            <div class="csstdyitem-img">
+                                                <img src="{{ caseStudy.small_image }}" alt="{{ caseStudy.title }}">
+                                            </div>
+                                            <div class="csstdynv-content">
+                                                <h3>{{ caseStudy.title }}</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {%- endfor -%}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- End Of Case Studies Section -->
+
+    <!-- Certification sec -->
+
+        <div class="certification-sec cmn-gap pt-0">
+            <div class="container">
+                <div class="certification-inr">
+                    <div class="sec-head">
+                        <h2>{{ certificate_section.cert_head }}</h2>
+                    </div>
+
+                    <div class="sec-inr-head">
+                        <h3 class="h2-title">{{ certificate_section.cert_desc }}</h3>
+                    </div>
+
+                    <div class="btn-grp">
+                        <a href="{{ certificate_section.brochure }}" class="button">{{ certificate_section.cert_btn }}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Certification sec -->
+
+{% endblock %}

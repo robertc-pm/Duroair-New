@@ -1,0 +1,787 @@
+backend:
+  name: git-gateway
+  branch: master
+display_url: /
+logo_url: /img/logo.svg
+media_folder: "public/media/uploads" # Media files will be stored in the repo at this location
+public_folder: "/media/uploads" # The src attribute for uploaded media will begin with this
+collections:
+  - name: "industry"
+    label: "Industries"
+    label_singular: "Industry"
+    folder: "src/content/industries"
+    create: true
+    filter: {field: "layout", value: "industry.njk"}
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - label: SEO
+        name: "seo"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "Page Title", name: "page_title", widget: "string", required: false, 'hint':'Will be suffixed with " | Duroair"'}
+          - {label: "Page Description", name: "description", widget: "string", required: false}
+          - {label: "No index, no follow", name: "noindex", widget: "boolean", required: false}
+      - {label: "Nav Title", name: "nav_title", widget: "string", hint: "Optional nav item label (will default to page title)", required: false}
+      - {label: "Nav Order", name: "nav_sort", widget: "number", required: false, value_type: "int"}
+      - label: "Show in nav?"
+        name: "show_in_menu"
+        widget: "select"
+        required: false
+        options:
+          - { label: "Yes", value: "true" }
+          - { label: "No", value: "false" }
+      - label: "Hero"
+        name: "jumbotron"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "Headline", name: "headline", widget: "string", required: false, "hint":"This is used as the 'short title' on blogs, case studies, etc."}
+          - {label: "Tagline", name: "tagline", widget: "string", required: false}
+          - {label: "CTA Url", name: "ctaUrl", widget: "string", required: false}
+          - {label: "CTA Label", name: "ctaText", widget: "string", required: false}
+          - {label: "Image", name: "img", widget: "image", 'hint':"1400 x 420", required: false}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "industry.njk"}
+      - {label: "Thumbnail", name: "thumbnail", widget: "image", required: true}
+      - {label: "Body Image 1", name: "image_1", widget: "image", required: false}
+      - {label: "Body Image 2", name: "image_2", widget: "image", required: false}
+      - {label: "Permalink", name: "permalink", widget: "string", required: false}
+      - {label: "Short Description", name: "short_description", widget: "text", 'hint':'shows on cards and summaries'}
+      - {label: "Copy Block 1", name: "body", widget: "markdown", 'hint':'shows at top of page'}
+      - {label: "Copy Block 2", name: "secondary_copy", widget: "markdown", 'hint':'shows mid page', required: false}
+      - {label: "Solutions for Your Industry", name: "solutions_for_industry", widget: "relation", collection: "solution", search_fields: ["title"], value_field: "title", "hint":"Begin typing to select a solution", required: false, multiple: true}
+      - label: Testimonial
+        name: "testimonial"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "Qotation", name: "quotation", widget: "string", required: false, 'hint':"Do not surround with quotes."}
+          - {label: "Attestant", name: "attestant", 'hint': "The person who said it ",  widget: "string", required: false}
+          - {label: "Company", name: "company", 'hint': "Job title, company",  widget: "string", required: false}
+          - {label: "Related Products", name: "related_products", widget: "relation", multiple: true, collection: "product", search_fields: ["title"], value_field: "title", "hint":"Begin typing to select a related solution ", required: false}
+      - label: CTA Callout
+        name: "cta"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "Headline", name: "headline", widget: "string", required: false}
+          - {label: "Copy", name: "copy", widget: "string", required: false}
+          - {label: "URL", name: "url", widget: "string", required: false}
+          - {label: "Button Label", name: "label", widget: "string", required: false, default: "Learn More"}
+  - name: "blog"
+    label: "Blog"
+    label_singular: "Blog Post"
+    folder: "src/content/blog"
+    create: true
+    fields:
+      - {label: "Private?", name: "private", widget: "boolean", required: false, 'hint':'Set to on for "draft mode". The page will not be published on the website.'}
+      - {label: "Title", name: "title", widget: "string"}
+      - label: SEO
+        name: "seo"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "Page Title", name: "page_title", widget: "string", required: false, 'hint':'Will be suffixed with " | Duroair"'}
+          - {label: "Page Description", name: "description", widget: "string", required: false}
+          - {label: "No index, no follow", name: "noindex", widget: "boolean", required: false}
+      - label: "Hero"
+        name: "jumbotron"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "Headline", name: "headline", widget: "string", required: false, "hint":"This is used as the 'short title' on blogs, case studies, etc."}
+          - {label: "Tagline", name: "tagline", widget: "string", required: false}
+          - {label: "CTA Url", name: "ctaUrl", widget: "string", required: false}
+          - {label: "CTA Label", name: "ctaText", widget: "string", required: false}
+          - {label: "Image", name: "img", widget: "image", 'hint':"1400 x 420", required: false}
+      - {label: "Small Image", name: "small_image", widget: "image", hint: "shows on blog overview/listing page  308px X 308px"}
+      - {label: "Short Description", name: "short_description", widget: "string", 'hint':"shows on blog overview/listing page"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog-post.njk"}
+      - {label: "Post Date", name: "date", widget: "datetime", time_format: false, required: true, format: "YYYY-MM-DD"}
+      - label: "Article Image Alignment"
+        name: "image_alignment"
+        widget: "select"
+        default: ["images-left"]
+        hint: "Controls the alignment of all images in body copy. Use 'Float left' by default."
+        options:
+         - {label: "Float left", value: "images-left"}
+         - {label: "Float Right", value: "images-right"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - name: cta
+        label: CTA
+        widget: object
+        hint: 'Optional cta'
+        fields: 
+          - {label: "Copy", name: "copy", widget: "string", required: false}
+          - {label: "URL", name: "url", widget: "string", required: false}
+          - {label: "Label", name: "label", widget: "string", required: false}
+      - label: "Tags"
+        name: "collection"
+        widget: "select"
+        multiple: true
+        required: false
+        options: ["Aerospace & Aviation", "Transportation", "Lean Manufacturing", "Marine", "Metal Fabrication", "Military & Defense", "Alternative Energy", "Stone Cutting", "Clean Rooms", "Painting & Coating", "Dust Collection", "Metal Cutting", "Non-Destructive Testing", "Oil Mist Collection", "Weld Smoke", "Blasting & Sanding", "Grinding"]
+  - name: "tradeshowLandingPage"
+    label: "Tradeshow Landing Page"
+    folder: "src/content/tradeshow"
+    create: true
+    fields:
+      - {label: "Private?", name: "private", widget: "boolean", required: false, 'hint':'Set to true to prevent publishing'}
+      - {label: "Title", name: "title", widget: "string"}
+      - label: SEO
+        name: "seo"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "Page Title", name: "page_title", widget: "string", required: false, 'hint':'Will be suffixed with " | Duroair"'}
+          - {label: "Page Description", name: "description", widget: "string", required: false}
+          - {label: "No index, no follow", name: "noindex", widget: "boolean", required: false}
+      - label: "Hero"
+        name: "jumbotron"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "Headline", name: "headline", widget: "string", required: false, "hint":"This is used as the 'short title' on blogs, case studies, etc."}
+          - {label: "Tagline", name: "tagline", widget: "string", required: false}
+          - {label: "CTA Url", name: "ctaUrl", widget: "string", required: false}
+          - {label: "CTA Label", name: "ctaText", widget: "string", required: false}
+          - {label: "Image", name: "img", widget: "image", 'hint':"1400 x 420", required: false}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "tradeshow-landing-page.njk"}
+      - {label: "Permalink URL", name: "permalink", widget: "string"}
+      - {label: "Trade Show Date", name: "trade_show_date", widget: "string", hint: "Don't put full URL slug, only example-page"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Form Intro", name: "form_intro", widget: "string"}
+      - {label: "Hubspot Form ID", name: "hubspot_form_id", widget: "string"}
+      - {label: "Video Embed", name: "video_embed", widget: "text", required: false, hint: "Use the  embed code from youtube, vimeo, etc."}
+      - name: bottom_section
+        label: Bottom Page bottom
+        widget: object
+        fields: 
+          - {label: "Headline", name: "headline", widget: "string", required: false}
+          - name: icon_blocks
+            label: Icon Content Blocks
+            widget: list
+            fields:
+              - {label: "Icon", name: "icon", widget: "string", required: false}
+              - {label: "Content", name: "content", widget: "string", required: false}
+  - name: "solution"
+    label: "Solutions"
+    folder: "src/content/solutions"
+    create: true
+    filter: {field: "layout", value: "solution.njk"}
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - label: SEO
+        name: "seo"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "Page Title", name: "page_title", widget: "string", required: false, 'hint':'Will be suffixed with " | Duroair"'}
+          - {label: "Page Description", name: "description", widget: "string", required: false}
+          - {label: "No index, no follow", name: "noindex", widget: "boolean", required: false}
+      - label: "Hero"
+        name: "jumbotron"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "Headline", name: "headline", widget: "string", required: false, "hint":"This is used as the 'short title' on blogs, case studies, etc."}
+          - {label: "Tagline", name: "tagline", widget: "string", required: false}
+          - {label: "CTA Url", name: "ctaUrl", widget: "string", required: false}
+          - {label: "CTA Label", name: "ctaText", widget: "string", required: false}
+          - {label: "Image", name: "img", widget: "image", 'hint':"1400 x 420", required: false}
+      - {label: "Nav Title", name: "nav_title", widget: "string", hint: "Optional nav item label (will default to page title)", required: false}
+      - {label: "Nav Order", name: "nav_sort", widget: "number", required: false, value_type: "int"}
+      - label: "Show in nav?"
+        name: "show_in_menu"
+        widget: "select"
+        required: false
+        options:
+          - { label: "Yes", value: "true" }
+          - { label: "No", value: "false" }
+      - {label: "Layout", name: "layout", widget: "hidden", default: "solution.njk"}
+      - {label: "Permalink", name: "permalink", widget: "string", required: false}
+      - {label: "Thumbnail", name: "thumbnail", widget: "image", required: true}
+      - {label: "Page Image 1", name: "image_1", widget: "image", required: false}
+      - {label: "Page Image 2", name: "image_2", widget: "image", required: false}
+      - {label: "Page Image 3", name: "image_3", widget: "image", required: false}
+      - {label: "Short Description", name: "short_description", widget: "text", 'hint':'shows on cards and summaries'}
+      - {label: "Intro", name: "body", widget: "markdown"}
+      - {label: "Copy Block 1", name: "copy_block_1", widget: "markdown"}
+      - {label: "Copy Block 2", name: "copy_block_2", widget: "markdown", 'hint': 'technical specs, etc.'}
+      - name: compliance
+        label: Compliance
+        widget: list
+        fields:
+          - {label: Code, name: code, widget: string}
+          - {label: Description, name: description, widget: string}
+      - {label: "Related Products", name: "related_products", widget: "relation", multiple: true, collection: "product", search_fields: ["title"], value_field: "title", "hint":"Begin typing to select a related solution ", required: false}
+      - label: Testimonial
+        name: "testimonial"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "Qotation", name: "quotation", widget: "string", required: false, 'hint':"Do not surround with quotes."}
+          - {label: "Attestant", name: "attestant", 'hint': "The person who said it ",  widget: "string", required: false}
+          - {label: "Company", name: "company", 'hint': "Job title, company",  widget: "string", required: false}
+      - { label: "Form Intro", name: "form_intro", widget: "markdown" }
+      - { label: "Hubspot Form ID", name: "hubspot_form_id", widget: "string", required: false, default: "8a7e8410-f0e6-4fdf-9fe9-60dfeb51b9b4" }
+  - name: "product"
+    label: "Products"
+    folder: "src/content/products"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - label: SEO
+        name: "seo"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "Page Title", name: "page_title", widget: "string", required: false, 'hint':'Will be suffixed with " | Duroair"'}
+          - {label: "Page Description", name: "description", widget: "string", required: false}
+          - {label: "No index, no follow", name: "noindex", widget: "boolean", required: false}
+      - {label: "Nav Title", name: "nav_title", widget: "string", hint: "Optional nav item label (will default to page title)", required: false}
+      - {label: "Nav Order", name: "nav_sort", widget: "number", required: false, value_type: "int"}
+      - label: "Show in nav?"
+        name: "show_in_menu"
+        widget: "select"
+        required: false
+        options:
+          - { label: "Yes", value: "true" }
+          - { label: "No", value: "false" }
+      - label: "Hero"
+        name: "jumbotron"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "Headline", name: "headline", widget: "string", required: false, "hint":"This is used as the 'short title' on blogs, case studies, etc."}
+          - {label: "Tagline", name: "tagline", widget: "string", required: false}
+          - {label: "CTA Url", name: "ctaUrl", widget: "string", required: false}
+          - {label: "CTA Label", name: "ctaText", widget: "string", required: false}
+          - {label: "Image", name: "img", widget: "image", 'hint':"1400 x 420", required: false}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "product.njk"}
+      - {label: "Permalink", name: "permalink", widget: "string", required: false}
+      - {label: "Product Image", name: "product_image", widget: "image", required: false}
+      - {label: "Thumbnail", name: "thumbnail", widget: "image", required: false}
+      - {label: "Short Description", name: "short_description", widget: "markdown"}
+      - {label: "Intro", name: "body", widget: "markdown"}
+      - {label: "Page Image 1", name: "image_1", widget: "image", required: false}
+      - {label: "Technical Specifications", name: "technical_specifications", widget: "markdown"}
+      - {label: "Key Features", name: "key_features", widget: "markdown"}
+      - {label: "Page Image 2", name: "image_2", widget: "image", required: false}
+      - name: compliance 
+        label: Compliance 
+        widget: list
+        fields:
+          - {label: Code, name: code, widget: string}
+          - {label: Description, name: description, widget: text}
+      - { label: Brochure, name: brochure, widget: file, required: false, allow_multiple: false}
+      - {label: "Download Button Label", name: "btn_label", widget: "string", default: "Download Brochure", required: false,}
+  - name: "case_study"
+    label: "Case Study"
+    folder: "src/content/resources/case-studies"
+    create: true
+    filter: {field: "layout", value: "case-study.njk"}
+    fields:
+      - {label: "Post Date", name: "date", widget: "date", required: true, format: "YYYY-MM-DD"}
+      - {label: "Title", name: "title", widget: "string"}
+      - label: SEO
+        name: "seo"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "Page Title", name: "page_title", widget: "string", required: false, 'hint':'Will be suffixed with " | Duroair"'}
+          - {label: "Page Description", name: "description", widget: "string", required: false}
+          - {label: "No index, no follow", name: "noindex", widget: "boolean", required: false}
+      - label: "Hero"
+        name: "jumbotron"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "Headline", name: "headline", widget: "string", required: false, "hint":"This is used as the 'short title' on blogs, case studies, etc."}
+          - {label: "Tagline", name: "tagline", widget: "string", required: false}
+          - {label: "CTA Url", name: "ctaUrl", widget: "string", required: false}
+          - {label: "CTA Label", name: "ctaText", widget: "string", required: false}
+          - {label: "Image", name: "img", widget: "image", 'hint':"1400 x 420", required: false}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "case-study.njk"}
+      - {label: "Permalink", name: "permalink", widget: "string", required: false}
+      - {label: "Headline", name: "headline", widget: "string"}
+      - {label: "Short Description", name: "short_description", widget: "markdown"}
+      - {label: "Situation", name: "situation", widget: "markdown"}
+      - {label: "Situation image", name: "situation_image", widget: "image", required: false}
+      - {label: "Solution", name: "solution", widget: "markdown"}
+      - {label: "Solution image", name: "solution_image", widget: "image", required: false}
+      - {label: "Results", name: "results", widget: "markdown"}
+      - {label: "Results image", name: "results_image", widget: "image", required: false}
+      - label: Testimonial
+        name: "testimonial"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "Qotation", name: "quotation", widget: "string", required: false, 'hint':"Do not surround with quotes."}
+          - {label: "Attestant", name: "attestant", 'hint': "The person who said it ",  widget: "string", required: false}
+      - name: cta
+        label: CTA
+        widget: object
+        hint: 'Optional cta'
+        fields: 
+          - {label: "Copy", name: "copy", widget: "string"}
+          - {label: "URL", name: "url", widget: "string"}
+          - {label: "Label", name: "label", widget: "string"}
+  - name: "video"
+    label: "Videos"
+    label_singular: Video
+    folder: "src/content/resources/videos"
+    create: true
+    filter: {field: "layout", value: "video.njk"}
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - label: SEO
+        name: "seo"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "Page Title", name: "page_title", widget: "string", required: false, 'hint':'Will be suffixed with " | Duroair"'}
+          - {label: "Page Description", name: "description", widget: "string", required: false}
+          - {label: "No index, no follow", name: "noindex", widget: "boolean", required: false}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "video.njk"}
+      - {label: "Permalink", name: "permalink", widget: "string", required: false}
+      - {label: "Youtube URL", name: "youtube_url", widget: "text", required: true, 'hint':' Enter a full url like "https://www.youtube.com/watch?v=hLoMT95EIpw"'}
+      - {label: "Youtube ID", name: "youtube_id", widget: "string", 'hint':' The id can be found in the url - "https://www.youtube.com/watch?v=hLoMT95EIpw"'}
+      - {label: "Copy", name: "body", widget: "markdown"}
+      - {label: "Image", name: "thumbail", widget: "image", required: false}
+  - label: "Pages"
+    name: "pages"
+    files:
+      - name: "home"
+        label: "Home"
+        file: "src/content/index.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "home.njk"}
+          - {label: "Title", name: "title", widget: "string"}
+          - label: SEO
+            name: "seo"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Page Title", name: "page_title", widget: "string", required: false, 'hint':'Will be suffixed with " | Duroair"'}
+              - {label: "Page Description", name: "description", widget: "string", required: false}
+              - {label: "No index, no follow", name: "noindex", widget: "boolean", required: false}
+          - label: "Hero"
+            name: "jumbotron"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Headline", name: "headline", widget: "string", required: false, "hint":"This is used as the 'short title' on blogs, case studies, etc."}
+              - {label: "Tagline", name: "tagline", widget: "string", required: false}
+              - {label: "CTA Url", name: "ctaUrl", widget: "string", required: false}
+              - {label: "CTA Label", name: "ctaText", widget: "string", required: false}
+              - {label: "Image", name: "img", widget: "image", 'hint':"1400 x 420", required: false}
+          - {label: Intro, name: body, widget: markdown }
+          - {label: "Image 1", name: "image_1", widget: "image"}
+          - {label: Copy Block 1, name: copy_block_1, widget: markdown }
+          - {label: "Image 2", name: "image_2", widget: "image"}
+          - {label: Copy Block 2, name: copy_block_2, widget: markdown }
+          - {label: "Image 3", name: "image_3", widget: "image"}
+      - name: "Goverment and military"
+        label: "Govermant and Miltary"
+        file: "src/content/goverment-and-military/index.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "goverment-and-military.njk"}
+          - {label: "Title", name: "title", widget: "string"}
+              - label: "SEO"
+                name: "seo"
+                widget: "object"
+                required: false
+                fields:
+                  - {label: "Page Title", name: "page_title", widget: "string", required: false, hint: 'Will be suffixed with " | Duroair"'}
+                  - {label: "Page Description", name: "description", widget: "string", required: false}
+                  - {label: "No index, no follow", name: "noindex", widget: "boolean", required: false}
+              - label: "Show in nav?"
+                name: "show_in_menu"
+                widget: "select"
+                required: false
+                options:
+                  - { label: "Yes", value: "true" }
+                  - { label: "No", value: "false" }    
+              - label: "Hero"
+                name: "jumbotron"
+                widget: "object"
+                required: false
+                fields:
+                  - {label: "Headline", name: "headline", widget: "string", required: false, hint: "This is used as the 'short title' on blogs, case studies, etc."}
+                  - {label: "Tagline", name: "tagline", widget: "string", required: false}
+                  - {label: "CTA Url", name: "ctaUrl", widget: "string", required: false}
+                  - {label: "CTA Label", name: "ctaText", widget: "string", required: false}
+                  - {label: "Image", name: "img", widget: "image", hint: "1400 x 420", required: false}
+              - {label: "Intro", name: "body", widget: "markdown" }
+              - {label: "Image 1", name: "image_1", widget: "image"}
+              - {label: "Copy Block 1", name: "copy_block_1", widget: "markdown"}
+              - {label: "Image 2", name: "image_2", widget: "image"}
+              - {label: "Copy Block 2", name: "copy_block_2", widget: "markdown"}
+              - {label: "Image 3", name: "image_3", widget: "image"}
+      - name: "leadership"
+        label: "Leadership"
+        file: "src/content/about/leadership/index.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "leadership.njk"}
+          - {label: "Title", name: "title", widget: "string"}
+          - label: SEO
+            name: "seo"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Page Title", name: "page_title", widget: "string", required: false, 'hint':'Will be suffixed with " | Duroair"'}
+              - {label: "Page Description", name: "description", widget: "string", required: false}
+              - {label: "No index, no follow", name: "noindex", widget: "boolean", required: false}
+          - {label: "Nav Title", name: "nav_title", widget: "string", hint: "Optional nav item label (will default to page title)", required: false}
+          - {label: "Nav Order", name: "nav_sort", widget: "number", required: false, value_type: "int"}
+          - label: "Show in nav?"
+            name: "show_in_menu"
+            widget: "select"
+            required: false
+            options:
+              - { label: "Yes", value: "true" }
+              - { label: "No", value: "false" }
+          - label: "Hero"
+            name: "jumbotron"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Headline", name: "headline", widget: "string", required: false, "hint":"This is used as the 'short title' on blogs, case studies, etc."}
+              - {label: "Tagline", name: "tagline", widget: "string", required: false}
+              - {label: "CTA Url", name: "ctaUrl", widget: "string", required: false}
+              - {label: "CTA Label", name: "ctaText", widget: "string", required: false}
+              - {label: "Image", name: "img", widget: "image", 'hint':"1400 x 420", required: false}
+          - {label: Body, name: body, widget: markdown }
+          - label: Team
+            name: team
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string, required: true}
+              - {label: Position, name: position, widget: string, required: true}
+              - {label: Photo, name: photo, widget: image, required: false}
+              - {label: Bio, name: bio, widget: markdown , required: true}
+              - {label: Start year, name: start_year, widget: number , min: 1950, required: true}
+      - name: "faq"
+        label: "FAQ"
+        file: "src/content/resources/faq/index.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "faq.njk"}
+          - {label: "Title", name: "title", widget: "string"}
+          - label: SEO
+            name: "seo"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Page Title", name: "page_title", widget: "string", required: false, 'hint':'Will be suffixed with " | Duroair"'}
+              - {label: "Page Description", name: "description", widget: "string", required: false}
+              - {label: "No index, no follow", name: "noindex", widget: "boolean", required: false}
+          - {label: "Nav Title", name: "nav_title", widget: "string", hint: "Optional nav item label (will default to page title)", required: false}
+          - {label: "Nav Order", name: "nav_sort", widget: "number", required: false, value_type: "int"}
+          - label: "Show in nav?"
+            name: "show_in_menu"
+            widget: "select"
+            required: false
+            options:
+              - { label: "Yes", value: "true" }
+              - { label: "No", value: "false" }
+          - label: "Hero"
+            name: "jumbotron"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Headline", name: "headline", widget: "string", required: false, "hint":"This is used as the 'short title' on blogs, case studies, etc."}
+              - {label: "Tagline", name: "tagline", widget: "string", required: false}
+              - {label: "CTA Url", name: "ctaUrl", widget: "string", required: false}
+              - {label: "CTA Label", name: "ctaText", widget: "string", required: false}
+              - {label: "Image", name: "img", widget: "image", 'hint':"1400 x 420", required: false}
+          - {label: Body, name: body, widget: markdown }
+          - name: questions
+            label: Questions
+            widget: list
+            fields:
+              - {label: Question, name: question, widget: string}
+              - {label: Answer, name: answer, widget: markdown}
+      - name: "beyond_comliance"
+        label: "Beyond Compliance"
+        file: "src/content/about/beyond-compliance/index.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "beyond-compliance.njk"}
+          - {label: "Title", name: "title", widget: "string"}
+          - label: SEO
+            name: "seo"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Page Title", name: "page_title", widget: "string", required: false, 'hint':'Will be suffixed with " | Duroair"'}
+              - {label: "Page Description", name: "description", widget: "string", required: false}
+              - {label: "No index, no follow", name: "noindex", widget: "boolean", required: false}
+          - {label: "Nav Title", name: "nav_title", widget: "string", hint: "Optional nav item label (will default to page title)", required: false}
+          - {label: "Nav Order", name: "nav_sort", widget: "number", required: false, value_type: "int"}
+          - label: "Show in nav?"
+            name: "show_in_menu"
+            widget: "select"
+            required: false
+            options:
+              - { label: "Yes", value: "true" }
+              - { label: "No", value: "false" }
+          - label: "Hero"
+            name: "jumbotron"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Headline", name: "headline", widget: "string", required: false, "hint":"This is used as the 'short title' on blogs, case studies, etc."}
+              - {label: "Tagline", name: "tagline", widget: "string", required: false}
+              - {label: "CTA Url", name: "ctaUrl", widget: "string", required: false}
+              - {label: "CTA Label", name: "ctaText", widget: "string", required: false}
+              - {label: "Image", name: "img", widget: "image", 'hint':"1400 x 420", required: false}
+          - {label: Intro, name: body, widget: markdown }
+          - {label: "Image", name: "image_1", widget: "image"}
+          - {label: Outro, name: outro, widget: markdown }
+          - {label: "Image 2", name: "image_2", widget: "image"}
+          - name: compliance 
+            label: Compliance 
+            widget: list
+            fields:
+              - {label: Code, name: code, widget: string}
+              - {label: Description, name: description, widget: string}
+      - name: "about"
+        label: "About"
+        file: "src/content/about/index.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "about.njk"}
+          - {label: "Title", name: "title", widget: "string"}
+          - label: SEO
+            name: "seo"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Page Title", name: "page_title", widget: "string", required: false, 'hint':'Will be suffixed with " | Duroair"'}
+              - {label: "Page Description", name: "description", widget: "string", required: false}
+              - {label: "No index, no follow", name: "noindex", widget: "boolean", required: false}
+          - {label: "Nav Title", name: "nav_title", widget: "string", hint: "Optional nav item label (will default to page title)", required: false}
+          - {label: "Nav Order", name: "nav_sort", widget: "number", required: false, value_type: "int"}
+          - label: "Show in nav?"
+            name: "show_in_menu"
+            widget: "select"
+            required: false
+            options:
+              - { label: "Yes", value: "true" }
+              - { label: "No", value: "false" }
+          - label: "Hero"
+            name: "jumbotron"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Headline", name: "headline", widget: "string", required: false, "hint":"This is used as the 'short title' on blogs, case studies, etc."}
+              - {label: "Tagline", name: "tagline", widget: "string", required: false}
+              - {label: "CTA Url", name: "ctaUrl", widget: "string", required: false}
+              - {label: "CTA Label", name: "ctaText", widget: "string", required: false}
+              - {label: "Image", name: "img", widget: "image", 'hint':"1400 x 420", required: false}
+          - {label: Intro, name: body, widget: markdown }
+          - {label: "Image", name: "image_1", widget: "image"}
+          - {label: Copy Block 1 , name: copy_block_1, widget: markdown }
+          - {label: "Image 2", name: "image_2", widget: "image"}
+          - name: cards 
+            label: Bottom Cards
+            widget: list
+            fields:
+              - {label: copy, name: copy, widget: markdown}
+              - {label: title, name: title, widget: string}
+              - {label: URL, name: url, widget: string}
+              - {label: "Image", name: "image", widget: "image"}
+      - name: "products-overview"
+        label: "Products Overview"
+        file: "src/content/products/index.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "products.njk"}
+          - {label: "Title", name: "title", widget: "string"}
+          - label: SEO
+            name: "seo"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Page Title", name: "page_title", widget: "string", required: false, 'hint':'Will be suffixed with " | Duroair"'}
+              - {label: "Page Description", name: "description", widget: "string", required: false}
+              - {label: "No index, no follow", name: "noindex", widget: "boolean", required: false}
+          - {label: "Nav Title", name: "nav_title", widget: "string", hint: "Optional nav item label (will default to page title)", required: false}
+          - {label: "Nav Order", name: "nav_sort", widget: "number", required: false, value_type: "int"}
+          - label: "Show in nav?"
+            name: "show_in_menu"
+            widget: "select"
+            required: false
+            options:
+              - { label: "Yes", value: "true" }
+              - { label: "No", value: "false" }
+          - label: "Hero"
+            name: "jumbotron"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Headline", name: "headline", widget: "string", required: false, "hint":"This is used as the 'short title' on blogs, case studies, etc."}
+              - {label: "Tagline", name: "tagline", widget: "string", required: false}
+              - {label: "CTA Url", name: "ctaUrl", widget: "string", required: false}
+              - {label: "CTA Label", name: "ctaText", widget: "string", required: false}
+              - {label: "Image", name: "img", widget: "image", 'hint':"1400 x 420", required: false}
+          - {label: Intro, name: body, widget: markdown }
+          - {label: "Intro Image", name: "intro_img", widget: "image"}
+          - name: section_1
+            label: Section 1
+            widget: "object"
+            fields:
+              - { label: "Headline", name: "headline", widget: "string", required: false}
+              - { label: "Copy", name: "copy", widget: "markdown", required: false }
+              - { label: "Youtube Url", name: "youtube_url", widget: "string", required: false }
+          - name: section_2
+            label: Section 1
+            widget: "object"
+            required: false
+            fields:
+              - { label: "Headline", name: "headline", widget: "string", required: false}
+              - { label: "Copy", name: "copy", widget: "markdown", required: false }
+              - { label: "Image", name: "img", widget: "image", 'hint':"", required: false}
+          - name: enclosures
+            label: Enclosures
+            widget: "object"
+            fields:
+              - { label: "Headline", name: "headline", widget: "string", required: false }
+              - { label: "Copy", name: "copy", widget: "markdown", required: false }
+              - name: cards
+                label: Cards
+                widget: list
+                fields:
+                  - { label: copy, name: copy, widget: markdown }
+                  - { label: title, name: title, widget: string }
+                  - { label: URL, name: url, widget: string }
+                  - { label: "Image", name: "image", widget: "image" }
+          - name: air_filtration
+            label: Air Filtration
+            widget: "object"
+            fields:
+              - { label: "Headline", name: "headline", widget: "string", required: false }
+              - { label: "Copy", name: "copy", widget: "markdown", required: false }
+              - name: cards
+                label:  Cards
+                widget: list
+                fields:
+                  - { label: copy, name: copy, widget: markdown }
+                  - { label: title, name: title, widget: string }
+                  - { label: URL, name: url, widget: string }
+                  - { label: "Image", name: "image", widget: "image" }
+          - name: dust_collection
+            label: Dust Collection
+            widget: "object"
+            fields:
+              - { label: "Headline", name: "headline", widget: "string", required: false }
+              - { label: "Copy", name: "copy", widget: "markdown", required: false }
+              - name: cards
+                label: Cards
+                widget: list
+                fields:
+                  - { label: copy, name: copy, widget: markdown }
+                  - { label: title, name: title, widget: string }
+                  - { label: URL, name: url, widget: string }
+                  - { label: "Image", name: "image", widget: "image" }
+      - name: "industry_associations"
+        label: "Industry Associations"
+        file: "src/content/about/industry-associations/index.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "associations.njk"}
+          - {label: "Title", name: "title", widget: "string"}
+          - label: SEO
+            name: "seo"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Page Title", name: "page_title", widget: "string", required: false, 'hint':'Will be suffixed with " | Duroair"'}
+              - {label: "Page Description", name: "description", widget: "string", required: false}
+              - {label: "No index, no follow", name: "noindex", widget: "boolean", required: false}
+          - {label: "Nav Title", name: "nav_title", widget: "string", hint: "Optional nav item label (will default to page title)", required: false}
+          - {label: "Nav Order", name: "nav_sort", widget: "number", required: false, value_type: "int"}
+          - label: "Show in nav?"
+            name: "show_in_menu"
+            widget: "select"
+            required: false
+            options:
+              - { label: "Yes", value: "true" }
+              - { label: "No", value: "false" }
+          - label: "Hero"
+            name: "jumbotron"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Headline", name: "headline", widget: "string", required: false, "hint":"This is used as the 'short title' on blogs, case studies, etc."}
+              - {label: "Tagline", name: "tagline", widget: "string", required: false}
+              - {label: "CTA Url", name: "ctaUrl", widget: "string", required: false}
+              - {label: "CTA Label", name: "ctaText", widget: "string", required: false}
+              - {label: "Image", name: "img", widget: "image", 'hint':"1400 x 420", required: false}
+          - {label: Copy, name: body, widget: markdown }
+          - label: CTA Callout
+            name: "cta"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Headline", name: "headline", widget: "string", required: false}
+              - {label: "Copy", name: "copy", widget: "string", required: false}
+              - {label: "URL", name: "url", widget: "string", required: false}
+              - {label: "Button Label", name: "label", widget: "string", required: false, default: "Learn More"}
+      - name: "resources"
+        label: "Resources"
+        file: "src/content/resources/index.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "resources.njk"}
+          - {label: "Title", name: "title", widget: "string"}
+          - label: SEO
+            name: "seo"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Page Title", name: "page_title", widget: "string", required: false, 'hint':'Will be suffixed with " | Duroair"'}
+              - {label: "Page Description", name: "description", widget: "string", required: false}
+              - {label: "No index, no follow", name: "noindex", widget: "boolean", required: false}
+          - {label: "Nav Title", name: "nav_title", widget: "string", hint: "Optional nav item label (will default to page title)", required: false}
+          - {label: "Nav Order", name: "nav_sort", widget: "number", required: false, value_type: "int"}
+          - label: "Show in nav?"
+            name: "show_in_menu"
+            widget: "select"
+            required: false
+            options:
+              - { label: "Yes", value: "true" }
+              - { label: "No", value: "false" }
+          - label: "Hero"
+            name: "jumbotron"
+            widget: "object"
+            required: false
+            fields:
+              - {label: "Headline", name: "headline", widget: "string", required: false, "hint":"This is used as the 'short title' on blogs, case studies, etc."}
+              - {label: "Tagline", name: "tagline", widget: "string", required: false}
+              - {label: "CTA Url", name: "ctaUrl", widget: "string", required: false}
+              - {label: "CTA Label", name: "ctaText", widget: "string", required: false}
+              - {label: "Image", name: "img", widget: "image", 'hint':"1400 x 420", required: false}
+          - {label: Copy, name: body, widget: markdown }
+          - {label: "Image", name: "image_1", widget: "image", required: false}
+          - name: cards 
+            label: Bottom Cards
+            widget: list
+            fields:
+              - {label: copy, name: copy, widget: markdown}
+              - {label: title, name: title, widget: string}
+              - {label: URL, name: url, widget: string}
+              - {label: "Image", name: "image", widget: "image"}
+              - {label: "Type", name: "type", widget: "select", options: ["Blog","Videos","Case Study","Whitepaper"], required: false}
+  - label: "Site"
+    name: "site"
+    files:
+      - name: "settings"
+        label: "Site Settings"
+        file: "src/content/private/settings.md"
+        description: "Control the promo popup here."
+        fields:
+          - {label: "private", name: "private", widget: "hidden", default: "true"}
+          - {label: "Enabled", name: "enabled", widget: "boolean", required: true}
+          - {label: "Promo Campaign Name", name: "promo_campaign", widget: "string", hint: "Shows in Google Analtyics event label.  Also controls cookie variable to dismiss the modal pop-up" }
+          - {label: "Promo Copy", name: "promo_copy", widget: "markdown", "hint":"Use 'bold' for the title/heading." }
+          - {label: "Promo URL", name: "promo_url", widget: "string" }
+          - {label: "Promo Button Label", name: "promo_button_label", widget: "string" }
+          - {label: "Promo Desktop Img", name: "promo_desktop_img", widget: "image", hint: "Size 236x296 px"}
+          - {label: "Promo Mobile Img", name: "promo_mobile_img", widget: "image", hint: "Size 73x96 px"}

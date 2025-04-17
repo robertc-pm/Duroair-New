@@ -1,0 +1,100 @@
+.home {
+    #hero {
+        min-height: 595px;
+        background: darken(@primary-color, 38%) !important;
+        background-image: none;
+        .btn-default {
+            background: #49bfac;
+            border-radius: 30px;
+            color: #fff;
+            letter-spacing: 2px;
+            border: 2px solid #fff;
+            padding: 10px 20px;
+            font-size: 20px;
+        }
+        .jumbotron-headline{
+            margin-bottom: 16px;
+        }
+        video{
+            position: absolute;
+            top:0;
+            left:0;
+            object-fit: cover;
+            .square(100%);
+            opacity: 0;
+            transition: all .5s;
+            z-index: 1;
+
+            &.visible{
+                opacity: 1;
+            }
+        }
+        .hero-overlay{
+            z-index: 2;
+            // display: none;
+        }
+    }
+    .jumbo-tagline {
+        font-size: 16px;
+        line-height: 1.8;
+
+        br {
+            display: none;
+        }
+    }
+    .solution-item {
+        height: 117px;
+        line-height: 117px;
+    }
+
+}
+.solutions-delivered {
+    padding-bottom: 50px;
+    margin-bottom:50px;
+
+    img {
+        max-width: 100%;
+    }
+    
+}
+@media screen and (min-width: 500px) {
+    .home {
+        #hero {
+            min-height: 515px;
+        }
+    }
+}
+@media screen and (min-width: @screen-sm-min) {
+    .home {
+        #hero {
+            min-height: 600px;
+            .jumbotron-headline {
+                margin-bottom: 24px;
+            }
+        }
+        .jumbo-tagline {
+            font-size: 16px;
+            max-width: none;
+            br {
+                display: inline;
+            }
+        }
+        .solutions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .solution-item {
+            @s: 220px;
+            width: @s;
+            height: @s;
+            line-height: @s;
+            display: block;
+            margin: 24px;
+        }
+    }
+    .solutions-delivered {
+        padding-bottom: 0;
+        justify-items: center;
+    }
+}

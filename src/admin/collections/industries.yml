@@ -1,0 +1,26 @@
+- name: "industry"
+  label: "Industries"
+  label_singular: "Industry"
+  folder: "src/content/industries"
+  create: true
+  filter: {field: "layout", value: "industry.njk"}
+  fields:
+    <!-- @include-static ../partials/base-fields.yml -->
+    <!-- @include-static ../partials/nav-fields.yml -->
+    <!-- @include-static ../partials/jumbotron.yml -->
+    - {label: "Layout", name: "layout", widget: "hidden", default: "industry.njk"}
+    - {label: "Thumbnail", name: "thumbnail", widget: "image", required: true}
+    - {label: "Head Text 1", name: "text_1", widget: "text", required: false}
+    - {label: "Body Image 1", name: "image_1", widget: "image", required: false}
+    - {label: "Head Text 2", name: "text_2", widget: "text", required: false}
+    - {label: "Body Image 2", name: "image_2", widget: "image", required: false}
+    - {label: "Head Text 3", name: "text_3", widget: "text", required: false}
+    - {label: "Body Image 3", name: "image_3", widget: "image", required: false}
+    - {label: "Permalink", name: "permalink", widget: "string", required: false}
+    - {label: "Short Description", name: "short_description", widget: "text", 'hint':'shows on cards and summaries'}
+    - {label: "Copy Block 1", name: "body", widget: "markdown", 'hint':'shows at top of page'}
+    - {label: "Copy Block 2", name: "secondary_copy", widget: "markdown", 'hint':'shows mid page', required: false}
+    - {label: "Solutions for Your Industry", name: "solutions_for_industry", widget: "relation", collection: "solution", search_fields: ["title"], value_field: "title", "hint":"Begin typing to select a solution", required: false, multiple: true}
+    <!-- @include-static ../partials/testimonial.yml -->
+        - {label: "Related Products", name: "related_products", widget: "relation", multiple: true, collection: "product", search_fields: ["title"], value_field: "title", "hint":"Begin typing to select a related solution ", required: false}
+    <!-- @include-static ../partials/cta-callout.yml --> 

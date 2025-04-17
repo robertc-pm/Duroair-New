@@ -1,0 +1,38 @@
+- name: "case_study"
+  label: "Case Study"
+  folder: "src/content/resources/case-studies"
+  create: true
+  filter: {field: "layout", value: "case-study.njk"}
+  fields:
+    - {label: "Post Date", name: "date", widget: "date", required: true, format: "YYYY-MM-DD"}
+    <!-- @include-static ../partials/base-fields.yml -->
+    <!-- @include-static ../partials/jumbotron.yml -->
+    - {label: "Layout", name: "layout", widget: "hidden", default: "case-study.njk"}
+    - {label: "Permalink", name: "permalink", widget: "string", required: false}
+    - {label: "Headline", name: "headline", widget: "string"}
+    - {label: "Small Image", name: "small_image", widget: "image", hint: "shows on case studies overview/listing page  308px X 308px"}
+    - {label: "Short Description", name: "short_description", widget: "markdown"}
+    - {label: "Situation", name: "situation", widget: "markdown"}
+    - {label: "Situation image", name: "situation_image", widget: "image", required: false}
+    - {label: "main image 1", name: "main_image_1", widget: "image", required: true}
+    - {label: "main image 2", name: "main_image_2", widget: "image", required: true}
+    - {label: "main image 3", name: "main_image_3", widget: "image", required: true}
+    - {label: "Solution", name: "solution", widget: "markdown"}
+    - {label: "Solution image", name: "solution_image", widget: "image", required: false}
+    - {label: "Results", name: "results", widget: "markdown"}
+    - {label: "Results image", name: "results_image", widget: "image", required: false}
+    - label: Testimonial
+      name: "testimonial"
+      widget: "object"
+      required: false
+      fields:
+        - {label: "Qotation", name: "quotation", widget: "string", required: false, 'hint':"Do not surround with quotes."}
+        - {label: "Attestant", name: "attestant", 'hint': "The person who said it ",  widget: "string", required: false}
+    - name: cta
+      label: CTA
+      widget: object
+      hint: 'Optional cta'
+      fields: 
+        - {label: "Copy", name: "copy", widget: "string" , required: false}
+        - {label: "URL", name: "url", widget: "string" , required: false}
+        - {label: "Label", name: "label", widget: "string" , required: false}

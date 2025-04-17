@@ -1,0 +1,12 @@
+- name: "whitepaper"
+  label: "White Paper"
+  label_singular: "whitepaper"
+  folder: "src/content/resources/whitepapers"
+  create: true
+  filter: {field: "layout", value: "landing-page.njk"}
+  fields:
+    <!-- @include-static ../partials/base-fields.yml -->
+    <!-- @include-static ../partials/nav-fields.yml -->
+    <!-- @include-static ../partials/jumbotron.yml -->
+    - {label: "Layout", name: "layout", widget: "hidden", default: "landing-page.njk"}
+    - {label: "Thumbnail", name: "thumbnail", widget: "image", required: false}

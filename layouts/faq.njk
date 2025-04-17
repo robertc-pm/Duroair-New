@@ -1,0 +1,71 @@
+{% extends "layout.njk" %}
+{% set waveType = 'gray' %}
+{% block body %}
+
+<!-- FAQ Section Begin -->
+<div class="faq-sec cmn-gap">
+    <div class="container">
+        <div class="faq-inr">
+            <div class="sec-head">
+                <h2>{{ intro_head }}</h2>
+                
+            </div>
+
+            <!-- Dynamic Category Tabs -->
+            <div class="faq-tab-head">
+                <ul>
+                    <li data-filter="all" class="active">All</li>
+                    
+                    {% set categories = [] %}
+                    {% for q in questions %}
+                        {% if q.category not in categories %}
+                            {% set categories = categories.concat([q.category]) %}
+                        {% endif %}
+                    {% endfor %}
+
+                    {% for category in categories %}
+                        <li data-filter="{{ category }}">{{ category }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+
+
+            <!-- FAQ Items -->
+            <div class="faq-inr-wrp">
+                {% for faq in questions %}
+                <div class="faq-inr-item {{ faq.category }} reasons-accrdn-card">
+                    <div class="faq-inr-item-head reasonsaccr-head">
+                        <h3>{{ faq.question }}</h3>
+                        <span class="faq-inr-item-head-icon"><i class="fa-solid fa-plus"></i></span>
+                    </div>
+                    <div class="faq-inr-item-content reasonsaccr-body">
+                        {{ faq.answer | md }}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Of FAQ Section -->
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {%- for q in questions -%}
+            {
+                "@type": "Question",
+                "name": "{{ q.question | escape}}",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "{{ q.answer | md | escape}}"
+                }
+            }{%- if not loop.last -%},{%- endif -%}
+            {%- endfor -%}
+        ]
+    }
+</script>
+{% endblock %}

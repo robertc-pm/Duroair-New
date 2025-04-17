@@ -1,0 +1,217 @@
+.header-img {}
+
+#hero.lp-hero {
+    padding-top: 0;
+    // overflow-y: visible;
+    margin-bottom: -270px;
+    min-height: 700px;
+
+    .hero-overlay {
+        height: 900px;
+    }
+
+    &:after {
+        bottom: -4px;
+    }
+
+    .jumbo-tagline {
+        text-transform: none;
+    }
+
+    .jumbotron-headline {
+        // padding-top:20px;
+        margin-bottom: 24px;
+    }
+
+    .btn-default {
+        padding: 16px 32px;
+    }
+}
+
+.lp-header {
+    padding-top: 20px;
+}
+
+.lp-top {
+    padding-top: 0;
+}
+
+.header-img {
+    max-height: 100%;
+    position: relative;
+    z-index: 4;
+    margin: 0 auto 32px;
+    display: block;
+}
+
+.card-whitepapers {
+    // border:1px solid #aaa;
+}
+
+.landing-page {
+    #hero {
+        background-image: url('/img/dur-aerodef-hero.jpg');
+    }
+
+    .vid-embed {
+        margin-top: 40px;
+    }
+}
+
+.page-how-a-retractable-clean-air-system-meets-stringent-compliance-requirements{
+    #hero {
+        background-image: url('/img/lp/lp-clean-air-bg.jpg');
+    }
+}
+
+
+.page-resources-whitepapers {
+    .card.simple {
+        .card-img {
+            box-shadow: none;
+            // height: auto;
+            width: auto;
+        }
+    }
+}
+
+.bottom-section {
+    padding: 0px 0 110px 0;
+}
+
+.below-form-section {
+    padding-top: 95px;
+}
+
+page-aerodef-2020-index.html {
+    display: none;
+}
+
+@media screen and (max-width: @screen-sm-min) {
+    .hero-form {
+        width: 88%;
+        margin: auto;
+    }
+
+    #hero.trade-show-hero {
+        margin-bottom: 70px;
+        min-height: 420px;
+
+        .jumbo-content {
+            padding-top: 40px;
+        }
+    }
+
+    #hero.lp-hero .jumbo-tagline {
+        font-size: 16px;
+    }
+
+}
+
+#hero.lp-hero .jumbo-tagline .lp-content {
+    h3 {
+        &:after {
+            display: none;
+        }
+    }
+
+
+}
+
+.lp-content {
+    ul {}
+
+    ol {
+        margin-bottom: 30px;
+
+        li {
+            line-height: 30px;
+        }
+    }
+}
+
+.hs-form-field .hs-input {
+    border-radius: 4px;
+    padding: 12px 8px;
+}
+
+@media screen and (min-width: @screen-sm-min) {
+    .lp-logo-container {}
+
+    #hero.lp-hero {
+        // min-height: 700px;
+        margin-bottom: 70px;
+
+        .jumbotron-headline {
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            margin-top: 20px;
+        }
+    }
+
+    .lp-header {
+        width: 47%;
+        max-width: 481px;
+        position: absolute;
+        top: 106px;
+        left: 50%;
+        margin-left: 56px;
+    }
+
+    .header-img {
+        left: 50px;
+        top: -620px;
+        max-height: none;
+        position: absolute;
+    }
+
+    .hero-form {
+        position: absolute;
+        top: 170px;
+        left: 50%;
+        max-width: 481px;
+        width: 100%;
+        z-index: 99;
+        margin-left: 40px;
+    }
+
+    .lp-top {
+        padding-top: 56px;
+    }
+
+    #hero.trade-show-hero {
+        margin-bottom: 290px;
+
+        .jumbo-content {
+            width: 50%;
+            padding-top: 132px;
+        }
+    }
+
+    .grid-2 {
+        grid-gap: 6%;
+        margin-top: 40px;
+    }
+}
+
+.vid-embed {
+    text-align: center;
+
+    img {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width:1060px) {
+
+    .hero-form {
+        max-width: 338px;
+    }
+
+    #hero .jumbotron-headline {
+        font-size: 40px;
+    }
+}

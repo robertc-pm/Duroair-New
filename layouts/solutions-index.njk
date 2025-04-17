@@ -1,0 +1,177 @@
+{% extends "layout.njk" %}
+{% set waveType = 'gray' %}
+{% block body %}
+
+
+    <!-- Transforming Solution Section Begin -->
+
+    <div class="transforming-solution-sec cmn-gap">
+        <div class="container">
+            <div class="transforming-solution-inr has-texture">
+                <div class="texture"><img src="/img/military-csstdy-texture.png" alt="Texture"></div>
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="transfrom-solution-left">
+                            <div class="sec-inr-head">
+                                <h2>Transforming Workspaces with Reliable Solutions and Trusted  Products</h2>
+                            </div>
+                            <div class="sec-inr-para">
+                                <p>Explore Duroair’s innovative solutions—Clean Rooms, Dust  Collection, Painting & Coating, and more—powered by our advanced product  lineup.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="transfrom-solution-right row">
+                            <div class="transfromsl-img-wrp">
+                                <div class="transforming-solution-img">
+                                    <img src="/img/transform-solution-2.png" alt="Image">
+                                </div>
+                                <div class="blob1"></div>
+                            </div>
+                            <div class="transfromsl-img-wrp">
+                                <div class="transforming-solution-img">
+                                    <img src="/img/transform-solution-1.png" alt="Image">
+                                </div>
+                                <div class="blob1"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <!-- End Of Transforming Solution Section -->
+
+
+    <!-- Solution process section Begin -->
+        {{ contents | safe }}
+    <!-- End Of Solution process section -->
+
+    <!-- INDUSTRIES-SECTION -->
+        <div class="solution-products-sec solution-pg">
+            <div class="container">
+                <div class="solutions-product-inr">
+                    <div class="sec-head">
+                        <h2>Application Powered by Duroair Products</h2>
+                    </div>
+                    <div class="sec-para noline">
+                        <p>Each Duroair product integrates seamlessly with specific solution needs, addressing compliance, safety, and operational challenges.</p>
+                    </div>
+
+                    <div class="slnpr-tab-wrp cmnslider">
+                        <div class="slnpr-tab-head-wrp">
+                            <ul>
+                                {%- for solution in solutions -%}
+                                <li class="{% if loop.first %}active{% endif %}">{{ solution.title }}</li>
+                                {%- endfor -%}
+                            </ul>
+                        </div>
+
+                        <div class="slnpr-tab-items-wrp">
+                            {%- for solution in solutions -%}
+                            <div class="slnpr-tab-item {{ solution.title | lower}}">
+                                <div class="slnprt-item-inr row">
+                                    <!-- Solution Data -->
+                                    <div class="slnprt-item-lg">
+                                        <div class="slnprt-item-lg-inr">
+                                            <div class="slnprti-img">
+                                                <img src="{{ solution.thumbnail }}" alt="{{ solution.title }}">
+                                                <h3>{{ solution.title }}</h3>
+                                            </div>
+                                            <div class="slnprt-conent">
+                                                <div class="h3-title">{{ solution.title }}</div>
+                                                <p>{{ solution.description }}</p>
+                                                <a href="/{{ solution.path }}" class="button cmn-btn">Learn More<span class="button__spotlight"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Related Products -->
+                                    <div class="slnprt-item-right">
+                                        <div class="row">
+                                            {%- for p in solution.related_products -%}
+                                            {%- set item = p | findByField('title', products) -%}
+                                            {%- if item and item.thumbnail and item.title -%} 
+                                                <div class="slnprt-item-sm col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                    <div class="slnprt-item-inr">
+                                                        <div class="slnprti-img">
+                                                            <img src="{{ item.thumbnail }}" alt="{{ item.title }}">
+                                                            <h3>{{ item.title }}</h3>
+                                                            <a href="/{{ item.path }}" class="arrow-symbol">
+                                                                <img src="/img/arrow-badge.svg" alt="Arrow">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            {%- endif -%}
+                                        {%- endfor -%}
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {%- endfor -%}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- INDUSTRIES-SECTION -->
+
+      <!-- WHY-CHOOSE-DUROAIR-SECTION -->
+   
+     <div class="whyduroair-solution">
+        <div class="container">
+            <div class="whyduroair-solution-inr">
+                <div class="whyduroairsol-head">
+                    <h2>Why Choose Duroair Solutions?</h2>
+                    <a href="/contact/" class="button">Contact Us<span class="button__spotlight"></span></a>
+                </div>
+                <div class="whyduroairsol-cards">
+                    <div class="wds-card-wrp">
+                        <div class="wds-card">
+                            <h3>Engineered for Compliance</h3>
+                            <p>Custom-designed to meet and exceed industry-specific regulatory  and compliance requirements.</p>
+                        </div>
+                    </div>
+                    <div class="btmwds-cards">
+                        <div class="wds-card-wrp">
+                            <div class="wds-card">
+                                <h3> Adaptable Designs</h3>
+                                <p>Featuring modular, flexible, and scalable solutions tailored to fit  evolving operational needs.</p>
+                            </div>
+                        </div>
+                        <div class="wds-card-wrp">
+                            <div class="wds-card">
+                                <h3> Cost and Efficiency Benefits</h3>
+                                <p> Proven to deliver measurable cost savings and significant  improvements in operational efficiency.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+
+    <!-- WHY-CHOOSE-DUROAIR-SECTION -->
+
+
+        <!-- GLOBAL-LEADERS-SECTION -->
+        <div class="global-leaders-wrap">
+            <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                <div class="section-heading">
+                    <h2>Trusted by Global Leaders</h2>
+                </div>
+                </div>
+                <div class="col-lg-12">
+                  {% include "partials/solutions-delivered.njk" %}
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- GLOBAL-LEADERS-SECTION -->
+
+{% endblock %}

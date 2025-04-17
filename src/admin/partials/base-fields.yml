@@ -1,0 +1,9 @@
+- {label: "Title", name: "title", widget: "string"}
+- label: SEO
+  name: "seo"
+  widget: "object"
+  required: false
+  fields:
+    - {label: "Page Title", name: "page_title", widget: "string", required: false, 'hint':'Will be suffixed with " | Duroair"'}
+    - {label: "Page Description", name: "description", widget: "string", required: false}
+    - {label: "No index, no follow", name: "noindex", widget: "boolean", required: false}

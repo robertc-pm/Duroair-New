@@ -1,0 +1,13 @@
+- name: "industry_associations"
+  label: "Industry Associations"
+  file: "src/content/about/industry-associations/index.md"
+  fields:
+    - {label: "Layout", name: "layout", widget: "hidden", default: "associations.njk"}
+    <!-- @include-static ../partials/base-fields.yml -->
+    <!-- @include-static ../partials/nav-fields.yml -->
+    <!-- @include-static ../partials/jumbotron.yml -->
+    - {label: Copy, name: body, widget: markdown }
+    - {label: Copy, name: head, widget: string }
+    - {label: Copy, name: desc, widget: markdown }
+    - {label: Copy, name: image, widget: image }
+    <!-- @include-static ../partials/cta-callout.yml -->

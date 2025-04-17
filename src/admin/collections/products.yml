@@ -1,0 +1,60 @@
+- name: "product"
+  label: "Products"
+  folder: "src/content/products"
+  create: true
+  fields:
+    <!-- @include-static ../partials/base-fields.yml -->
+    <!-- @include-static ../partials/jumbotron.yml -->
+    - {label: "Layout", name: "layout", widget: "hidden", default: "product.njk"}
+    - {label: "Permalink", name: "permalink", widget: "string", required: false}
+    - {label: "Product Image", name: "product_image", widget: "image", required: false}
+    - name: product_intro
+      label: Product Intro
+      widget: object
+      fields:
+        - {label: Heading, name: heading, widget: string, required: false}
+        - {label: Description, name: description, widget: markdown, required: false}
+    - {label: "Intro Video", name: "intro_video", widget: "file", required: false, allow_multiple: false}     
+    - {label: "Thumbnail", name: "thumbnail", widget: "image", required: false}
+    - {label: "Short Description", name: "short_description", widget: "markdown", required: false}
+    - {label: "Intro", name: "body", widget: "markdown"}
+    - {label: "Page Image 1", name: "image_1", widget: "image", required: false}
+    - name: techncal_specification
+      label: Technical Specification
+      widget: object
+      fields:
+        - {label: Technical Heading, name: "technical_heading", widget: string, required: false}
+        - {label: "Technical Description", name: "technical_description", widget: "markdown", required: false}
+    - name: new_key_features
+      label: New Key Features
+      widget: list
+      fields:
+        - {label: Heading, name: heading, widget: string}
+        - {label: Description, name: description, widget: markdown}
+    - name: key_images
+      label: Key Images
+      widget: object
+      fields:
+        - {label: Image 1, name: image_1, widget: image, required: false}
+        - {label: Image 2, name: image_2, widget: image, required: false}
+        - {label: Image 3, name: image_3, widget: image, required: false}
+        - {label: Image 4, name: image_4, widget: image, required: false}
+    - {label: "Key Features", name: "key_features", widget: "markdown"}
+    - {label: "Page Image 2", name: "image_2", widget: "image", required: false}
+    - name: compliance 
+      label: Compliance 
+      widget: list
+      fields:
+        - {label: Code, name: code, widget: string}
+        - {label: Description, name: description, widget: text}
+    - {label: "Related Solutions", name: "related_solutions", widget: "relation", multiple: true, collection: "solution", search_fields: ["title"], value_field: "title", "hint":"Begin typing to select a related product ", required: false}
+    - name: g&m_related_data
+      label: Government 7 military Data
+      widget: "object"
+      fields:
+        - {label: "Show Data", name: "show_data", widget: markdown, required: false}
+        - {label: "Hide Data", name: "hide_data", widget: markdown, required: false}
+    - { label: Brochure, name: brochure, widget: file, required: false, allow_multiple: false}
+    - {label: "Download Button Label", name: "btn_label", widget: "string", default: "Download Brochure", required: false,}
+
+    <!-- @include-static ../partials/cta-callout.yml -->

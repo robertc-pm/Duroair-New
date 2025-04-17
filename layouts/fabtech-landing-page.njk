@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {% include "partials/head.njk" %}
+</head>
+<body class="page-{{ path | cssClassify }}  landing-page">
+{%- include "partials/gtm-noscript.njk" -%}
+<div id="hero" class="{{waveType}} lp-hero trade-show-hero">
+    <div class="container lp-logo-container"><a class="header-logo" href="/" title="Duroair Home">{% include "partials/inline-svg-logo.njk" %}</a></div>
+    <div class="container">
+        <div class="jumbo-content">
+            <div class="date">{{date}}</div>
+            <h1 class="jumbotron-headline">{{ jumbotron.headline if jumbotron.headline else title }}</h1>
+            <div class="jumbo-tagline">{{ jumbotron.tagline }}</div>
+        </div>
+    </div>
+    <div class="hero-overlay"></div>
+</div>
+<div class="form-container hero-form" id="form-container">
+    <div class="form-intro">{{form_intro | md}}</div>
+    {% include "partials/hubspot-form.njk" %}
+</div>
+<section class="section">
+    <div class="grid-2">
+        <div class="vid-embed">
+            <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/334763857" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+        </div>
+        <div>
+            {{ contents | safe }}
+        </div>
+    </div>
+</section>
+<section class="section bottom-section">
+    <h3 class="text-center">Visit Us at Booth #B11067</h3><br><br>
+    <div class="grid-3">
+        <div class="icon-block">
+            <object id="svg-1" type="image/svg+xml" data-animate-svg="svg-1" data="/img/icons/icon-basic_sheet_pen.svg" alt="icon"></object>
+            <br>
+            Discover how our modular air filtration solutions can be tailored to protect and improve cellular workflows
+        </div>
+        <div class="icon-block">
+            <object id="svg-2" type="image/svg+xml" data-animate-svg="svg-2" data="/img/icons/icon-arrows_circle_check.svg" alt="icon"></object>
+            <br>
+            Explore the bottom-line impact of hexavalent chromium on aerospace and other manufacturing facilities
+        </div>
+        <div class="icon-block">
+            <object id="svg-3" type="image/svg+xml" data-animate-svg="svg-3" data="/img/icons/icon-ecommerce_graph_increase.svg" alt="icon"></object>
+            <br>
+            Learn how we can engineer a clean air solution to enhance safety, ensure compliance, and maximize productivity
+        </div>
+    </div>
+</section>
+{%- include "partials/colophon.njk" -%}
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+{% include "partials/footer-scripts.njk" %}
+</body>
+</html>

@@ -1,0 +1,10 @@
+- label: "Hero"
+  name: "jumbotron"
+  widget: "object"
+  required: false
+  fields:
+    - {label: "Headline", name: "headline", widget: "string", required: false, "hint":"This is used as the 'short title' on blogs, case studies, etc."}
+    - {label: "Tagline", name: "tagline", widget: "string", required: false}
+    - {label: "CTA Url", name: "ctaUrl", widget: "string", required: false}
+    - {label: "CTA Label", name: "ctaText", widget: "string", required: false}
+    - {label: "Image", name: "img", widget: "image", 'hint':"1400 x 420", required: false}

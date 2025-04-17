@@ -1,0 +1,23 @@
+- name: "resources"
+  label: "Resources"
+  file: "src/content/resources/index.md"
+  fields:
+    - {label: "Layout", name: "layout", widget: "hidden", default: "resources.njk"}
+    <!-- @include-static ../partials/base-fields.yml -->
+    <!-- @include-static ../partials/nav-fields.yml -->
+    <!-- @include-static ../partials/jumbotron.yml -->
+    - {label: Copy, name: body, widget: markdown }
+    - {label: Heading, name: head, widget: string}
+    - {label: Description, name: desc, widget: markdown }
+    - {label: "Image1", name: "image_1", widget: "image", required: false}
+    - {label: "Image2", name: "image_2", widget: "image", required: false}
+    - {label: "Image3", name: "image_3", widget: "image", required: false}
+    - name: cards 
+      label: Bottom Cards
+      widget: list
+      fields:
+        - {label: copy, name: copy, widget: markdown}
+        - {label: title, name: title, widget: string}
+        - {label: URL, name: url, widget: string}
+        - {label: "Image", name: "image", widget: "image"}
+        - {label: "Type", name: "type", widget: "select", options: ["Blog","Videos","Case Study","Whitepaper"], required: false}

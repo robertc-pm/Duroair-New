@@ -1,0 +1,21 @@
+- name: "beyond_comliance"
+  label: "Beyond Compliance"
+  file: "src/content/about/beyond-compliance/index.md"
+  fields:
+    - {label: "Layout", name: "layout", widget: "hidden", default: "beyond-compliance.njk"}
+    <!-- @include-static ../partials/base-fields.yml -->
+    <!-- @include-static ../partials/nav-fields.yml -->
+    <!-- @include-static ../partials/jumbotron.yml -->
+    - {label: Intro, name: body, widget: markdown }
+    - {label: "Heading", name: "heading", widget: "string"}
+    - {label: "Descrtion", name: "description", widget: "markdown"}
+    - {label: "Image", name: "image_1", widget: "image"}
+    - {label: Outro Heading, name: outro_head, widget: string }
+    - {label: Outro Description, name: outro_desc, widget: markdown }
+    - {label: "Image 2", name: "image_2", widget: "image"}
+    - name: compliance
+      label: Compliance 
+      widget: list
+      fields:
+        - {label: Code, name: code, widget: string}
+        - {label: Description, name: description, widget: string}

@@ -1,0 +1,57 @@
+- name: "about"
+  label: "About"
+  file: "src/content/about/index.md"
+  fields:
+    - {label: "Layout", name: "layout", widget: "hidden", default: "about.njk"}
+    <!-- @include-static ../partials/base-fields.yml -->
+    <!-- @include-static ../partials/nav-fields.yml -->
+    <!-- @include-static ../partials/jumbotron.yml -->
+    - {label: Intro, name: body, widget: markdown }
+    - name: about_intro
+      label: About Intro
+      widget: object
+      fields:
+        - {label: Heading, name: heading, widget: string}
+        - {label: Description, name: description, widget: markdown}
+        - {label: Image 1, name: image_1, widget: image}
+        - {label: Image 2, name: image_2, widget: image}
+    - name: a_nederman_company
+      label: A Nedermen Company
+      widget: object
+      fields:
+        - {label: Heading, name: heading, widget: string}
+        - {label: Description, name: description, widget: markdown}
+
+    - name: our_experties
+      label: Our Experties
+      widget: list
+      fields:
+        - {label: Heading, name: heading, widget: string}
+        - {label: "Image", name: "image", widget: "image"}
+        - {label: Description, name: description, widget: markdown}
+    - {label: "Image", name: "image_1", widget: "image"}
+    - {label: Copy Block 1 , name: copy_block_1, widget: markdown }
+    - {label: "Image 2", name: "image_2", widget: "image"}
+    - name: cards 
+      label: Bottom Cards
+      widget: list
+      fields:
+        - {label: title, name: title, widget: string}
+        - {label: copy, name: copy, widget: markdown}
+        - {label: URL, name: url, widget: string}
+        - {label: "Image", name: "image", widget: "image"}
+    - name: key_milestone
+      label: Key Milestone 
+      widget: object
+      fields:
+        - name: milestone_head
+          label: Milestone Stripe Heading
+          widget: list
+          fields:
+            - {label: Heading, name: main_head, widget: string} 
+        - name: milestone_achi
+          label: Year Achivement
+          widget: list
+          fields:    
+            - {label: Year, name: achi_year, widget: string}
+            - {label: Description, name: achi_description, widget: markdown}

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {% include "partials/head.njk" %}
+         <link href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css" rel="stylesheet">
+    </head>
+    <body class="page-{{ title | cssClassify }}  landing-page ">
+    {% include "partials/header.njk" %}
+        {%- include "partials/gtm-noscript.njk" -%}
+
+<!-- White Paper Details Section Begin -->
+
+        <div class="white-paper-details-sec cmn-gap">
+            <div class="container">
+                <div class="white-paper-details-inr has-texture">
+                    <img src="/img/white-paper-detail-bg-texture.png" alt="Image" class="texture-nw"> 
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="whitepprdtl-left-wrp">
+                                <div class="white-paper-details-inr-left">
+                                    <div class="white-paper-details-inr-left-img">
+                                        <div class="whitepaperdtl-img-inr">
+                                            <img src="{{header_img}}" alt="White Paper Details Image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="white-paper-details-inr-right">
+                                <div class="sec-inr-head">
+                                    <h2>{{ jumbotron.headline }}</h2>
+                                    <p>{{ jumbotron.tagline }}</p>
+                                </div>
+                                <a href="#form-container" class="cmn-btn button">Download Now <span class="button__spotlight"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- End Of White Paper Details Section -->
+
+        <!-- White paper Download Section Begin -->
+
+            <div class="white-paper-download-sec pb-200">
+                <div class="container">
+                    <div class="white-paper-download-inr">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="white-paper-download-inr-left">
+                                    <div class="sec-inr-head">
+                                        {{ contents | safe }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="download-form" id="form-container">
+                                    <h3>{{form_intro | md}}</h3>
+                                    {% include "partials/hubspot-form.njk" %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- End Of White paper Download Section -->
+
+
+        {%- include "partials/colophon.njk" -%}
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+        {% include "partials/footer-scripts.njk" %}
+    </body>
+</html>

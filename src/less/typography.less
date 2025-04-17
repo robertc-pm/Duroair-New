@@ -1,0 +1,129 @@
+  strong{
+      font-weight: bold;
+  }
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    a{
+        color:inherit;
+    }
+}
+h1, .h1{
+    font-size: 37px;
+    font-weight: bold;
+}
+h2, .h2{
+    font-size:24px;
+    font-weight: bold;
+}
+
+h3, .h3{
+    font-size: 24px;
+    font-weight: 500;
+}
+h4, .h4{
+    font-size: 16px;
+    font-weight: 500;
+}
+h5, .h5{
+    font-size: 12px;
+    font-weight: 500;
+}
+h6, .h6{
+    font-size: 12px;
+    font-weight: bold;
+    // text-transform: uppercase;    
+    color:#9B9B9B;
+    letter-spacing: 2px;
+}
+.h7{
+    font-size: 12px;
+    
+    letter-spacing: 0.72px;
+}
+@rule-width: 123px;
+ .apply-ruled-headers{
+     h2,.h2,
+     h3,.h3,
+     h4,.h4{
+         .ruled;
+         &:after{
+             width:@rule-width;
+         }
+     }
+ }
+.ruled, h3{
+    &:after{
+        // content:'';
+        display: block;
+        height: 3px;
+        width:0;
+        @c1: #17445c;
+        @c2: #2b779f;
+        // background: @c1; /* Old browsers */
+        // background: -moz-linear-gradient(left, @c1 0%, @c2 100%); /* FF3.6-15 */
+        // background: -webkit-linear-gradient(left, @c1 0%, @c2 100%); /* Chrome10-25,Safari5.1-6 */
+        // background: linear-gradient(to right, @c1 0%, @c2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@c1', endColorstr='@c2',GradientType=1 ); /* IE6-9 */
+        transition: all 1s;
+        margin:18px 0;
+    }
+    &.is-visible{
+        &:after{
+            width:@rule-width;
+        }
+    }
+    &.text-center{
+        &:after{
+            margin-left:auto;
+            margin-right:auto;
+        }
+    }
+}
+.center{
+    h3{
+        &::after{
+            margin-left:auto;
+            margin-right:auto;
+        }
+    }
+}
+p{
+    line-height: 1.8;
+}
+
+.nederman{
+        margin-bottom: 8px;
+    font-size: 9px;
+    color: #3C83B7;
+    text-align: right;
+
+}
+
+.text-brand-primary{
+    color: @primary-color;
+}
+
+@media  screen and (min-width:@screen-sm-min) {
+    h1, .h1{
+        font-size: 60px;
+        
+    }
+    h2, .h2{
+        font-size: 40px;
+        
+    }
+    
+    h3, .h3{
+        font-size: 32px;
+        
+    }
+    h4, .h4{
+        font-size: 24px;
+        
+    }
+    h5, .h5{
+        font-size: 16px;
+        
+    }
+}

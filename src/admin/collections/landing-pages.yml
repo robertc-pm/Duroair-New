@@ -1,0 +1,14 @@
+- name: "product"
+  label: "Products"
+  folder: "src/resources/whitepapers"
+  filter: {field: "layout", value: "landing-page.njk"}
+  create: true
+  fields:
+    <!-- @include-static ../partials/base-fields.yml -->
+    <!-- @include-static ../partials/jumbotron.yml -->
+    - {label: "Layout", name: "layout", widget: "hidden", default: "landing-page.njk"}
+    - {label: "Permalink", name: "permalink", widget: "string", required: false}
+    - {label: "Form Intro", name: "form_intro", widget: "mardown"}
+    - {label: "Hubspot Form ID", name: "hubspot_form_id", widget: "string", required: true}
+    - {label: "Header Image", name: "header_img", widget: "image", required: false}
+    - {label: "Copy", name: "body", widget: "markdown"}

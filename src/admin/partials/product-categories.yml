@@ -1,0 +1,1 @@
+- {label: "Category", name: "category", widget: "select", options: ['Press Controls','Press Safety','Press Sync Module', 'Plant Floor Data Collection','Programmable Limit Switch','Die Protection','Tonnage Monitoring','System Integration Solutions']}

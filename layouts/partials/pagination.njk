@@ -1,0 +1,44 @@
+<div class="pagination">
+    {% if pagination.previous %}
+    <a href="/{{ pagination.previous.path }}" class="pagination-previous">
+        <svg width="28px" height="24px" viewBox="0 0 28 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.3">
+                <g id="Arrow-circle-double" transform="translate(-19.000000, -20.000000)" fill="#131313">
+                    <g id="arr" transform="translate(33.000000, 32.000000) rotate(180.000000) translate(-33.000000, -32.000000) translate(19.000000, 20.000000)">
+                        <polygon id="arr2" points="1.71322621 0 0 1.58252298 11.27822 12.0003197 0 22.4181164 1.71322621 24 14 12.6505928 14 11.3494072"></polygon>
+                        <polygon id="arr1" points="15.7132262 0 14 1.58252298 25.27822 12.0003197 14 22.4181164 15.7132262 24 28 12.6505928 28 11.3494072"></polygon>
+                    </g>
+                </g>
+            </g>
+        </svg>
+        Previous
+    </a>
+    {% endif %}
+
+    {# Loop through all pages and generate numbered links #} 
+    <div class="custom-blog-page">
+    {% for page in pagination.pages %}
+        {% if page.path == pagination.current.path %}
+            <span class="pagination-number active">{{ loop.index }}</span>
+        {% else %}
+            <a href="/{{ page.path }}" class="pagination-number">{{ loop.index }}</a>
+        {% endif %}
+    {% endfor %}
+    </div>
+
+    {% if pagination.next %}
+    <a href="/{{ pagination.next.path }}" class="pagination-next">
+        Next
+        <svg width="28px" height="24px" viewBox="0 0 28 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.3">
+                <g id="Arrow-circle-double" transform="translate(-19.000000, -20.000000)" fill="#131313">
+                    <g id="arr" transform="translate(19.000000, 20.000000)">
+                        <polygon id="arr2" points="1.71322621 0 0 1.58252298 11.27822 12.0003197 0 22.4181164 1.71322621 24 14 12.6505928 14 11.3494072"></polygon>
+                        <polygon id="arr1" points="15.7132262 0 14 1.58252298 25.27822 12.0003197 14 22.4181164 15.7132262 24 28 12.6505928 28 11.3494072"></polygon>
+                    </g>
+                </g>
+            </g>
+        </svg>
+    </a>
+    {% endif %}
+</div>

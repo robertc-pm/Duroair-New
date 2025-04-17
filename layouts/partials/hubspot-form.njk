@@ -1,0 +1,42 @@
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" crossorigin="anonymous"></script>
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+<script>
+    hbspt
+        .forms
+        .create({
+            css: '',
+            portalId: '3114036',
+            region: "na1",
+            formId: '{{ hubspot_form_id }}',
+            {%- if redirectUrl -%}
+            redirectUrl: '{{ redirectUrl }}',
+            {%- endif -%}
+
+            onFormReady: function ($form, ctx) {
+                setHiddenParams($form, ctx);
+            }
+        });
+    function setHiddenParams() {
+        window.addEventListener('load', e => {
+            // add ILS values
+            var iLS = new IndustrialLeadSource(document);
+            var obj = iLS.getStoredValues();
+
+            jQuery('input[name="utm_source"]')
+                .val(obj['utm_source'])
+                .trigger('change');
+            jQuery('input[name="utm_campaign"]')
+                .val(obj['utm_campaign'])
+                .trigger('change');
+            jQuery('input[name="utm_medium"]')
+                .val(obj['utm_medium'])
+                .trigger('change');
+            jQuery('input[name="utm_term"]')
+                .val(obj['utm_term'])
+                .trigger('change');
+            jQuery('input[name="ga_client_id"]')
+                .val(getGAClientId())
+                .trigger('change');
+        })
+    }
+</script>

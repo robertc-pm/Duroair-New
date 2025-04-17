@@ -1,0 +1,96 @@
+{% extends "layout.njk" %}
+{% set additionalScript = '/js/vivus.min.js' %}
+{% block body %}
+    <!-- Cmn About Section Begin -->
+
+        <div class="cmn-about-sec cmn-gap hww-abt-sec">
+            <div class="container">
+                <div class="cmn-about-inr">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="cmn-about-right">
+                                <div class="cmn-about-right-inr">
+                                    <div class="sec-inr-head">
+                                        <h2>{{ heading }}</h2>
+                                    </div>
+                                    <div class="cmnabt-box nbox">
+                                        <p>{{ description | md }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="cmn-about-left hww-abt-img-wrp">
+                                <div class="blob1"></div>
+                                <div class="hww-abt-imgs-left">
+                                    <div class="hww-abt-img">
+                                        <img src="{{ image_section.image_1 }}" alt="How We Work Image">
+                                    </div>
+                                    <div class="hww-abt-img">
+                                        <img src="{{ image_section.image_2 }}" alt="How We Work Image">
+                                    </div>
+                                    <div class="hww-abt-img">
+                                        <img src="{{ image_section.image_3 }}" alt="How We Work Image">
+                                    </div>
+                                </div>
+                                <div class="hww-abt-imgs-right">
+                                    <div class="hww-abt-img">
+                                        <img src="{{ image_section.image_4 }}" alt="How We Work Image">
+                                    </div>
+                                    <div class="hww-abt-img">
+                                        <img src="{{ image_section.image_5 }}" alt="How We Work Image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- End Of Cmn About Section -->
+
+    <!-- Ensuring Requirements Section Begin -->
+
+    <div class="ensuring-requirements-sec cmn-gap pb-200">
+        <div class="container">
+            <div class="ensuring-requirements-inr">
+                <div class="sec-head newhedline">
+                    <h2>Ensuring Your Requirements Come First</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="ensuring-require-left">
+                            <div class="blob1"></div>
+                            <div class="ensuring-require-img">
+                                <img src="{{ image_1}}" alt="Image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="ensuring-require-right">
+                            <div class="ensuring-require-right-inr">
+                                {%- for b in blocks-%}
+                                <div class="ensuring-card">
+                                    <div class="ensuring-icon">
+                                        <object id="svg-{{loop.index}}" data-animate-svg="svg-{{loop.index}}" type="image/svg+xml" data="{{b.icon}}" alt="icon"></object>
+                                    </div>
+                                    <div class="ensuring-card-inr">
+                                        <h3>{{b.copy}}</h3>
+                                    </div>
+                                </div>
+                                {%- endfor -%}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- End Of Ensuring Requirements Section -->
+
+{% endblock %}
+{% block testimonial %}
+{% include "partials/testimonial.njk" %}
+{% endblock %}

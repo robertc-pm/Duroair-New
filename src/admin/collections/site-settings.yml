@@ -1,0 +1,13 @@
+- name: "settings"
+  label: "Site Settings"
+  file: "src/content/private/settings.md"
+  description: "Control the promo popup here."
+  fields:
+    - {label: "private", name: "private", widget: "hidden", default: "true"}
+    - {label: "Enabled", name: "enabled", widget: "boolean", required: true}
+    - {label: "Promo Campaign Name", name: "promo_campaign", widget: "string", hint: "Shows in Google Analtyics event label.  Also controls cookie variable to dismiss the modal pop-up" }
+    - {label: "Promo Copy", name: "promo_copy", widget: "markdown", "hint":"Use 'bold' for the title/heading." }
+    - {label: "Promo URL", name: "promo_url", widget: "string" }
+    - {label: "Promo Button Label", name: "promo_button_label", widget: "string" }
+    - {label: "Promo Desktop Img", name: "promo_desktop_img", widget: "image", hint: "Size 236x296 px"}
+    - {label: "Promo Mobile Img", name: "promo_mobile_img", widget: "image", hint: "Size 73x96 px"}

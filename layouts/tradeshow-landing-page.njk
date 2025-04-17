@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        {% include "partials/head.njk" %}
+    </head>
+
+    <body class="page-{{ path | cssClassify }}  landing-page">
+        {%- include "partials/gtm-noscript.njk" -%}
+        <div id="hero" class="{{waveType}} lp-hero trade-show-hero">
+            <div class="container lp-logo-container">
+                <a class="header-logo" href="/" title="Duroair Home">{% include "partials/inline-svg-logo.njk" %}</a>
+            </div>
+            <div class="container">
+                <div class="jumbo-content">
+                    <div class="date">{{date}}</div>
+                    <h1 class="jumbotron-headline">{{ jumbotron.headline if jumbotron.headline else title }}</h1>
+                    <div class="jumbo-tagline">{{ jumbotron.tagline }}</div>
+                </div>
+            </div>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="form-container hero-form" id="form-container">
+            <div class="form-intro">
+                <a name="formfill"></a>
+                <h3 class="animated show-on-scroll is-visible">{{form_intro | md}}
+                </h3>
+            </div>
+            {% include "partials/hubspot-form.njk" %}
+        </div>
+        <section class="section below-form-section">
+            <div class="grid-2">
+                <div class="vid-embed">
+                    {{ video_embed }}
+                </div>
+                <div>
+                    <h2>Clean Air Solutions Without the Complications</h2>
+                    {{ contents | safe }}
+                </div>
+            </div>
+        </section>
+        <section class="section bottom-section">
+            <h3 class="text-center">
+                {{bottom_section.headline}}
+            </h3>
+            <div class="grid-3">
+                {% for block in bottom_section.icon_blocks %}
+                    <div class="icon-block">
+                        <object id="svg-1" type="image/svg+xml" data-animate-svg="svg-1"
+                    data="{{block.icon}}" alt="icon"></object>
+                        <br>
+                        {{block.content}}
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+        {%- include "partials/colophon.njk" -%}
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+        {% include "partials/footer-scripts.njk" %}
+    </body>
+
+</html>

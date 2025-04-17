@@ -1,0 +1,11 @@
+{
+  "name": "dur-search",
+  "version": "1.0.0",
+  "description": "",
+  "main": "search.js",
+  "author": "Brian Matthews <brian@slapthink.net>",
+  "license": "ISC",
+  "dependencies": {
+    "lunr": "^2.3.6"
+  }
+}
