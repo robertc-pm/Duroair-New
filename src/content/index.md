@@ -8,10 +8,8 @@ seo:
 jumbotron:
   ctaText: Request for quote
   ctaUrl: /request-for-quote/
-  headline: Flexibility to Control Your Environment
-  tagline: Duroair designs and manufactures custom clean air solutions that ensure
-    a safe and <br>productive work environment while addressing your specific
-    workflow challenges.
+  headline: Flexibility to Control Your Manufacturing Environment
+  tagline: Duroair designs and manufactures custom containment solutions paired with tailored filtration systems to create flexible work environments that enhance production standards, address workflow challenges, and protect people and processes.
 image_1: /img/home-image-1.jpg
 copy_block_1: >-
   ### Responsive to Your <br>Manufacturing Reality
