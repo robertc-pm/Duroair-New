@@ -2,24 +2,19 @@
 layout: about.njk
 title: About Duroair
 seo:
-  description: Duroair knows why lean manufacturing has unique needs for facility
+  description:
+    Duroair knows why lean manufacturing has unique needs for facility
     design and air purification, and creates industrial air systems to meet your
     exact needs.
   page_title: About Us | Why Lean Manufacturing?
 nav_title: About
 nav_sort: 4000
-show_in_menu: "true"
+show_in_menu: 'true'
 jumbotron:
   img: /img/heros/hero-about.jpg
 about_intro:
   description: >-
-    At Duroair, we’ve built a legacy for transforming air quality through
-    customization. Need to do surfacing and coating without contaminating your
-    other processes in the same indoor space? Want to reduce your footprint and
-    eliminate the need to move workpieces? We’ll partner with you to learn your
-    processes so we can customize a clean-air solution that will increase your
-    efficiency while helping you provide a clean, safe, and productive working
-    environment.
+    At Duroair, we’ve built a legacy for transforming air quality through customization. Need to do surfacing and coating without contaminating your other processes in the same indoor space? Want to reduce your footprint and eliminate the need to move workpieces? We’ll partner with you to learn your processes so we can customize a clean-air solution that will increase your efficiency while helping you provide a clean, safe, and productive working environment.
 
 
     From North America to Asia, Europe, and beyond, we're committed to customizing clean-air solutions to help customers like you:
@@ -30,7 +25,7 @@ about_intro:
     * Engineer [solutions](/solutions) to isolate, capture, and contain a wide variety of industrial processes.
 
     * Go [beyond EHS compliance](/about/beyond-compliance/) to maximize efficiency and productivity.
-  heading: "Our Legacy: Transforming Air Quality for Over 15 Years"
+  heading: 'Our Legacy: Transforming Air Quality for Over 15 Years'
   image_1: /media/uploads/dur_jan2021_blog_01-thumb.jpg
   image_2: /media/uploads/dur_jan2021_blog_01-img.jpg
 a_nederman_company:
@@ -59,9 +54,7 @@ our_experties:
   - heading: Innovating Purposeful Clean-Air Solutions
     image: /media/uploads/about-duroair-making-the-business-case-for-clean-air.jpg
     description: >-
-      Never satisfied with the status quo, we’re always searching for new
-      technology and methods for purposeful innovation to help you create a
-      clean-air competitive advantage.
+      Never satisfied with the status quo, we’re always searching for new technology and methods for purposeful innovation to help you create a clean-air competitive advantage.
 
 
       * **Hexavalent Chromium Protection:** Through independent testing, Duroair has verified that our exhaust systems meet or exceed NESHAP 319 standards by capturing and containing hexavalent chromium - allowing clean air to be recirculated back into the manufacturing space or vented outside.
@@ -69,7 +62,7 @@ our_experties:
       * **Dust Collection Innovation:** Because your employees are your most valuable assets, Duroair has developed DuroDust™, a dust collection system that provides a properly vented, regulated work area that limits employees' exposure to respirable silica, metal dust, and other particulates.
 
       * **Space-Saving Hinge Design:** Space efficiency is always a priority, so Duroair has created a new hinge design that does not impact the enclosure footprint and moves up in the vertical wall axis, while the building retracts to under 20 percent of its extended length.
-  - heading: Creating Complex Containment Solutions
+  - heading: Designing Practical Containment Solutions for Complex Problem
     description: >-
       Our customized, complex containment solutions are designed to isolate
       sanding and painting processes while protecting workers doing other types
@@ -136,7 +129,8 @@ cards:
     image: /media/uploads/group-3-.png
     title: How We Work
     url: /how-we-work/
-  - copy: Duroair engineers custom solutions that meet EHS requirements and other
+  - copy:
+      Duroair engineers custom solutions that meet EHS requirements and other
       clean air compliance standards while improving the bottom line.
     image: /media/uploads/group-3800.png
     title: Beyond Compliance
@@ -156,38 +150,40 @@ key_milestone:
     - main_head: Sustainment Plan for DoD Initiated
     - main_head: Duroair sold to Nederman
   milestone_achi:
-    - achi_year: "2012"
+    - achi_year: '2012'
       achi_description: NIF rebranded to Duroair
     - achi_year: 2014 - 2016
       achi_description: Duroair receives 1st U.S. military sale. - DuroCap™ 1st
         Aerospace Cleanroom sale - DuroClean.
-    - achi_year: "2018"
+    - achi_year: '2018'
       achi_description: Move to Niagara Falls R and D facility. DuroDust™ is launched.
-    - achi_year: "2019"
-      achi_description: Hexavalent Chromium Study is completed. 1st order is received
+    - achi_year: '2019'
+      achi_description:
+        Hexavalent Chromium Study is completed. 1st order is received
         for DuroPure™ hexavalent chromium mitigation solution.
-    - achi_year: "2019"
+    - achi_year: '2019'
       achi_description: SOFI booth 55'H x 40'W x 100"L order received from large
         aerospcae customer.
-    - achi_year: "2019"
+    - achi_year: '2019'
       achi_description: 1st sale to US Army for hexavalent chromium mitigation.
-    - achi_year: "2020"
+    - achi_year: '2020'
       achi_description: 40'H x 55'W x 160'L retractable cleanroom order received-DuroClean™.
-    - achi_year: "2021"
+    - achi_year: '2021'
       achi_description: Order for elevated platform cleanroom received.
-    - achi_year: "2023"
+    - achi_year: '2023'
       achi_description: 1st hard walled system installed
-    - achi_year: "2024"
+    - achi_year: '2024'
       achi_description: Duroair receives NSNs from DLA
-    - achi_year: "2024"
+    - achi_year: '2024'
       achi_description: Duroair bought by Nederman, August 30, 2024
 ---
+
 ### Making the Business Case<br>for Clean Air
 
-At Duroair, we believe everyone deserves a clean, productive and safe working environment. For more than a decade, we’ve invested in research and development to design and manufacture industrial clean air solutions that not only meet EHS compliance, but also have a measurable impact on the manufacturing bottom line.  
+At Duroair, we believe everyone deserves a clean, productive and safe working environment. For more than a decade, we’ve invested in research and development to design and manufacture industrial clean air solutions that not only meet EHS compliance, but also have a measurable impact on the manufacturing bottom line.
 
 From North America to Asia, Europe and beyond, we’re committed to:
 
-* Improving overall health and safety in lean manufacturing facilities
-* Engineering [solutions](/solutions) to isolate, capture, and contain a wide variety of industrial processes
-* Going [beyond EHS compliance](/about/beyond-compliance/) to maximize efficiency and productivity
+- Improving overall health and safety in lean manufacturing facilities
+- Engineering [solutions](/solutions) to isolate, capture, and contain a wide variety of industrial processes
+- Going [beyond EHS compliance](/about/beyond-compliance/) to maximize efficiency and productivity
