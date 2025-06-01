@@ -1,11 +1,12 @@
 ---
 title: Aerospace & Aviation
 seo:
-  description: Ready to deploy when and where needed, Duroair’s modular aerospace
+  description:
+    Ready to deploy when and where needed, Duroair’s modular aerospace
     clean rooms can be engineered to move with your cellular workflows.
-  page_title: "Aerospace Clean Rooms | Filtration Systems "
+  page_title: 'Aerospace Clean Rooms | Filtration Systems '
 nav_sort: 2000
-show_in_menu: "true"
+show_in_menu: 'true'
 jumbotron:
   img: /img/heros/hero-aerospace.jpg
 layout: industry.njk
@@ -31,7 +32,7 @@ secondary_copy: >-
   Aerospace and aviation clean air solutions include:
 
 
-  * **Hexavalent chromium containment** and capture during sanding, coating, and painting operations
+  * **Hexavalent chromium containment** and capture during surface preparation, coating, and painting operations
 
   * **Negative and positive pressure anterooms** to accompany cleanrooms and enclosures for painting and coating operations
 
@@ -60,6 +61,7 @@ cta:
     workflow challenges.
   headline: Clean Air, Clear Solutions. Let's Talk!
 ---
+
 ### Engineered Clean Air Solutions That Won’t Disrupt Your Lead Time
 
 Aerospace and aviation metal finishing, coating and painting processes release toxic hexavalent chromium, isocyanates and VOCs into the air, often requiring clean rooms with precise temperature and humidity controls, as well as the need to isolate and capture contaminants via positive or negative pressure.

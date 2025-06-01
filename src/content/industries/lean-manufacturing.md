@@ -6,17 +6,17 @@ seo:
     practices, and extend the life of valuable equipment.
   page_title: Clean Air Systems for Lean Manufacturing
 nav_sort: 2200
-show_in_menu: "true"
+show_in_menu: 'true'
 jumbotron:
   img: /img/heros/hero-lean-manufacturing.jpg
 layout: industry.njk
 thumbnail: /media/uploads/img_20160623_085324_hdr.jpg
-text_1: ""
-image_1: /media/uploads/20230528_111529.jpg
-text_2: ""
-image_2: /media/uploads/20230528_111517.jpg
-text_3: ""
-image_3: /media/uploads/20230528_111451.jpg
+text_1: ''
+image_1: /media/uploads/25LeanManufacturing.jpg
+text_2: ''
+image_2: /media/uploads/middleleanmanufacturing.jpg
+text_3: ''
+image_3: /media/uploads/leanmanufacturing1.jpg
 short_description: Boost one-piece flows and cellular processes with a modular solution.
 secondary_copy: >-
   ### Modular Industrial Air Filtration for Lean-Minded Manufacturers
@@ -48,12 +48,13 @@ cta:
     one-piece-flows and eliminates man-hour waste.
   headline: Clean Air, Clear Solutions. Let's Talk!
 ---
+
 ### Clean Air Systems for Lean Manufacturing
 
-Whether you call it lean manufacturing or Just-in-Time (JIT) manufacturing,  eliminating waste isn’t a new concept for bottom-line minded manufacturers. 
+Whether you call it lean manufacturing or Just-in-Time (JIT) manufacturing, eliminating waste isn’t a new concept for bottom-line minded manufacturers.
 
-But, it isn’t easy to reduce operating costs while creating more value for your customers. 
+But, it isn’t easy to reduce operating costs while creating more value for your customers.
 
-This is especially the case for welding, sanding, painting, or other processes that produce harmful air contaminants and create production bottlenecks for larger construction projects.
+This is especially the case for welding, surface preparation, sanding, painting, or other processes that produce harmful air contaminants and create production bottlenecks for larger construction projects.
 
 What if you had a portable, clean air solution to protect your employees from indoor airborne hazards while saving valuable floor space? Rather than wasting man-hours moving tasks to specific productions cells, you could bring the clean air to each workpiece.

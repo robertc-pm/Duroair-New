@@ -6,16 +6,16 @@ seo:
     line.
   page_title: Clean Air Technologies | Alternative Energy
 nav_sort: 2100
-show_in_menu: "true"
+show_in_menu: 'true'
 jumbotron:
   img: /img/heros/hero-alternativeenergy.jpg
 layout: industry.njk
 thumbnail: /img/thumbs/hero-alternativeenergy.jpg
-text_1: ""
+text_1: ''
 image_1: /img/image-1-alternativeenergy.jpg
-text_2: ""
+text_2: ''
 image_2: /img/image-2-alternativeenergy.jpg
-text_3: ""
+text_3: ''
 image_3: /media/uploads/case-study-detail-img-3.png
 short_description: Shield delicate solar panel processes from air surface contamination.
 secondary_copy: >-
@@ -36,7 +36,7 @@ secondary_copy: >-
 
   * **Welding containment with a** **[DuroRoom™](/products/duroroom)** **retractable enclosure** to capture both smoke and mist, without impeding crane access or interfering with current ventilation infrastructure 
 
-  * **Dust containment, coupled with customized vented and recirculating filtration systems,** [DuroCap™](/products/durocap), [DuroPure™](/products/duropure), [DuroDust™](/products/durodust), or DuroClean™, to capture particulates before they compromise environmentally-sensitive components
+  * **Containment, coupled with customized vented and recirculating filtration systems,** [DuroCap™](/products/durocap), [DuroPure™](/products/duropure), [DuroDust™](/products/durodust), and DuroRoom, to fabricate the largest and most awkward sized workpieces.
 solutions_for_industry:
   - Painting & Coating
   - Clean Rooms
@@ -49,8 +49,9 @@ cta:
     bottom-line results in your alternative energy facility.
   headline: Clean Air, Clear Solutions. Let's Talk!
 ---
+
 ### Clean Air Technologies Engineered For Alternative Energy
 
 Environmental control is easier said than done when you’re manufacturing alternative energy solutions. Humidity, temperature fluctuations, and dust can corrode your copper solar panel or battery components. Metal finishing, coating, or painting containment is a daunting task when working with behemoth turbine bases and blades.
 
-But, how do you isolate your critical processes in a controlled clean air environment without breaking your material handling budget? The answer is a flexible indoor air filtration solution that can be engineered to expand and move with your unique workflows.
+But, how do you isolate your critical processes in a controlled clean air environment without breaking your material handling budget? The answer is a flexible indoor air filtration solution that can be engineered to expand and move with your unique workflows. Duroair systems are designed to isolate and contain industrial hazards and filter contaminants OR protect sensitive manufacturing processes from external contamination. Every system is designed around your processes to create a more clean, productive and safe work environment.

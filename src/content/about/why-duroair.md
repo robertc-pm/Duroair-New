@@ -2,17 +2,19 @@
 layout: product-page.njk
 title: Why Duroair
 seo:
-  description: Choosing an industrial air filtration system has never been easier,
+  description:
+    Choosing an industrial air filtration system has never been easier,
     Duroair has revolutionized clean air with their retractable clean air
     enclosures.
   page_title: Industrial Air Filtration System
 nav_sort: 1000
-show_in_menu: "true"
+show_in_menu: 'true'
 jumbotron:
   img: /img/heros/hero-durocap.jpg
   headline: A Big Shift In Clean Air
 section_1:
-  head: Duroair has designed and engineered the most flexible and efficient clean
+  head:
+    Duroair has designed and engineered the most flexible and efficient clean
     air systems in the market <strong>— the patented six-stage
     DuroPure™</strong> industrial air filtration system paired with <strong>the
     retractable DuroRoom™</strong> enclosure creates a lean manufacturing layout
@@ -23,7 +25,8 @@ section_1:
     bottom line.
 choose_duroair:
   - heading_1: Gain Flexibility
-    description_1: DuroRoom enclosures retract to provide easy access to overhead
+    description_1:
+      DuroRoom enclosures retract to provide easy access to overhead
       cranes. Say goodbye to costly moves and lengthy disruptions when moving
       oversized workpieces.
     image: /media/uploads/dur-221401-march-blogthumb.jpg
@@ -76,7 +79,7 @@ choose_duroair:
 
 
       <!--EndFragment-->
-    image: /media/uploads/case-study-detail-img-3.png
+    image: /media/uploads/case-study-detail-img-3b.png
   - description_1: >-
       <!--StartFragment-->
 
@@ -99,11 +102,12 @@ choose_duroair:
     image: /media/uploads/dur-201308-img.jpg
 efficient:
   heading_2: Efficient Light Transmission for Clean Air Solutions
-  description_2: Our retractable enclosures feature premium vinyl fabric with 95%
+  description_2:
+    Our retractable enclosures feature premium vinyl fabric with 95%
     light transmission, reducing the need for supplemental lighting. Designed
     for clean air environments, they ensure energy efficiency and superior
     visibility.
-  number: "95"
+  number: '95'
 air_system:
   heading_3: How The 6-Stage Airfiltration System Works
   description_3: >-
@@ -131,18 +135,18 @@ air_system:
     photocatalytic oxidation (PCO) and UV light to separate and <br> destroy
     VOCs. Carbon adsorbs contaminants and UV light destroys VOCs.
   efficient:
-    number_1: "99"
-    description_6: "percent of airborne particulates are safely captured and
-      destroyed by the system through these stages, including:"
+    number_1: '99'
+    description_6: 'percent of airborne particulates are safely captured and
+      destroyed by the system through these stages, including:'
     heading_6: Hexavalent chromium, Isocyanates, Volatile Organic Compounds
 compilance_section:
   heading_7: Compliance
-  description_7: "The six-stage DuroPure system meets compliance requirements of:"
+  description_7: 'The six-stage DuroPure system meets compliance requirements of:'
   image_1: /media/uploads/compliance-img-1.png
   image_2: /media/uploads/compliance-img-2.png
   image_3: /media/uploads/compliance-img-3.png
 our_system:
-  title: "Our Systems Provide:"
+  title: 'Our Systems Provide:'
   flexibility:
     heading_8: Flexibility
     description_8: Move the enclosure not the workpiece.
@@ -150,26 +154,30 @@ our_system:
     image_5: /media/uploads/DuroClean 1.jpeg
   workflow:
     heading_9: Streamlined Workflow
-    description_9: Need a controlled environment for mechanical assembly? Duroair
+    description_9:
+      Need a controlled environment for mechanical assembly? Duroair
       can design a clean air solution and integrate it into your plant layout.
     air_list:
       - image_6: /media/uploads/products-intro.jpg
         description_10: Use one enclosure to prepare surfaces (composite repair,
           sanding, bonding) and then apply coatings.
-      - description_10: Integrate a 3 in 1 enclosure into current work cells. The
+      - description_10:
+          Integrate a 3 in 1 enclosure into current work cells. The
           flexibility enables production needs to determine its use. Use as one
           large cell or as 2 or 3 smaller cells.
         image_6: /media/uploads/dur-201310-sep-blog-1-thumb.jpg
       - description_10: Use one enclosure to prepare surfaces (composite repair,
           sanding, bonding) and then apply coatings.
         image_6: /media/uploads/products-intro.jpg
-      - description_10: Integrate a 3 in 1 enclosure into current work cells. The
+      - description_10:
+          Integrate a 3 in 1 enclosure into current work cells. The
           flexibility enables production needs to determine its use. Use as one
           large cell or as 2 or 3 smaller cells.
         image_6: /media/uploads/dur-201310-sep-blog-1-img.jpg
   retracts:
     heading_11: Retracts in minutes
-    description_11: When painting and/or prep work is completed, the enclosure can
+    description_11:
+      When painting and/or prep work is completed, the enclosure can
       be retracted and stored at a fraction of its functional space. Or, can
       move to be used in an alternate location.
     image_7: /media/uploads/dur_221407_blog-thumb.jpg
@@ -179,21 +187,25 @@ ingenuity:
     designing a multi-chamber booth that **accommodates up to three separate
     clean-air operations at the same time.**
   heading_12: Flexible Setup Options to Cater Your Different Needs
-  description_12: The three chambers can be used independently, or one or both of
+  description_12:
+    The three chambers can be used independently, or one or both of
     the interior curtains can be opened so that one or two functions can be
     performed. Easily prep, paint, or coat three workpieces at the same time!
   image_8: /media/uploads/ingenunity-img.png
   flexible_options:
     - heading_13: 1-1-1 ratio for three separate operations.
-      description_13: In the case of prep work, painting, and coating, the workpiece
+      description_13:
+        In the case of prep work, painting, and coating, the workpiece
         is moved the shortest possible distance for the next function.
       image_9: /media/uploads/1-1-1-2.png
     - heading_13: 2-1 ratio for two operations.
-      description_13: This can eliminate or reduce backlogs, especially since some
+      description_13:
+        This can eliminate or reduce backlogs, especially since some
         functions require more time than others.
       image_9: /media/uploads/2-1.jpg
     - heading_13: 1 single operation in the entire space.
-      description_13: This accommodates a larger workpiece, such as the wing of an
+      description_13:
+        This accommodates a larger workpiece, such as the wing of an
         aircraft, an entire wind turbine, or a large engine workpiece.
       image_9: /media/uploads/1-1.png
 intro: >-

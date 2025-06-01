@@ -1,21 +1,22 @@
 ---
 title: Stone Cutting
 seo:
-  description: Stone cutting is one of the messiest operations in manufacturing –
+  description:
+    Stone cutting is one of the messiest operations in manufacturing –
     and the most hazardous. Our silica dust collection systems limit worker
     exposure to harmful particulates.
   page_title: Stone Cutting | Silica Dust Collection System
 nav_sort: 2700
-show_in_menu: "true"
+show_in_menu: 'true'
 jumbotron:
   img: /img/heros/hero-stonecutting.jpg
 layout: industry.njk
 thumbnail: /media/uploads/adobestock_62297265.jpeg
-text_1: ""
+text_1: ''
 image_1: /media/uploads/adobestock_64009608.jpeg
-text_2: ""
+text_2: ''
 image_2: /media/uploads/adobestock_203988303.jpeg
-text_3: ""
+text_3: ''
 image_3: /media/uploads/dur-221410_blog1-img.jpg.jpg
 short_description: Integrate OSHA-compliant dust protection with your existing layout.
 secondary_copy: >-
@@ -33,7 +34,7 @@ secondary_copy: >-
 
   * **Negative pressure enclosures** to pull all particulates into the filters, enabling employees to safely see the project they are working on and greatly increasing productivity
 
-  * **Properly-vented, regulated work areas** that limit exposure of employees to respirable silica 
+  * **Regulated work areas** that limit exposure of employees to respirable silica 
 
   * **Enclosures that retract** to less than 20 percent of extended length, allowing for easy material handling and access to overhead cranes.
 
@@ -41,7 +42,7 @@ secondary_copy: >-
 
   * **Diamond wire-cutting enclosures** to protect against higher quantities of dust for harder varieties of stone
 solutions_for_industry:
-  - Clean Rooms
+  - DuroRoom
   - Dust Collection
 cta:
   copy: Contact us today to discuss an OSHA-compliant clean air solution that
@@ -49,6 +50,7 @@ cta:
     line.
   headline: Make Clean Air a Competitive Advantage
 ---
+
 ### Silica Dust Collection Systems Engineered For Clean Air
 
 Stone cutting is one of the messiest operations in manufacturing – and the most hazardous. When it comes to producing dust, stone cutting generates clouds of dust that is far from harmless. Most concrete, masonry, and stone contain sand that is made of quartz and creates crystalline silica when cut. The inhalation of silica particles can scar the lungs or even lead to silicosis.

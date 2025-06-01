@@ -17,7 +17,7 @@ about_intro:
     At Duroair, we’ve built a legacy for transforming air quality through customization. Need to do surfacing and coating without contaminating your other processes in the same indoor space? Want to reduce your footprint and eliminate the need to move workpieces? We’ll partner with you to learn your processes so we can customize a clean-air solution that will increase your efficiency while helping you provide a clean, safe, and productive working environment.
 
 
-    From North America to Asia, Europe, and beyond, we're committed to customizing clean-air solutions to help customers like you:
+    From North America to Asia, Europe, and beyond, we're committed to customizing clean-air solutions to help customers like you: 
 
 
     * Improve overall health and safety in lean manufacturing facilities.
@@ -27,7 +27,7 @@ about_intro:
     * Go [beyond EHS compliance](/about/beyond-compliance/) to maximize efficiency and productivity.
   heading: 'Our Legacy: Transforming Air Quality for Over 15 Years'
   image_1: /media/uploads/dur_jan2021_blog_01-thumb.jpg
-  image_2: /media/uploads/dur_jan2021_blog_01-img.jpg
+  image_2: /media/uploads/RetracatedwithDuroPure.jpg
 a_nederman_company:
   heading: Duroair, a Nederman Company
   description: >-
@@ -51,27 +51,35 @@ a_nederman_company:
 
     [Learn more](https://nedermangroup.com/)
 our_experties:
-  - heading: Innovating Purposeful Clean-Air Solutions
+  - heading: Innovating Purposeful <br>Clean-Air Solutions
     image: /media/uploads/about-duroair-making-the-business-case-for-clean-air.jpg
     description: >-
-      Never satisfied with the status quo, we’re always searching for new technology and methods for purposeful innovation to help you create a clean-air competitive advantage.
+      Never satisfied with the status quo, we’re always searching for new technology and methods for purposeful innovation to help you create a clean-air competitive advantage. Duroair systems are designed to isolate and contain industrial hazards and filter contaminants or protect sensitive manufacturing processes from external contamination. Our systems are designed around your processes to create a more clean, productive and safe work environment.
 
 
-      * **Hexavalent Chromium Protection:** Through independent testing, Duroair has verified that our exhaust systems meet or exceed NESHAP 319 standards by capturing and containing hexavalent chromium - allowing clean air to be recirculated back into the manufacturing space or vented outside.
+      * **Hexavalent Chromium Protection:** Duroair’s patented six-stage filtration scrubs the air of particulates including hexavalent chromium, heavy metals, isocyanates and VOCs exceeding NESHAP 319 requirements and returns filtered clean back into a workspace.  
+          * 3 stages of particulate collection, captures paint particulate including hexavalent chromium, heavy metals and particulate isocyanates. 
+          * 3 stage gas filtration, captures isocyanates in gas stage and destroys VOCs with two stages of carbon adsorbtion and 1 stage of UV PCO (photocatalytic oxidation) technology.
+
 
       * **Dust Collection Innovation:** Because your employees are your most valuable assets, Duroair has developed DuroDust™, a dust collection system that provides a properly vented, regulated work area that limits employees' exposure to respirable silica, metal dust, and other particulates.
 
-      * **Space-Saving Hinge Design:** Space efficiency is always a priority, so Duroair has created a new hinge design that does not impact the enclosure footprint and moves up in the vertical wall axis, while the building retracts to under 20 percent of its extended length.
+
+      * **Space-Saving Hinge Design:**  Space efficiency is always a priority, so Duroair has created a new hinge design that does not impact the enclosure footprint and moves up in the vertical wall axis, while the building retracts to under 20 percent of its extended length.
+
   - heading: Designing Practical Containment Solutions for Complex Problem
     description: >-
-      Our customized, complex containment solutions are designed to isolate
-      sanding and painting processes while protecting workers doing other types
-      of MRO in the same indoor space.
+      Our custom containment solutions are designed to create flexible work environments that enhance production standards, address workflow challenges, and protect people and processes. Duroair provides clean air solutions for coating operations, prep rooms, mechanical assembly, isolation rooms (NDT), dust collection and clean rooms.
 
 
-      * **Fixed containment:** Duroair engineers both fixed, softwall containment solutions, as well as hardwall clean-air solutions. For example, DuroRoom™ Hardwall is designed to accommodate wider spans (over 65 feet) for large assemblies. Its modular walls are easy to move and reconfigure as needed for sub-assemblies.
+      Duroair systems are designed to isolate and contain industrial hazards and filter contaminants or protect sensitive manufacturing processes from external contamination. 
 
-      * **Portable containment:** The DuroRoom™ softwall enclosure is also available as a portable containment solution. It retracts to 20% of its extended length to accommodate overhead cranes and to save space when not in use. This portability addresses workflow and footprint problems that cost time and money,
+
+      * **Retractable, flexible containment:** The DuroRoom™ softwall enclosure retracts to 20% of its extended length to save space when not in use and to accommodate material handling by allowing easy access to overhead cranes. DuroRoom’s retractability and portability  address workflow and footprint issues that cost time and money.
+
+
+      * **Fixed containment:** Duroair engineers both fixed, softwall containment solutions, as well as hardwall clean-air solutions. The DuroRoom™ Hardwall is designed to accommodate wider spans (over 65 feet) for large assemblies. Its modular walls are easy to move and reconfigure as needed for sub-assemblies.
+
 
       * **Plug and Play containment:** Our DuroDeployable™ is the generator-ready paint booth for rapid, Plug and Play deployment. We developed it by combining the DuroRoom softwall, retractable enclosure and the DuroPure™ air filtration system for safe, compliant spray operations in garrison or while deployed.
     image: /media/uploads/duroroom-and-duroclean-.jpg
@@ -84,7 +92,6 @@ our_experties:
 
       * **Preventing damage during material handling:** Rather than moving pieces into spray booths, prep areas, or clean rooms, Duroair customizes portable clean-air enclosures to isolate and move with each piece. This prevents costly damage that can happen from over-handling.
 
-      * **Reducing equipment expenses:** In some cases, a portable containment solution allows you to take clean air to each workpiece, which can eliminate the need for expensive overhead cranes or conveyors to move workpieces.
 
       * **Increasing facility/labor ROI:** Time-consuming material handling can eat into your profits because it ties up facility floor space and labor. Duroair’s clean-air solutions can retract to store when not in use. This minimizes space and labor required for material handling, enabling you to take on additional, more profitable projects in-house.
     image: /media/uploads/full-room-from-exhaust-cropped.jpg
@@ -101,7 +108,7 @@ our_experties:
       * This patented technology pairs with our **DuroRoom** containment systems to create a clean-air envelope around each workpiece, for a contaminant-free, portable workstation. It also pairs with our patented, Taper Draft Airflow technology that goes beyond traditional cross drafts by creating indoor environments that are so clean, they exceed OSHA compliance requirements.
 
       * **DuroRoom** meets/exceeds CFM requirements, from 13,500 CFM to 200,000 CFM and beyond, to achieve airflow over 100 FPM at the intake filter face and ensure airflow remains below code requirements of 25% of the LEL (lower explosion limit). It’s also been tested by the Defense Centers for Public Health – Aberdeen (DCPH-A) and verified by Army Engineers and Industrial Hygienists.
-    image: /media/uploads/img_20160622_080959.jpg
+    image: /media/uploads/DuroPure_Industrial_Air_Filtration.jpg
 image_1: /img/image-1-about2.jpg
 copy_block_1: >-
   ### Innovating Industrial Clean Air Solutions

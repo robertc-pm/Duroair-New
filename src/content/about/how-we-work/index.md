@@ -10,8 +10,8 @@ heading: Always Innovating for Your Manufacturing Reality
 image_section:
   image_1: /media/uploads/hww-abt-img-1.png
   image_2: /media/uploads/adobestock_625996984.jpeg
-  image_3: /media/uploads/adobestock_655386544.jpeg
-  image_4: /media/uploads/adobestock_426954596.jpeg
+  image_3: /media/uploads/innovatingmanuf.png
+  image_4: /media/uploads/innovatingmfg.png
   image_5: /media/uploads/adobestock_322016196.jpeg
 blocks:
   - icon: /img/icons/icon-basic_magnifier.svg
@@ -20,14 +20,15 @@ blocks:
     copy: Propose a tailored solution to improve your manufacturing compliance,
       efficiency, and productivity
   - icon: /img/icons/icon-basic_settings.svg
-    copy: Design, produce, and install your customized retractable enclosure and air
+    copy:
+      Design, produce, and install your customized retractable enclosure and air
       handling unit
   - icon: /img/icons/icon-basic_sheet_pen.svg
     copy: Follow up to ensure your solution is fully compliant and creating a
       cleaner, safer, more productive working environment
 title: How We Work
 nav_sort: 2000
-show_in_menu: "true"
+show_in_menu: 'true'
 description: >-
   <!--StartFragment-->
 

@@ -7,12 +7,12 @@ seo:
 jumbotron:
   img: /media/uploads/image-30-.png
 nav_sort: 2000
-show_in_menu: "true"
+show_in_menu: 'true'
 layout: solution.njk
 thumbnail: /media/uploads/image-30-.png
 image_1: /media/uploads/soft-walled-clean-room-durocleans-cropped-1-.jpg
-image_2: /img/image-2-cleanrooms.jpg
-image_3: /img/image-3-cleanrooms.png
+image_2: /img/11 clean room middle.jpg
+image_3: /img/12 Clean room beside Technical Specs.jpg
 short_description: Duroair's modular clean rooms keep harmful elements out and
   clean air inside each workpiece station.
 intro:
@@ -38,14 +38,23 @@ copy_block_list: >-
 
   * Increased workflow efficiency for stop-and-start R&D processes
 
-  * Eliminated need for expensive equipment and installation for air make-up
-
   * Laminar or turbulent airflow as required *Unsurpassed control of isolated work environments, including pressure (positive or negative), humidity, and temperature air flow patterns, and harmful dust particulates and gaseous contaminants
 copy_block_1: >-
   ### Controlled, Clean-Air Work Spaces On-Demand Work Environments
 
 
   Duroair’s retractable clean rooms protect your people, help you meet OSHA and life safety requirements, and provide the flexibility to add and change workflows. These flexible, controlled environments move wherever they are needed. For example, with these flexible clean rooms, you don’t have to stop assembly lines to move a workpiece for painting or coating.
+
+
+  Duroair’s retractable clean rooms protect workers and provide the flexibility to add and change workflows. Our flexible, controlled environments can be moved to wherever they are needed. 
+  Duroair designs multiple solutions for diverse clean room requirements. 
+
+
+  * Retractable soft wall 
+
+  * Fixed soft wall
+
+  * Hard wall
 
 
   How does this work? We combine a customized DuroRoom™ retractable enclosure with our DuroClean™ engineered exhaust system into one flexible, cost-effective solution for portable clean rooms and isolation rooms.
@@ -67,9 +76,6 @@ copy_block_2: >-
 
   * Temperature and humidity control
 
-  * For spray applications: NFPA 33 compliant motor and electrical systems work outside of the air stream
-
-  * Air filtration ranging from 800 CFM to 80,000 CFM
 compliance:
   - code: NFPA 33
     description: spray application
@@ -112,8 +118,11 @@ form_intro: Contact Us
 hubspot_form_id: 8a7e8410-f0e6-4fdf-9fe9-60dfeb51b9b4
 redirectUrl: /contact-us/success/
 ---
+
 ### **Modular Clean Room Design For Manufacturing Flexibility**
 
-Ensuring quality control while balancing long-term construction with short-term cutting, welding, or surface prep and spraying tasks is an ongoing logistical challenge. Navigating these cellular workflows is critical for [aerospace](https://www.duroair.com/industries/aerospace-aviation) OEMs, [ship and boat manufacturers](https://www.duroair.com/industries/marine), and for operations conducting prototyping and R&D. 
+Ensuring quality control while balancing long-term construction with short-term cutting, welding, or surface prep and spraying tasks is an ongoing logistical challenge. Navigating these cellular workflows is critical for [aerospace](https://www.duroair.com/industries/aerospace-aviation) OEMs, [ship and boat manufacturers](https://www.duroair.com/industries/marine), and for operations conducting prototyping and R&D.
 
-How do you cost-effectively isolate manufacturing processes to keep damaging elements out and clean air around each workpiece?
+Ensuring quality control in a diverse manufacturing environment is challenging; there are often competing priorities sharing the same space. Duroair enclosures provide the flexibility to navigate this workflow reality. Duroair clean rooms can be placed anywhere in a shared manufacturing space and are an affordable upgrade to outdated infrastructure.
+
+How can you isolate manufacturing processes cost effectively while maintaining clean room standards and deliver the flexibility to solve workflow challenges?
