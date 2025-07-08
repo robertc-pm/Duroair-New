@@ -25,7 +25,7 @@ product_intro:
     during sanding, grinding, [coating and
     painting](https://www.duroair.com/solutions/painting-coating/). DuroCap has
     an enhanced 3rd stage filter when a vented option that meets NESHAP 319 is
-    required.   
+    required.
 
 
     Pair it with:
