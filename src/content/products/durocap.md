@@ -11,7 +11,7 @@ seo:
     free from dangerous particulates and corrosive dust contaminants.
   page_title: DuroCap™ Vented Filtration | Particulate Filtration
 jumbotron:
-  img: /img/heros/hero-durocap.jpg
+  img: /media/uploads/durocap-with-two-ducts-hero-picture.png
 layout: product.njk
 product_image: /img/image-1-durocap.jpg
 product_intro:
@@ -22,21 +22,19 @@ product_intro:
     envelope around your oversized work pieces. Its 2-stage filtration removes
     99.4% of all air pollutants for a contaminant free portable workstation
     during sanding, grinding, [coating and
-    painting](https://www.duroair.com/solutions/painting-coating/).
-
-
+    painting](https://www.duroair.com/solutions/painting-coating/). DuroCap has
+    an enhanced 3rd stage filter when a vented option that meets NESHAP 319 is
+    required.  
 
 
     Pair it with:
-
-
 
 
     * [DuroRoom™](https://www.duroair.com/products/duroroom) to create a clean air envelope around workpieces for a contaminant free retractable work station.
 thumbnail: /img/thumbs/thumb-durocap.jpg
 short_description: DuroCap™ vented filtration creates a clean air chamber nearly
   100% free from dangerous particulates and corrosive dust contaminants.
-image_1: /img/image-2-durocap.jpg
+image_1: /media/uploads/1-durocap-all-filters-side-view.jpeg
 techncal_specification:
   technical_heading: Technical Specifications
   technical_description: >-
@@ -85,11 +83,11 @@ new_key_features:
       non-retracting only.
     heading: Fire Suppression
 key_images:
-  image_1: /media/uploads/duropure-thumbnail.jpg
-  image_2: /media/uploads/hero-durocap.jpg
+  image_1: /media/uploads/1-durocap-all-filters-side-view.jpeg
+  image_2: /media/uploads/2-durocap-website-p1280009-copy.jpg
   image_3: /media/uploads/2.png
   image_4: /media/uploads/3.jpg
-image_2: /media/uploads/durocap-2.png
+image_2: /media/uploads/3-durocap-us-navy.jpg
 related_solutions:
   - Non-Destructive Testing
   - Painting & Coating
