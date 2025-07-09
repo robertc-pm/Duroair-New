@@ -14,7 +14,10 @@ product_intro:
     <!--StartFragment-->
 
 
-    DuroDust™ is the mobile dust collection system with non-vented, non-ducted, industrial dust collection technology. From silica dust to hexavalent chromium, it’s the safe, clean air solution for stone cutting, welding, sanding, grinding, painting, and coating preparation.
+    DuroDust™ is the mobile dust collection system with non-vented, non-ducted, industrial dust collection technology. From silica dust to hexavalent chromium, it’s the safe, clean air solution for stone cutting, welding, sanding, grinding, painting, and coating preparation. The DuroDust is used for non-combustible dust only. 
+
+
+    * St 0: Kst value 0 – no explosion. Typical of silica dust, welding-generated dust and thermally generated dusts from cutting processes.
 
 
     For a complete clean air solution, pair DuroDust with:
@@ -44,6 +47,8 @@ techncal_specification:
     * Easy controller with start-stop variable speed dial
 
     * Customized four-stage filtration meeting NESHAP 319 and higher
+
+    * St 0: Kst value 0 – no explosion dust only.
 
     * Front loading all filter stages
 
@@ -130,7 +135,8 @@ new_key_features:
 
       <!--EndFragment-->
   - heading: Non vented returns air to the building
-    description: no
+    description: Yes, The DuroDust is a non vented system. Filtered air is returned
+      to workspace.
 key_images:
   image_1: /media/uploads/duro-dust-3-stone-cutting.jpg
   image_2: /media/uploads/duro-dust-2.jpg
@@ -155,7 +161,7 @@ key_features: >-
   * **Variable Frequency Drive**: Energy-efficient VFD with adjustable air speeds, doubles as a soft starter to eliminate the need for a motor starter.
 
   * **Non vented returns air to the building**
-image_2: /media/uploads/WELDMENT-C23021-8HX14WX15L-LAKES-GRANITE-2.png
+image_2: /media/uploads/11-durodust-technical-illustration-replacement.jpg
 compliance:
   - code: OHSA O.Reg 851-63
     description: ignition or explosive
