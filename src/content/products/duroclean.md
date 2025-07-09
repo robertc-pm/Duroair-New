@@ -13,7 +13,8 @@ product_intro:
     <!--StartFragment-->
 
 
-    The DuroClean™ exhaust system filters air to an ISO 6 standard to create [portable clean rooms](https://www.duroair.com/solutions/clean-rooms/) or isolation rooms for mechanical assembly, [additive manufacturing](https://www.duroair.com/solutions/additive-manufacturing/), R&D, and other processes requiring a clean environment. Combined with our DuroRoom retractable enclosure, the DuroClean engineered exhaust system becomes a flexible, cost-effective solution for on-demand clean rooms and isolation rooms wherever and whenever they are needed.
+    The DuroClean™ exhaust system filters air to an ISO 6 standard to create [portable clean rooms](https://www.duroair.com/solutions/clean-rooms/) or isolation rooms for mechanical assembly, [additive manufacturing](https://www.duroair.com/solutions/additive-manufacturing/), R&D, and other processes requiring a clean environment. Combined with our DuroRoom soft wall retractable enclosure, soft wall fixed or hard wall enclosure the DuroClean engineered exhaust system becomes a flexible, cost-effective solution for on-demand clean rooms and isolation rooms wherever and whenever they are needed.
+
 
 
     Pair it with:
@@ -37,15 +38,19 @@ techncal_specification:
     <!--StartFragment-->
 
 
-    * Fans designed with reverse, incline fan wheels and inlet cones. Non-sparking constructed with fan sizes from 18" to 35" with 5hp to 25hp motors dependent on airflow requirements. Airflow designed at 3.5" static pressure.
+     * ISO 6-9
 
-    * Variable frequency drive (VF) gives complete control of airflow and doubles as a soft starter to eliminate the need for a motor starter.
+      * Turbulent, or non-unidirectional, air flow systems
 
-    * Control panel is a lockable fused disconnect and is a C/UL/US listed panel, with an on/off, speed dial control. Prewired. Options include a customized HMI interface. Customer supplies building power.
+    * HEPA Single Pass Design: Heating/Cooling and dehumidification can be added to the system. 
 
-    * Lighting options include C1D1, C1D2, LED lights and troffer lights, depending upon requirements.
+    * HEPA Recirculating Design: Heating/Cooling and dehumidification can be added to the system.
 
-    * Fire suppression: Wet or dry is available depending upon requirements. Wet for non-retracting only.
+    * HEPA Negative Pressure: Negative pressure/ Environmental isolation rooms to protect the external environment from processes generated in the enclosure. Heating/Cooling and dehumidification can be added to the system
+
+    * HEPA Positive Pressure: Positive pressure cleanrooms to protect your process from external contaminants. Heating/Cooling and dehumidification can be added to the system
+
+    *  Containment: Heating/Cooling and dehumidification can be added to the system and air is recirculated for filtration or exhausted area within the building
 
 
     For ISO classifications and other technical information, download our DuroClean fact sheet!
@@ -53,7 +58,7 @@ techncal_specification:
 
     <!--EndFragment-->
 new_key_features:
-  - heading: "Negative & Positive Pressure Capability:"
+  - heading: 'Negative & Positive Pressure Capability:'
     description: >-
       <!--StartFragment-->
 
@@ -62,14 +67,14 @@ new_key_features:
 
 
       <!--EndFragment-->
-  - heading: "Neutral Pressure Capability:"
+  - heading: 'Neutral Pressure Capability:'
     description: |-
       <!--StartFragment-->
 
       for simple containment.
 
       <!--EndFragment-->
-  - heading: "HEPA Filter Configurations:"
+  - heading: 'HEPA Filter Configurations:'
     description: >-
       <!--StartFragment-->
 
@@ -78,7 +83,7 @@ new_key_features:
 
 
       <!--EndFragment-->
-  - heading: "Custom Filtration Options:"
+  - heading: 'Custom Filtration Options:'
     description: >-
       <!--StartFragment-->
 
@@ -87,7 +92,7 @@ new_key_features:
 
 
       <!--EndFragment-->
-  - heading: "Airflow Options:"
+  - heading: 'Airflow Options:'
     description: >-
       <!--StartFragment-->
 
@@ -96,7 +101,7 @@ new_key_features:
 
 
       <!--EndFragment-->
-  - heading: "Air Changes Per Hour (ACH):"
+  - heading: 'Air Changes Per Hour (ACH):'
     description: >-
       <!--StartFragment-->
 
@@ -108,7 +113,7 @@ new_key_features:
 key_images:
   image_1: /media/uploads/1.jpg
   image_2: /media/uploads/2-1-.jpg
-  image_3: /media/uploads/3.jpg
+  image_3: /media/uploads/
   image_4: /media/uploads/DuroClean 1.jpeg
 key_features: >-
   * **Negative & Positive Pressure Capability**: Isolates hazardous processes or
@@ -124,7 +129,7 @@ key_features: >-
   * **Airflow Options**:   Laminar or unidirectional airflow systems, as well as turbulent or non-unidirectional airflow systems.
 
   * **Air Changes Per Hour (ACH)**: Combines air changes per hour (ACH) with filtered air circulating into the cleanroom many times per hour (designed to meet ISO classifications).
-image_2: /media/uploads/3.png
+image_2: /media/uploads/DuroClean5.jpg
 related_solutions:
   - Clean Rooms
 g&m_related_data:
@@ -147,24 +152,27 @@ g&m_related_data:
 brochure: /media/uploads/Duroair DuroClean™ System.pdf
 btn_label: Download Fact Sheet
 technical_specifications: >-
-  * Fans designed with reverse, incline fan wheels and inlet cones. Non-sparking
-  constructed with fan sizes from 18" to 35" with 5hp to 25hp motors dependent
-  on airflow requirements. Airflow designed at 3.5" static pressure.
+  * ISO 6-9
 
-  * Variable frequency drive (VF) gives complete control of airflow and doubles as a soft starter to eliminate the need for a motor starter.
+  * Turbulent, or non-unidirectional, air flow systems
 
-  * Control panel is a lockable fused disconnect and is a C/UL/US listed panel, with an on/off, speed dial control. Prewired. Options include a customized HMI interface. Customer supplies building power.  
+  * HEPA Single Pass Design: Heating/Cooling and dehumidification can be added to the system. 
 
-  * Lighting options include C1D1, C1D2, LED lights and troffer lights, depending upon requirements.
+  * HEPA Recirculating Design: Heating/Cooling and dehumidification can be added to the system.
 
-  * Fire suppression: Wet or dry is available depending upon requirements. Wet for non-retracting only.
-show_in_menu: "true"
+  * HEPA Negative Pressure: Negative pressure/ Environmental isolation rooms to protect the external environment from processes generated in the enclosure. Heating/Cooling and dehumidification can be added to the system
+
+  * HEPA Positive Pressure: Positive pressure cleanrooms to protect your process from external contaminants. Heating/Cooling and dehumidification can be added to the system
+
+  *  Containment: Heating/Cooling and dehumidification can be added to the system and air is recirculated for filtration or exhausted area within the building
+show_in_menu: 'true'
 nav_title: DuroClean
 ---
+
 ### How It Works
 
 The DuroClean™ exhaust system filters air to an ISO 6 standard to create [portable clean rooms](/solutions/clean-rooms/) or isolation rooms for mechanical assembly, [additive manufacturing](/solutions/additive-manufacturing/), R&D, and other processes requiring a clean environment. Combined with our DuroRoom retractable enclosure, the DuroClean engineered exhaust system becomes a flexible, cost-effective solution for on-demand clean rooms and isolation rooms wherever and whenever they are needed.
 
 Pair it with:
 
-* [DuroRoom™](/products/duroroom)
+- [DuroRoom™](/products/duroroom)
