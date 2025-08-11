@@ -58,7 +58,7 @@ techncal_specification:
 
     <!--EndFragment-->
 new_key_features:
-  - heading: 'Negative & Positive Pressure Capability:'
+  - heading: "Negative & Positive Pressure Capability:"
     description: >-
       <!--StartFragment-->
 
@@ -67,14 +67,14 @@ new_key_features:
 
 
       <!--EndFragment-->
-  - heading: 'Neutral Pressure Capability:'
+  - heading: "Neutral Pressure Capability:"
     description: |-
       <!--StartFragment-->
 
       for simple containment.
 
       <!--EndFragment-->
-  - heading: 'HEPA Filter Configurations:'
+  - heading: "HEPA Filter Configurations:"
     description: >-
       <!--StartFragment-->
 
@@ -83,7 +83,7 @@ new_key_features:
 
 
       <!--EndFragment-->
-  - heading: 'Custom Filtration Options:'
+  - heading: "Custom Filtration Options:"
     description: >-
       <!--StartFragment-->
 
@@ -92,7 +92,7 @@ new_key_features:
 
 
       <!--EndFragment-->
-  - heading: 'Airflow Options:'
+  - heading: "Airflow Options:"
     description: >-
       <!--StartFragment-->
 
@@ -101,7 +101,7 @@ new_key_features:
 
 
       <!--EndFragment-->
-  - heading: 'Air Changes Per Hour (ACH):'
+  - heading: "Air Changes Per Hour (ACH):"
     description: >-
       <!--StartFragment-->
 
@@ -113,7 +113,7 @@ new_key_features:
 key_images:
   image_1: /media/uploads/1.jpg
   image_2: /media/uploads/2-1-.jpg
-  image_3: /media/uploads/
+  image_3: /media/uploads/4-duroclean4.jpg
   image_4: /media/uploads/DuroClean 1.jpeg
 key_features: >-
   * **Negative & Positive Pressure Capability**: Isolates hazardous processes or
@@ -129,7 +129,7 @@ key_features: >-
   * **Airflow Options**:   Laminar or unidirectional airflow systems, as well as turbulent or non-unidirectional airflow systems.
 
   * **Air Changes Per Hour (ACH)**: Combines air changes per hour (ACH) with filtered air circulating into the cleanroom many times per hour (designed to meet ISO classifications).
-image_2: /media/uploads/DuroClean5.jpg
+image_2: /media/uploads/4-duroclean5.jpg
 related_solutions:
   - Clean Rooms
 g&m_related_data:
@@ -165,7 +165,7 @@ technical_specifications: >-
   * HEPA Positive Pressure: Positive pressure cleanrooms to protect your process from external contaminants. Heating/Cooling and dehumidification can be added to the system
 
   *  Containment: Heating/Cooling and dehumidification can be added to the system and air is recirculated for filtration or exhausted area within the building
-show_in_menu: 'true'
+show_in_menu: "true"
 nav_title: DuroClean
 ---
 

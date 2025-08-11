@@ -21,7 +21,7 @@ product_intro:
 
 
     * [DuroRoom™](/products/duroroom) to create a clean air envelope around workpieces for a contaminant free retractable work station.
-thumbnail: /img/thumbs/thumb-duropure.jpg
+thumbnail: /media/uploads/12-hero-shot-for-duropure.jpg
 short_description: Paired with Duroair retractable enclosures, DuroPure™ is a
   non-vented portable, industrial air purification solution that recirculates
   air without exhausting contaminants outside.
@@ -32,21 +32,23 @@ techncal_specification:
     <!--StartFragment-->
 
 
-    * Patented filtration is created using a unique configuration of panel, pocket dual pleat , V bank, UV and carbon filters.
+    * Recirculating, non-vented solution.
 
-    * Built-in control panel and air regulation with no makeup air required.
+    * Patented, Six-stage filtration.
 
-    * Air quality monitor and magnehelic gauge indicating when filters require changing.
+    * Three (3) stages of particulate collection; captures paint particulate including hexavalent chromium and particulate isocyanates. Final filter exceeds NESHAP 319 Three (3) stage gas filtration, captures isocyanates in gas stage and destroys VOCs. 
 
-    * Available as 208/230/460V three phase.
+    * Two (2) stages of activated carbon  filtration. Over 70lbs of carbon for every 2000 CFM.
 
-    * Variable frequency drive (VFD) to optimize and control airflow.
+    * UV light with PCO (photocatalytic oxidation). Converts organic pollutants into the carbon dioxide & water.
 
-    * Automatic shut off to spray gun if VOCs exceed acceptable regulation levels.
+    * No ducting or makeup air required.
 
-    * Carbon filter housing section with induct air VOC oxidizer.
+    * Plug and Play and can be generator ready.
 
-    * Portable on casters.
+    * Robust CFM to meet airflow requirements @ 100 FPM, less than 25% LEL is maintained.DCPH-A tested, confirmed and verified.
+
+    * System is monitored. VOC monitor will shut down system if ACGIH limits are surpassed.
 
 
     For ISO classifications and other technical information, download our DuroPure fact sheet!
@@ -144,10 +146,10 @@ new_key_features:
 
       <!--EndFragment-->
 key_images:
-  image_1: /media/uploads/duropure-image-2.jpg
+  image_1: /media/uploads/13-duropure.jpg
   image_2: /media/uploads/duropure-filtration.png
-  image_3: /media/uploads/duropure-thumbnail.jpg
-  image_4: /media/uploads/duropure-img1.jpg
+  image_3: /media/uploads/14-duropure.jpg
+  image_4: /media/uploads/15-retracted-enclosure-with-duropure™.jpg
 key_features: >-
   * **Patented Six-Stage Filtration**: Multi-stage particulate collection and
   multi-stage gas collection with carbon adsorption and UV PCO (photocatalytic
@@ -170,7 +172,7 @@ key_features: >-
   * **Fire Suppression**: Designed by Kidde Badger for protection of exhaust systems and the enclosure, meets NFPA 17 standards and UL listed
 
   * **Defense Centers for Public Health – Aberdeen (DCPH-A) tested and verified by Army Engineers and Industrial Hygienists**: The DuroPure system mitigates exposure to hexavalent chromium, isocyanates and VOCs, meeting HQDA’s mandate  
-image_2: /media/uploads/duropure-img1.jpg
+image_2: /media/uploads/16-duropure-technical-illustration-replacement.jpg
 compliance:
   - code: NFPA 33
     description: spray application

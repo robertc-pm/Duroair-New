@@ -23,7 +23,7 @@ product_intro:
 
     <!--EndFragment-->
   heading: DuroDeployable™
-thumbnail: /media/uploads/hero-unloading-enclosure-durodeployable.jpg
+thumbnail: /media/uploads/6-main-image-durodeploy.jpg
 short_description: DuroDeployable™ is the portable paint booth that creates a
   safe, controlled, compliant environment for painting and other military MRO in
   garrison or while deployed.
@@ -108,9 +108,9 @@ new_key_features:
 
       <!--EndFragment-->
 key_images:
-  image_1: /media/uploads/moving-durodeployable-enclosure-into-shop.jpg
-  image_2: /media/uploads/final-touches-setting-up-durodeployable.jpg
-  image_3: /media/uploads/loading-duropure-for-durodeployable.jpg
+  image_1: /media/uploads/7-close-up-of-system-no-fire-suppression.jpg
+  image_2: /media/uploads/22e-in-garrison.jpg
+  image_3: /media/uploads/8-loading-duropure-for-durodeployable.jpg
   image_4: /media/uploads/features-plug-and-play.jpg
 key_features: >-
   **Cost Savings**
@@ -136,7 +136,7 @@ key_features: >-
       * DCPH-A – (Defense Centers for Public Health – Aberdeen) tested and verified by U.S. Army Engineers and Industrial Hygienists.
       * OSHA – VOC monitor ensures the VOC level does not rise above the allowable amount in an 8-hour time period (50ppm).
     * DuroDeployable also exceeds many compliance standards, including containment of particulate levels for safeguarding personnel against hexavalent chromium.
-image_2: /media/uploads/technical-specifications.webp
+image_2: /media/uploads/10-durodeploy-technical-illustration-image.jpg
 g&m_related_data:
   show_data: >-
     <!--StartFragment-->
