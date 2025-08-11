@@ -10,7 +10,7 @@ nav_sort: 5000
 show_in_menu: "true"
 layout: solution.njk
 thumbnail: /img/thumbs/hero-nondestructivetesting.jpg
-image_1: /img/image-1-nondestructivetesting.jpg
+image_1: /img/nondestructivetesting2.jpg
 image_2: /media/uploads/hww-abt-img-2.png
 image_3: /img/image-3-nondestructivetesting.png
 short_description: Conduct climate-controlled testing with true UV containment.
