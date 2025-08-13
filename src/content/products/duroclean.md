@@ -24,7 +24,7 @@ product_intro:
 
 
     <!--EndFragment-->
-thumbnail: /media/uploads/two-duroclean-systems.jpg
+thumbnail: /media/uploads/DuroClean-Main.jpg
 short_description: The DuroClean™ exhaust system filters air to an ISO 6
   standard to create [portable clean
   rooms](https://www.duroair.com/solutions/clean-rooms/) or isolation rooms for

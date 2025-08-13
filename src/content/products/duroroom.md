@@ -123,10 +123,10 @@ new_key_features:
 
       <!--EndFragment-->
 key_images:
-  image_1: /media/uploads/3-2-.jpg
-  image_2: /media/uploads/duroroom-thumbnail.jpg
+  image_1: /media/uploads/DuroRoom-tl.jpg
+  image_2: /media/uploads/DuroRoom-bl.jpg
   image_3: /media/uploads/2-please-slightly-crop.jpg
-  image_4: /media/uploads/duroroom-containment-img.png
+  image_4: /media/uploads/DuroRoom-br.jpg
 key_features: >-
   * **[Taper Draft Airflow
   Technology](/products/taper-draft-airflow-technology/)**: Moves air through
@@ -144,7 +144,7 @@ key_features: >-
   * **Quick Seals**: Quick seals are used to penetrate the vinyl covering and allow mechanicals to enter the enclosure (for air, electrical requirements, etc.).
 
   * **Fire Suppression**: The fire suppression system in DuroRoom is designed by Kidde Badger and protects both exhaust systems and the enclosure. This design moves with the enclosure as it extends and retracts. For non-retracting DuroRooms, wet fire suppression systems can be used.
-image_2: /media/uploads/duroroom-img2.jpg
+image_2: /media/uploads/duroroom-ill.jpg
 compliance:
   - code: ISO1
     description: |-
@@ -240,7 +240,9 @@ nav_title: DuroRoom
 ---
 ### How it Works
 
-The DuroRoom™ portable workstation is custom-engineered to accommodate any workspace and any workpiece. It retracts to 20% of its extended length to accommodate use of an overhead crane and facilitate material handling or save space when not in use. DuroRoom retractable enclosures are used for painting and coating, clean rooms, isolation rooms, anterooms or gowning rooms and non-destructive testing environments. Most DuroRooms retract but fixed rooms are also available. Sizes up to 50’ high x 65’ wide x any linear length.
+The DuroRoom enclosure contain hazards or protect processes. The DuroRoom™ portable workstation is custom-engineered to accommodate any workspace and any workpiece. It retracts to 20% of its extended length to accommodate use of an overhead crane and facilitate material handling or save space when not in use. DuroRoom retractable enclosures are used for painting and coating, clean rooms, isolation rooms, anterooms or gowning rooms and non-destructive testing environments. 
+Most DuroRooms retract but fixed rooms are also available. Sizes up to 50’ high x 65’ wide x any linear length
+
 
 Pair it with:
 

@@ -19,8 +19,9 @@ title: Painting & Coating
 nav_sort: 2000
 show_in_menu: "true"
 image_1: /media/uploads/2.jpg
-image_2: /img/image-2-paintingcoating.jpg
-image_3: /img/image-3-paintingcoating.png
+image_2: /img/paint-and-coating.jpg
+image_2a: /img/middle-painting.jpg
+image_3: /img/painting-coating-specs.jpg
 short_description: Portable paint booths safeguard employees while reducing
   spraying and coating capital expenses.
 intro:

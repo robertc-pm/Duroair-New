@@ -85,7 +85,7 @@ key_images:
   image_1: /media/uploads/duro-table1.jpg
   image_2: /media/uploads/durotable-thumb.jpg
   image_3: /media/uploads/durotable-thumnail.jpg
-  image_4: /media/uploads/duroair-table.jpg
+  image_4: 
 key_features: >-
   * **Custom Tabletop Sizes** Options include  4’ x 7’ , 5’ x 8’  tabletop, 36”-
   40” High, with custom configurations available.
@@ -93,7 +93,7 @@ key_features: >-
   * **Multi-Stage Filtration** Dust collection filtration can be customized by particle size including  NESHAP 319 filter and HEPA filters.
 
   * **Variable Frequency Drive** Energy-efficient VFD with adjustable air speeds, doubles as a soft starter to eliminate the need for a motor.
-image_2: /media/uploads/duropure-img1.jpg
+image_2: 
 related_solutions:
   - Dust Collection
 brochure: /media/uploads/Duroair DuroTable™ System W.pdf

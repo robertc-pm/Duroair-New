@@ -13,7 +13,8 @@ layout: solution.njk
 thumbnail: /media/uploads/thumb-hero-additive.jpg
 image_1: /img/image-1-additivecollection.jpg
 image_2: /img/9 additive manufacturing middel.jpg
-image_3: /img/image-3-additive.png
+image_2a: /img/9 additive manufacturing middel.jpg
+image_3: /img/DuroTower-nobg.png
 short_description: Remove your compliance burdens while safeguarding the shop floor.
 intro:
   intro_head: Clean Air Solutions for Safe Additive Manufacturing

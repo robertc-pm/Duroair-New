@@ -12,6 +12,7 @@ layout: solution.njk
 thumbnail: /media/uploads/image-30-.png
 image_1: /media/uploads/soft-walled-clean-room-durocleans-cropped-1-.jpg
 image_2: /img/11 clean room middle.jpg
+image_2a: /img/DuroRoom_DuroClean.jpg
 image_3: /img/12 Clean room beside Technical Specs.jpg
 short_description: Duroair's modular clean rooms keep harmful elements out and
   clean air inside each workpiece station.

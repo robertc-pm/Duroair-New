@@ -32,7 +32,7 @@ product_intro:
 
 
     * [DuroRoom™](https://www.duroair.com/products/duroroom) to create a clean air envelope around workpieces for a contaminant free retractable work station.
-thumbnail: /img/thumbs/thumb-durocap.jpg
+thumbnail: /img/DuroCap cropped.jpg
 short_description: DuroCap™ vented filtration creates a clean air chamber nearly
   100% free from dangerous particulates and corrosive dust contaminants.
 image_1: /media/uploads/1-durocap-all-filters-side-view.jpeg
@@ -89,7 +89,7 @@ new_key_features:
     heading: Fire Suppression
 key_images:
   image_1: /media/uploads/1-durocap-all-filters-side-view.jpeg
-  image_2: /media/uploads/2-durocap-website-p1280009-copy.jpg
+  image_2: /media/uploads/DuroCap-img2.png
   image_3: /media/uploads/2.png
   image_4: /media/uploads/3.jpg
 image_2: /media/uploads/3-durocap-us-navy.jpg

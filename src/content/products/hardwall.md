@@ -168,7 +168,7 @@ key_features: >-
   **Sound Transmission Class for noise reduction**
     * Sound Transmission Class (STC) rating of 48 for a 30-40% noise reduction.
     * Additional noise reduction is available with tectum panels composed of aspen wood fibers and a hydraulic cement binder.
-image_2: /media/uploads/technical-photo.webp
+image_2: 
 related_solutions:
   - Clean Rooms
 btn_label: ""

@@ -12,8 +12,9 @@ show_in_menu: "true"
 layout: solution.njk
 thumbnail: /img/thumbs/hero-weldsmoke.jpg
 image_1: /img/image-1-weldsmoke.jpg
-image_2: /img/image-2-weldsmoke.jpg
-image_3: /img/image-3-weldsmoke.png
+image_2: /img/Main image weld smoke.jpg
+image_2a: /img/image-2-weldsmoke.jpg
+image_3: /img/DuroTower-nobg.png
 short_description: Remove your compliance burdens while safeguarding the shop floor.
 intro:
   intro_desc: Welding toxic fumes and laser-cutting dust can threaten employee

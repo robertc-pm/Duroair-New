@@ -13,8 +13,9 @@ layout: solution.njk
 thumbnail: /img/thumbs/hero-dustcollection.jpg
 top_img: /img/dustcollection2.jpg
 image_1: /img/image-1-dustcollection.jpg
-image_2: /img/image-2-dustcollection.jpg
-image_3: /img/image-3-dustcollection.png
+image_2: /img/18 Landscape Dust collection.jpg
+image_2a: /img/image-2-dustcollection.jpg
+image_3: /img/Side of DuroDust.jpg
 short_description: Comply with OSHA’s .3 microns standard without breaking the budget.
 intro:
   intro_head: Industrial Dust Collection Systems Where and When You Need Them

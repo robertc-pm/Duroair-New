@@ -59,7 +59,9 @@
                                 <img src="{{ key_images.image_3 }}" alt="DuroCap Features Image">
                             </div>
                             <div class="dcapfture-img">
-                                <img src="{{ key_images.image_4 }}" alt="DuroCap Features Image">
+                                {%- if key_images.image_4 -%}
+                                    <img src="{{ key_images.image_4 }}" alt="DuroCap Features Image">
+                                {%-  endif -%}
                             </div>
                         </div>
                     </div>
@@ -121,7 +123,9 @@
                     <div class="tech-specs-right has-texture">
                         <div class="radial-shape"><img src="/img/radial-shape.png" alt="Shape"></div>
                         <div class="tecspecs-img">
-                            <img src="{{ image_2 }}" alt="Image">
+                             {%- if image_2 -%}
+                                <img src="{{ image_2 }}" alt="Image">
+                            {%- endif -%}
                         </div>
                     </div>
                 </div>
